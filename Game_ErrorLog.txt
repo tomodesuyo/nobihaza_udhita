@@ -1,5 +1,4 @@
-【ピクチャ表示】ファイル読み込みエラー
-F:\tomoki/ma/nodihaza_udhita/_GameData/nobihaza_udhita/Data/SystemFile/WindowBase_nobihaza2.png が見つかりません
-処理地点:【コモンEv 63 行 90 】
---------------------
-a
+デバッグウィンドウの内容をDebugLog.txtにセーブしました
+
+
+--------------------
