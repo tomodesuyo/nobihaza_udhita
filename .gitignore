@@ -11,5 +11,4 @@ Data/Temp
 Game_ErrorLog.txt
 DebugLog.txt
 デバックモードの使い方.txt
-.gitignore
-.gitattributes
+ドラえもん/
