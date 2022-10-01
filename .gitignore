@@ -1,4 +1,13 @@
-Save/
-Log.txt
-Editor.ini
-Game.ini
+/Save/
+/Log.txt
+/Editor.ini
+/Game.ini
+/Game_ErrorLog.txt
+/Systemfirst.dat
+/Editor.exe
+/CustomData/
+/DirectX9_game.dat
+/GdiPlus.dll
+/EditorGraphic.dat
+/Data/Temp/
+*.tmp
