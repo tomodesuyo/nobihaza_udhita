@@ -10,12 +10,8 @@ Data/Temp
 *.tmp
 Game_ErrorLog.txt
 DebugLog.txt
-デバッグモードの使い方.txt
+デバックモードの使い方.txt
 ドラえもん/
 UpdateLink.html
 ver.txt
-Systemdata.dat
-ScreenShot_*.png
-mods
-*.cus
-Game.exe - ショートカット.lnk
+デバッグモードの使い方.txt
