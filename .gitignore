@@ -16,16 +16,20 @@ UpdateLink.html
 ver.txt
 デバッグモードの使い方.txt
 Backup_Before_Ver3
-mods
 EditorPro.exe
+Game.exe
 Game.exe (Debug).bat
+ScreenShot_*.png
 Game.exe - ショートカット.lnk
-GamePro.exe (Debug).bat
-Systemdata.dat
+mods
+エディター更新履歴\[Ver3.04\].txt
 Wodistant - ショートカット -.exe
 Wodistant - ショートカット -.ini
-エディター更新履歴\[Ver3.04\].txt
-ScreenShot_*.png
+Systemdata.dat
+GamePro.exe (Debug).bat
+ライセンス.rtf
+AutoBackup*
 mods1
-ドラえもん*
-*.anotherGame
+Editor.exe
+ドラえもん_*
+Systemdata.dat.anotherGame
