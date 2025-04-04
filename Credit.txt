@@ -8,6 +8,7 @@ Wodistant:https://alpha-stella.com/tool/wodistant/
 効果音ラボ:https://soundeffect-lab.info/
 無料効果音で遊ぼう！:https://taira-komori.jpn.org/
 VSQ plus+:https://vsq.co.jp/plus/
+DOVA-SYNDROME:https://dova-s.jp/
 
 使用コモン(使用していないコモンも含みます。)
 狼デバッガー: Fyu様 
