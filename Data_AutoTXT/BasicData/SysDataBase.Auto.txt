@@ -324,7 +324,7 @@ DATATYPE_2=1001
 DATATYPE_3=1002
 NUMDATA_TYPE_NUM=3
 STRDATA_TYPE_NUM=1
-DATA_NUM=1
+DATA_NUM=21
 TYPENAME=BGMリスト
 ITEMNAME_NUM=4
 ITEMNAME0=ファイル名
@@ -457,6 +457,26 @@ DEFAULT_VAL_2=0
 DEFAULT_VAL_3=0
 <<--CSV_START-->>
 "ファイル名","再生音量[%] 標準100","再生周波数[%]","ループ開始位置(ms)/ｷｰ±",
+"nobihazaBGM/ff9.mid",100,100,0,<<!--DATANAME--!>>ff9,
+"nobihazaBGM/緊急事態.mid",100,100,0,<<!--DATANAME--!>>緊急事態,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
+"",0,0,0,<<!--DATANAME--!>>,
 "",0,0,0,<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
@@ -794,14 +814,14 @@ DEFAULT_VAL_3=0
 "SE/[System]Get3_wolf.ogg",100,100,0,<<!--DATANAME--!>>RPG_レジェンドアイテムゲット,
 "SE2/木箱開ける.mp3",175,120,0,<<!--DATANAME--!>>RPG_木箱開ける,
 "nobihazaSE/毒.ogg",100,70,0,<<!--DATANAME--!>>毒,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
+"nobihazaSE/アイテム1.wav",100,100,0,<<!--DATANAME--!>>アイテム1,
+"nobihazaSE/ガシャン.wav",100,100,0,<<!--DATANAME--!>>ガシャン,
+"nobihazaSE/ケルベロス声.wav",100,100,0,<<!--DATANAME--!>>ケルベロス1,
+"nobihazaSE/ケルベロス声2.wav",100,100,0,<<!--DATANAME--!>>ケルベロス2,
+"nobihazaSE/カギ開け.wav",100,100,0,<<!--DATANAME--!>>ドア鍵開け,
+"nobihazaSE/炎1.wav",100,100,0,<<!--DATANAME--!>>炎1,
+"nobihazaSE/炎2.wav",100,100,0,<<!--DATANAME--!>>炎2,
+"nobihazaSE/水1.wav",100,100,0,<<!--DATANAME--!>>水1,
 
 <<--CSV_END-->>
 ----
@@ -2875,9 +2895,9 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>高度な詳細設定,
 <<!--DATANAME--!>>画面アクティブか,
 <<!--DATANAME--!>>エラーID,
-<<!--DATANAME--!>>,
-<<!--DATANAME--!>>,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>資料室の鍵,
+<<!--DATANAME--!>>資料室開けた,
+<<!--DATANAME--!>>火をおこした,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
