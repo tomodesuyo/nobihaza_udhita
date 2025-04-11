@@ -22,7 +22,6 @@ Game.exe (Debug).bat
 ScreenShot_*.png
 Game.exe - ショートカット.lnk
 mods
-エディター更新履歴\[Ver3.04\].txt
 Wodistant - ショートカット -.exe
 Wodistant - ショートカット -.ini
 Systemdata.dat
@@ -47,3 +46,4 @@ _Make_protect.bat
 *.kra
 Editor_w.exe
 Editor_w.ini
+エディター更新履歴\[*].txt
