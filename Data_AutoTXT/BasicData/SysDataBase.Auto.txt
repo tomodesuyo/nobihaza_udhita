@@ -1376,7 +1376,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>ﾒｯｾｰｼﾞ速度( X 文字/秒),
 <<!--DATANAME--!>>ﾒｯｾｰｼﾞ表示ｳｪｲﾄ(X ﾌﾚｰﾑ),
 <<!--DATANAME--!>>ﾋﾟｸﾁｬ文字速度( X 文字/秒),
-<<!--DATANAME--!>>ﾒｯｾｰｼﾞ表示中？(1=ON),
+<<!--DATANAME--!>>文章の表示 実行中？(1=ON),
 <<!--DATANAME--!>>ｲﾍﾞﾝﾄ実行中？(1=ON),
 <<!--DATANAME--!>>選択肢ｳｨﾝﾄﾞｳ表示する?(1=ON),
 <<!--DATANAME--!>>方向ｷｰﾘﾋﾟｰﾄ初ｳｪｲﾄ(ﾌﾚｰﾑ数指定),
@@ -1402,7 +1402,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>主人公移動中？(1=YES) ﾏｽの間にいる?,
 <<!--DATANAME--!>>主人公の影番号(Sys9),
 <<!--DATANAME--!>>仲間の車間距離(1あたり1歩),
-<<!--DATANAME--!>> -----,
+<<!--DATANAME--!>>ｷｰﾎﾞ入力中受付可?[1:ﾏｳｽﾀｯﾁ+2ﾊﾟｯﾄﾞ] *[ｷｰ入力]のみ,
 <<!--DATANAME--!>>[読]ｷｰﾎﾞ入力状態 0=Enter -1=ｷｬﾝｾﾙ,
 <<!--DATANAME--!>>ｷｰﾎﾞ入力文字列 X座標,
 <<!--DATANAME--!>>ｷｰﾎﾞ入力文字列 Y座標,
@@ -1786,7 +1786,7 @@ ITEM_NUM=1
 DATATYPE_0=2000
 NUMDATA_TYPE_NUM=0
 STRDATA_TYPE_NUM=1
-DATA_NUM=32
+DATA_NUM=36
 TYPENAME=キャラクター画像
 ITEMNAME_NUM=1
 ITEMNAME0=読込ファイル名
@@ -1933,9 +1933,13 @@ DEFAULT_VAL_0=0
 "CharaChip/[ウ]おっさんゾンビ104.png",<<!--DATANAME--!>>おっさんゾンビ死体首なし,
 "CharaChip/[ウ]おっさんゾンビ104.png",<<!--DATANAME--!>>おっさんゾンビ首なし,
 "CharaChip/[ウ]おっさんゾンビ100.png",<<!--DATANAME--!>>おっさんゾンビ,
-"",<<!--DATANAME--!>>,
-"",<<!--DATANAME--!>>,
-"",<<!--DATANAME--!>>,
+"CharaChip/[ウ]男性ゾンビ101.png",<<!--DATANAME--!>>男性ゾンビ1モーション1,
+"CharaChip/[ウ]男性ゾンビ102.png",<<!--DATANAME--!>>男性ゾンビ1モーション2,
+"CharaChip/[ウ]男性ゾンビ103.png",<<!--DATANAME--!>>男性ゾンビ1モーション3,
+"CharaChip/[ウ]男性ゾンビ104.png",<<!--DATANAME--!>>男性ゾンビ1死体,
+"CharaChip/[ウ]男性ゾンビ106.png",<<!--DATANAME--!>>男性ゾンビ1死体首なし,
+"CharaChip/[ウ]男性ゾンビ105.png",<<!--DATANAME--!>>男性ゾンビ1首なし,
+"CharaChip/[ウ]男性ゾンビ100.png",<<!--DATANAME--!>>男性ゾンビ1,
 
 <<--CSV_END-->>
 ----
@@ -3108,7 +3112,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>回転,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>強制ゲームオーバー,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>外部コモン呼び出し,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,

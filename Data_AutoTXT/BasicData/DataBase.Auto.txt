@@ -21863,7 +21863,7 @@ DEFAULT_VAL_12=0
 "nobihazaSE/ゾンビ声2.wav","nobihazaSE/ゾンビ声3.wav","nobihazaSE/ゾンビ声5.wav","nobihazaSE/ゾンビ声5.wav","nobihazaSE/ゾンビ声3.wav","nobihazaSE/ゾンビ声6.wav",7,8,9,10,11,12,21,<<!--DATANAME--!>>学生ゾンビ2,
 "nobihazaSE/女ゾンビ声4.wav","nobihazaSE/女ゾンビ声4.wav","nobihazaSE/女ゾンビ声.wav","nobihazaSE/女ゾンビ声.wav","nobihazaSE/女ゾンビ声2.wav","nobihazaSE/女ゾンビ声2.wav",13,14,15,16,17,19,18,<<!--DATANAME--!>>女性ゾンビ,
 "nobihazaSE/ゾンビ声2.wav","nobihazaSE/ゾンビ声3.wav","nobihazaSE/ゾンビ声5.wav","nobihazaSE/ゾンビ声5.wav","nobihazaSE/ゾンビ声3.wav","nobihazaSE/ゾンビ声6.wav",22,23,24,25,26,28,27,<<!--DATANAME--!>>おっさんゾンビ,
-"","","","","","",0,0,0,0,0,0,0,<<!--DATANAME--!>>,
+"nobihazaSE/ゾンビ声2.wav","nobihazaSE/ゾンビ声3.wav","nobihazaSE/ゾンビ声5.wav","nobihazaSE/ゾンビ声5.wav","nobihazaSE/ゾンビ声3.wav","nobihazaSE/ゾンビ声6.wav",29,30,31,32,33,35,34,<<!--DATANAME--!>>男性ゾンビ1,
 "","","","","","",0,0,0,0,0,0,0,<<!--DATANAME--!>>,
 "","","","","","",0,0,0,0,0,0,0,<<!--DATANAME--!>>,
 "","","","","","",0,0,0,0,0,0,0,<<!--DATANAME--!>>,
