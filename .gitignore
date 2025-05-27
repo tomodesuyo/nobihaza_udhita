@@ -38,12 +38,13 @@ list
 mods2
 assets
 Data/BasicData/BrowserWoditor.dat
-_Make.bat
+_Make*.bat
 /Screenshot
-_Make_protect.bat
 *.pdn
 *.mdp
 *.kra
 Editor_w.exe
 Editor_w.ini
 エディター更新履歴\[*].txt
+/Extract
+/Web
