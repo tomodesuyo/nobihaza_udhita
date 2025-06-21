@@ -1267,7 +1267,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / アニメ頻度を設定 => 1
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / アニメ頻度を設定 => 1
 ■ウェイト：60 フレーム
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/喰う2.wav] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：30ﾌﾚｰﾑ
 ■
@@ -1399,7 +1399,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V46[何が起こってる！]  が   1 と同じ 
+■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
 -◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
  |■イベントの挿入： コモン333：[ ゾンビ ]
  |■
@@ -1455,7 +1455,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / アニメ頻度を設定 => 1
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / アニメ頻度を設定 => 1
 ■ウェイト：60 フレーム
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/喰う2.wav] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：30ﾌﾚｰﾑ
 ■
@@ -1587,7 +1587,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V46[何が起こってる！]  が   1 と同じ 
+■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
 -◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
  |■イベントの挿入： コモン333：[ ゾンビ ]
  |■
@@ -1635,11 +1635,11 @@ WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
 ■変数操作: V32[イージーモード] = 1 + 0 
-■動作指定：このイベント / 主人公から離れる
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 主人公から離れる
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=35
+EVENT_ID=24
 EVENT_NAME=CharaChip/透明.png
 EVENT_X=36
 EVENT_Y=10
@@ -1691,7 +1691,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=231
+EVENT_ID=25
 EVENT_NAME=CharaChip/[ウ]死体01.png
 EVENT_X=36
 EVENT_Y=13
@@ -1795,7 +1795,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=233
+EVENT_ID=26
 EVENT_NAME=CharaChip/[ウ]死体01.png
 EVENT_X=36
 EVENT_Y=13

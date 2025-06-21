@@ -150,7 +150,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V46[何が起こってる！]  が   1 と同じ 
+■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
 -◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
  |■イベントの挿入[名]： ["学生ゾンビ1"] <コモンEv 753> 
  |■
@@ -198,7 +198,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=2
+EVENT_ID=1
 EVENT_NAME=
 EVENT_X=24
 EVENT_Y=2
@@ -248,7 +248,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=3
+EVENT_ID=2
 EVENT_NAME=火
 EVENT_X=8
 EVENT_Y=8
@@ -301,18 +301,18 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / 上向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 上向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 左向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 左向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 下向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 下向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 右向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 右向
 ■ウェイト：6 フレーム
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=4
+EVENT_ID=3
 EVENT_NAME=CharaChip/[ウ]死体01.png
 EVENT_X=9
 EVENT_Y=10
@@ -360,7 +360,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=5
+EVENT_ID=4
 EVENT_NAME=
 EVENT_X=24
 EVENT_Y=14
@@ -410,7 +410,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=6
+EVENT_ID=5
 EVENT_NAME=
 EVENT_X=0
 EVENT_Y=10
@@ -460,7 +460,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=7
+EVENT_ID=6
 EVENT_NAME=火
 EVENT_X=26
 EVENT_Y=10
@@ -513,18 +513,18 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / 上向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 上向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 左向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 左向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 下向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 下向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 右向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 右向
 ■ウェイト：6 フレーム
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=8
+EVENT_ID=7
 EVENT_NAME=火
 EVENT_X=26
 EVENT_Y=11
@@ -577,18 +577,18 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / 上向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 上向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 左向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 左向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 下向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 下向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 右向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 右向
 ■ウェイト：6 フレーム
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=9
+EVENT_ID=8
 EVENT_NAME=火
 EVENT_X=27
 EVENT_Y=12
@@ -641,18 +641,18 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / 上向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 上向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 左向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 左向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 下向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 下向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 右向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 右向
 ■ウェイト：6 フレーム
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=10
+EVENT_ID=9
 EVENT_NAME=火
 EVENT_X=27
 EVENT_Y=9
@@ -705,18 +705,18 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / 上向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 上向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 左向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 左向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 下向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 下向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 右向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 右向
 ■ウェイト：6 フレーム
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=11
+EVENT_ID=10
 EVENT_NAME=火
 EVENT_X=26
 EVENT_Y=8
@@ -769,18 +769,18 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：このイベント / 上向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 上向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 左向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 左向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 下向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 下向
 ■ウェイト：6 フレーム
-■動作指定：このイベント / 右向
+■動作指定：[ｽｷｯﾌﾟ]  このイベント / 右向
 ■ウェイト：6 フレーム
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=12
+EVENT_ID=11
 EVENT_NAME=
 EVENT_X=12
 EVENT_Y=1
@@ -836,7 +836,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=13
+EVENT_ID=12
 EVENT_NAME=CharaChip/透明.png
 EVENT_X=7
 EVENT_Y=6
@@ -884,7 +884,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=14
+EVENT_ID=13
 EVENT_NAME=CharaChip/透明.png
 EVENT_X=17
 EVENT_Y=6
@@ -932,7 +932,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=15
+EVENT_ID=14
 EVENT_NAME=
 EVENT_X=10
 EVENT_Y=0
@@ -982,7 +982,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=16
+EVENT_ID=15
 EVENT_NAME=学生ゾンビ2<Enemy>
 EVENT_X=12
 EVENT_Y=9
@@ -1071,7 +1071,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V46[何が起こってる！]  が   1 と同じ 
+■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
 -◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
  |■イベントの挿入[名]： ["学生ゾンビ2"] <コモンEv 754> 
  |■

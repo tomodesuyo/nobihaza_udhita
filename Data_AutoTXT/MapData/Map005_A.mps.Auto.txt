@@ -124,13 +124,13 @@ WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
 ■サウンド：SE18「ドア開け金属」(0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■動作指定：[ｳｪｲﾄ] このイベント / 右向 / 上向 / 左向
-■条件分岐(変数):  【1】 V96[Original]  が   1 と同じ 
+■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  このイベント / 右向 / 上向 / 左向
+■条件分岐(数値):  【1】 V96[Original]  が   1 と同じ 
 -◇分岐： 【1】  [ V96[Original]  が  1 と同じ  ]の場合↓
  |■場所移動：主人公 ▲マップID8[街4] X:12 Y:12  [ﾄﾗﾝｼﾞｼｮﾝ + 暗転有り]
  |■
 -◇上記以外
- |■条件分岐(変数):  【1】 V32[イージーモード]  が   1 と同じ 
+ |■条件分岐(数値):  【1】 V32[イージーモード]  が   1 と同じ 
  |-◇分岐： 【1】  [ V32[イージーモード]  が  1 と同じ  ]の場合↓
  | |■場所移動：主人公 ▲マップID38[倉庫通路] X:8 Y:10  [ﾄﾗﾝｼﾞｼｮﾝ + 暗転有り]
  | |■
@@ -575,7 +575,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=10
+EVENT_ID=9
 EVENT_NAME=おっさんゾンビ<Enemy>
 EVENT_X=18
 EVENT_Y=6
@@ -664,7 +664,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V46[何が起こってる！]  が   1 と同じ 
+■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
 -◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
  |■イベントの挿入[名]： ["おっさんゾンビ"] <コモンEv 756> 
  |■
@@ -712,7 +712,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=11
+EVENT_ID=10
 EVENT_NAME=CharaChip/[ウ]死体07.png
 EVENT_X=17
 EVENT_Y=10
@@ -760,7 +760,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=12
+EVENT_ID=11
 EVENT_NAME=
 EVENT_X=16
 EVENT_Y=14
@@ -812,7 +812,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=13
+EVENT_ID=12
 EVENT_NAME=CharaChip/[ウ]死体07.png
 EVENT_X=18
 EVENT_Y=3
@@ -860,7 +860,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=14
+EVENT_ID=13
 EVENT_NAME=CharaChip/[ウ]死体07.png
 EVENT_X=12
 EVENT_Y=4
@@ -908,7 +908,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=15
+EVENT_ID=14
 EVENT_NAME=
 EVENT_X=27
 EVENT_Y=7
@@ -958,7 +958,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=16
+EVENT_ID=15
 EVENT_NAME=
 EVENT_X=8
 EVENT_Y=7
@@ -1008,7 +1008,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=17
+EVENT_ID=16
 EVENT_NAME=
 EVENT_X=11
 EVENT_Y=0
@@ -1058,7 +1058,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=18
+EVENT_ID=17
 EVENT_NAME=
 EVENT_X=19
 EVENT_Y=0
@@ -1108,7 +1108,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=19
+EVENT_ID=18
 EVENT_NAME=学生ゾンビ1<Enemy><T1>
 EVENT_X=15
 EVENT_Y=7
@@ -1197,7 +1197,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V46[何が起こってる！]  が   1 と同じ 
+■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
 -◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
  |■イベントの挿入[名]： ["女性ゾンビ"] <コモンEv 755> 
  |■

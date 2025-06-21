@@ -2199,7 +2199,7 @@ WoditorEvCOMMAND_END
 ■変数操作: このEvのSelf1 = 2 + 0 
 ■変数操作: このEvのSelf2 = このEvのSelf1 * -1 
 ■変数操作+: このEvのSelf0 = 主人公 の 向き[1～9]
-■条件分岐(変数):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
+■条件分岐(数値):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
 -◇分岐： 【1】  [ このEvのSelf0  が  2 と同じ  ]の場合↓
  |■キャラエフェクト：このイベント[ピクセル移動(β版)] =>  X 0  Y このEvのSelf1
  |■
@@ -2275,7 +2275,7 @@ WoditorEvCOMMAND_END
 ■変数操作: このEvのSelf1 = 2 + 0 
 ■変数操作: このEvのSelf2 = このEvのSelf1 * -1 
 ■変数操作+: このEvのSelf0 = 主人公 の 向き[1～9]
-■条件分岐(変数):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
+■条件分岐(数値):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
 -◇分岐： 【1】  [ このEvのSelf0  が  2 と同じ  ]の場合↓
  |■変数操作: このEvのSelf3 = 0 + 0 
  |■
@@ -2532,7 +2532,7 @@ WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
 ■イベントの挿入： コモン587：[  ] / 150 / 10045 / 自動改行機能搭載のWindows風ウィンドウ表示機能です。
-改造すれば、タイトルも表示可能！今のところ×ボタンのみ。ピクチャの色や、表示位置を変更すればオリジ ....
+改造すれば、タイトルも表示可能！今のところ×ボタンのみ。ピクチャの色や、表示位置を変更すればオリジナ ....
 ■イベントの挿入： コモン587：[  ] / 50 / 5436 / こんにちは!!!!!
 ■
 [COMMAND_TEXT_END]
@@ -3010,7 +3010,7 @@ WoditorEvCOMMAND_END
 ■変数操作: このEvのSelf1 = 2 + 0 
 ■変数操作: このEvのSelf2 = このEvのSelf1 * -1 
 ■変数操作+: このEvのSelf0 = 主人公 の 向き[1～9]
-■条件分岐(変数):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
+■条件分岐(数値):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
 -◇分岐： 【1】  [ このEvのSelf0  が  2 と同じ  ]の場合↓
  |■キャラエフェクト：このイベント[ピクセル移動(β版)] =>  X 0  Y このEvのSelf1
  |■
@@ -3086,7 +3086,7 @@ WoditorEvCOMMAND_END
 ■変数操作: このEvのSelf1 = 2 + 0 
 ■変数操作: このEvのSelf2 = このEvのSelf1 * -1 
 ■変数操作+: このEvのSelf0 = 主人公 の 向き[1～9]
-■条件分岐(変数):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
+■条件分岐(数値):  【1】 このEvのSelf0  が   2 と同じ  【2】 このEvのSelf0  が   4 と同じ  【3】 このEvのSelf0  が   6 と同じ  【4】 このEvのSelf0  が   8 と同じ 
 -◇分岐： 【1】  [ このEvのSelf0  が  2 と同じ  ]の場合↓
  |■変数操作: このEvのSelf3 = 0 + 0 
  |■
@@ -3855,7 +3855,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V17[デバッグ]  が   1 と同じ 
+■条件分岐(数値):  【1】 V17[デバッグ]  が   1 と同じ 
 -◇分岐： 【1】  [ V17[デバッグ]  が  1 と同じ  ]の場合↓
  |■変数操作: このEvのSelf0 = 0 + 0 
  |■
@@ -4009,7 +4009,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V17[デバッグ]  が   1 と同じ 
+■条件分岐(数値):  【1】 V17[デバッグ]  が   1 と同じ 
 -◇分岐： 【1】  [ V17[デバッグ]  が  1 と同じ  ]の場合↓
  |■変数操作: このEvのSelf0 = 0 + 0 
  |■
@@ -4205,7 +4205,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V17[デバッグ]  が   1 と同じ 
+■条件分岐(数値):  【1】 V17[デバッグ]  が   1 と同じ 
 -◇分岐： 【1】  [ V17[デバッグ]  が  1 と同じ  ]の場合↓
  |■変数操作: このEvのSelf0 = 0 + 0 
  |■
@@ -4401,7 +4401,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V17[デバッグ]  が   1 と同じ 
+■条件分岐(数値):  【1】 V17[デバッグ]  が   1 と同じ 
 -◇分岐： 【1】  [ V17[デバッグ]  が  1 と同じ  ]の場合↓
  |■変数操作: このEvのSelf0 = 0 + 0 
  |■
@@ -4597,7 +4597,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V17[デバッグ]  が   1 と同じ 
+■条件分岐(数値):  【1】 V17[デバッグ]  が   1 と同じ 
 -◇分岐： 【1】  [ V17[デバッグ]  が  1 と同じ  ]の場合↓
  |■変数操作: このEvのSelf0 = 0 + 0 
  |■
@@ -4793,7 +4793,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(変数):  【1】 V17[デバッグ]  が   1 と同じ 
+■条件分岐(数値):  【1】 V17[デバッグ]  が   1 と同じ 
 -◇分岐： 【1】  [ V17[デバッグ]  が  1 と同じ  ]の場合↓
  |■変数操作: このEvのSelf0 = 0 + 0 
  |■
