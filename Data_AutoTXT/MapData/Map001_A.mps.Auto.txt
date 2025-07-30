@@ -659,11 +659,12 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=2
-COMMAND_NUM=32
+COMMAND_NUM=33
 --
 WoditorEvCOMMAND_START
+[103][0,1]<0>()(" ")
 [121][4,0]<0>(2000035,0,0,0)()
-[201][1,0]<0>(-2)()(6,[61,31,55],[11])
+[201][1,0]<0>(-2)()(6,[61,31,56],[11])
 [121][4,0]<0>(1100008,9000116,2,12288)()
 [121][4,0]<0>(1100009,9000117,2,12288)()
 [150][11,1]<0>(0,100,0,1,1,1,255,0,0,100,0)("SystemFile/スクリーンカット.png")
@@ -697,8 +698,9 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+▼  
 ■変数操作: V35[喰う] = 0 + 0 
-■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  主人公 /  X:31,Y:55 まで自動移動 [大負荷] / 上向
+■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  主人公 /  X:31,Y:56 まで自動移動 [大負荷] / 上向
 ■変数操作: このEvのSelf8 = Sys116:[読]画面サイズＸ / 2 
 ■変数操作: このEvのSelf9 = Sys117:[読]画面サイズＹ / 2 
 ■ﾋﾟｸﾁｬ表示：100 [左上]ﾌｧｲﾙ｢SystemFile/スクリーンカット.png｣ X:0 Y:0 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
@@ -3478,7 +3480,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=33
-EVENT_NAME=mamav2
+EVENT_NAME=のびママゾンビmama<Enemy>
 EVENT_X=31
 EVENT_Y=55
 EVENT_PAGE=3
@@ -3533,15 +3535,15 @@ EVENT_DIRECTION=2
 EVENT_PATTERN=1
 EVENT_OPACITY=255
 EVENT_BLENDTYPE=0
-EVENT_TRIGGER_TYPE=4
+EVENT_TRIGGER_TYPE=2
 EVENT_CONDITION_0_USE=33
 EVENT_CONDITION_TARGET_0=2000036
 EVENT_CONDITION_VALUE_0=1
 EVENT_CONDITION_1_USE=33
 EVENT_CONDITION_TARGET_1=2000058
 EVENT_CONDITION_VALUE_1=0
-EVENT_CONDITION_2_USE=32
-EVENT_CONDITION_TARGET_2=1000000
+EVENT_CONDITION_2_USE=33
+EVENT_CONDITION_TARGET_2=1100009
 EVENT_CONDITION_VALUE_2=0
 EVENT_CONDITION_3_USE=32
 EVENT_CONDITION_TARGET_3=1000000
@@ -3549,7 +3551,7 @@ EVENT_CONDITION_VALUE_3=0
 ANIME_SPEED=3
 MOVE_SPEED=3
 MOVE_FREQUENCY=0
-MOVE_TYPE=1
+MOVE_TYPE=0
 CHARA_OPTION_FLAG=34
 ROUTE_OPTION_FLAG=3
 ROUTE_COMMAND_NUM=8
@@ -3599,12 +3601,12 @@ OPTION_VAL_2=0
 COMMAND_NUM=2
 --
 WoditorEvCOMMAND_START
-[210][2,0]<0>(500333,0)()
+[300][2,1]<0>(0,0)("のびママゾンビ")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン333：[ ゾンビ ]
+■イベントの挿入[名]： ["のびママゾンビ"] <コモンEv 758> 
 ■
 [COMMAND_TEXT_END]
 EVENT_PAGE=2
@@ -3639,15 +3641,25 @@ OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
 OPTION_VAL_3=0
-COMMAND_NUM=3
+COMMAND_NUM=8
 --
 WoditorEvCOMMAND_START
+[179][1,0]<0>(30)()
+[201][1,0]<1>(-1)()(4,[44,39])
+[180][1,0]<1>(1)()
+[0][0,0]<1>()()
+[498][0,0]<0>()()
 [101][0,1]<0>()("@3<\n> ･･･肌の色も変色して腐っている。<\n> これはもう死人の姿だ。")
 [101][0,1]<0>()("@3<\n> なのになんで動いていたんだ･･･")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■回数付きループ [ 30 ]回
+ |■動作指定：[ｳｪｲﾄ] このイベント / ｸﾞﾗﾌｨｯｸ変更 39:のびママゾンビ死体
+ |■ウェイト：1 フレーム
+ |■
+◇ループここまで◇◇
 ■文章:@3\n ･･･肌の色も変色して腐っている。\n これはもう死人の姿だ。
 ■文章:@3\n なのになんで動いていたんだ･･･
 ■

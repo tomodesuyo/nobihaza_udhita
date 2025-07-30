@@ -1786,7 +1786,7 @@ ITEM_NUM=1
 DATATYPE_0=2000
 NUMDATA_TYPE_NUM=0
 STRDATA_TYPE_NUM=1
-DATA_NUM=36
+DATA_NUM=43
 TYPENAME=キャラクター画像
 ITEMNAME_NUM=1
 ITEMNAME0=読込ファイル名
@@ -1940,6 +1940,13 @@ DEFAULT_VAL_0=0
 "CharaChip/[ウ]男性ゾンビ106.png",<<!--DATANAME--!>>男性ゾンビ1死体首なし,
 "CharaChip/[ウ]男性ゾンビ105.png",<<!--DATANAME--!>>男性ゾンビ1首なし,
 "CharaChip/[ウ]男性ゾンビ100.png",<<!--DATANAME--!>>男性ゾンビ1,
+"CharaChip/[ウ]のびママゾンビ01.png",<<!--DATANAME--!>>のびママゾンビモーション1,
+"CharaChip/[ウ]のびママゾンビ02.png",<<!--DATANAME--!>>のびママゾンビモーション2,
+"CharaChip/[ウ]のびママゾンビ03.png",<<!--DATANAME--!>>のびママゾンビモーション3,
+"CharaChip/[ウ]のびママゾンビ06.png",<<!--DATANAME--!>>のびママゾンビ死体,
+"CharaChip/[ウ]のびママゾンビ06.png",<<!--DATANAME--!>>のびママゾンビ死体首なし,
+"CharaChip/[ウ]のびママゾンビ06.png",<<!--DATANAME--!>>のびママゾンビ首なし,
+"CharaChip/[ウ]のびママゾンビ00.png",<<!--DATANAME--!>>のびママゾンビ,
 
 <<--CSV_END-->>
 ----
