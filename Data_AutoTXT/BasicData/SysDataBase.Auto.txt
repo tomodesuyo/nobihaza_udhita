@@ -236,7 +236,7 @@ DEFAULT_VAL_10=0
 "MapData/Map004_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街3,
 "MapData/デバッグ.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>デバッグ,
 "MapData/Map005_A.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>倉庫,
-"MapData/pien.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>pien,
+"MapData/Map007.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>pien,
 "MapData/Map008.mps",-3,-1,0,-2,"nobihazaBGM/ff9.mid
 100
 100
@@ -302,7 +302,7 @@ DEFAULT_VAL_10=0
 100
 0","","",0,0,0,<<!--DATANAME--!>>倉庫通路,
 "MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>置き換え用マップ,
-"MapData/Map040.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>test_map,
+"",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>,
 "MapData/マップチップテスト2.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>テストワールド,
 "MapData/ループテスト.mps",-1,-1,3,-2,"","","",0,0,0,<<!--DATANAME--!>>ループテスト,
 "MapData/マップチップテスト.mps",-3,-1,3,-2,"nobihazaBGM/危険.mid
