@@ -22,7 +22,6 @@ Game.exe (Debug).bat
 ScreenShot_*.png
 Game.exe - ショートカット.lnk
 mods
-エディター更新履歴\[Ver3.04\].txt
 Wodistant - ショートカット -.exe
 Wodistant - ショートカット -.ini
 Systemdata.dat
@@ -36,3 +35,17 @@ Systemdata.dat.anotherGame
 ver_woditor_v2.txt
 Config.ini
 list
+mods2
+assets
+Data/BasicData/BrowserWoditor.dat
+_Make*.bat
+/Screenshot
+*.pdn
+*.mdp
+*.kra
+Editor_w.exe
+Editor_w.ini
+エディター更新履歴\[*].txt
+/Extract
+/Web
+*.dxvk-cache
