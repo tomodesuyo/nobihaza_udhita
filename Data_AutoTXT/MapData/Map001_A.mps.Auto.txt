@@ -1009,7 +1009,7 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=116
+COMMAND_NUM=117
 --
 WoditorEvCOMMAND_START
 [201][1,0]<0>(-2)()(0,[31,1])
@@ -1113,6 +1113,7 @@ WoditorEvCOMMAND_START
 [101][0,1]<0>()("@2<\n> 僕もママに顔を見せてこなきゃ。")
 [121][4,0]<0>(2000041,1,0,1)()
 [121][4,0]<0>(2000111,1,0,0)()
+[210][2,0]<0>(500411,0)()
 [180][1,0]<0>(5)()
 [210][2,0]<0>(500227,0)()
 [111][4,0]<0>(1,2000096,0,2)()
@@ -1232,6 +1233,7 @@ WoditorEvCOMMAND_END
 ■文章:@2\n 僕もママに顔を見せてこなきゃ。
 ■変数操作: [リ] V41[いなくなった] = 1 + 0 
 ■変数操作: V111[スタート(タイム用)] = 1 + 0 
+■イベントの挿入： コモン411：[ ロード実行 ]
 ■ウェイト：5 フレーム
 ■イベントの挿入： コモン227：[ 初期アイテム ]
 ■条件分岐(数値):  【1】 V96[Original]  が   0 と同じ 
@@ -3477,8 +3479,8 @@ WoditorEvCOMMAND_END
 -----
 EVENT_ID=32
 EVENT_NAME=コン
-EVENT_X=47
-EVENT_Y=14
+EVENT_X=14
+EVENT_Y=48
 EVENT_PAGE=1
 OPTION_DATA_NUM=0
 EVENT_PAGE_NUM=1
@@ -3566,12 +3568,12 @@ OPTION_VAL_2=0
 COMMAND_NUM=2
 --
 WoditorEvCOMMAND_START
-[130][5,0]<0>(34,31,54,0,0)()
+[130][6,0]<0>(33,31,54,0,0,0)()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■場所移動：Ev34[] X:31 Y:54  [ﾄﾗﾝｼﾞｼｮﾝなし]
+■場所移動：Ev33[のびママゾンビmama<Enemy>] X:31 Y:54  [ﾄﾗﾝｼﾞｼｮﾝなし]
 ■
 [COMMAND_TEXT_END]
 EVENT_PAGE=1
