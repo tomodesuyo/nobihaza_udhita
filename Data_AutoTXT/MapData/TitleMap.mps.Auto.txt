@@ -57,11 +57,12 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=591
+COMMAND_NUM=592
 --
 WoditorEvCOMMAND_START
 [151][2,0]<0>(0,0)()
 [106][0,1]<0>()("[起動]引数確認中")
+[121][4,0]<0>(2000014,1,0,0)()
 [210][3,0]<0>(500653,16777216,1100005)()
 [111][4,0]<0>(1,1100005,1,2)()
 [401][1,0]<0>(1)()
@@ -656,6 +657,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_START]
 ■色調変更： R0 G0 B0 / 0ﾌﾚｰﾑ
 ■デバッグ文:[起動]引数確認中
+■変数操作: V14[demo] = 1 + 0 
 ■イベントの挿入： このEvのSelf5 = コモン653：[ CheckRender ]
 ■条件分岐(数値):  【1】 このEvのSelf5  が   1 と同じ 
 -◇分岐： 【1】  [ このEvのSelf5  が  1 と同じ  ]の場合↓
