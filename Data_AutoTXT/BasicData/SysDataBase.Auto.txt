@@ -3119,7 +3119,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>強制ゲームオーバー,
 <<!--DATANAME--!>>外部コモン呼び出し,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>銃弾発射,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
