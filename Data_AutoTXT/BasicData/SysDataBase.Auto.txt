@@ -245,7 +245,7 @@ DEFAULT_VAL_10=0
 100
 100
 0","","",0,1,1,<<!--DATANAME--!>>学校,
-"MapData/Map010_A.mps",-3,-1,0,-2,"nobihazaBGM/Tha Flont Holl.mp3
+"MapData/Map010_A.mps",-3,-1,0,-2,"nobihazaBGM/The Front Hall.ogg
 100
 100
 0","","",0,0,0,<<!--DATANAME--!>>南舎1F 児童入口前,
