@@ -251,7 +251,7 @@ DEFAULT_VAL_10=0
 0","","",0,0,0,<<!--DATANAME--!>>南舎1F 児童入口前,
 "MapData/デバッグ2.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>デバッグ2,
 "MapData/テスト.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>test,
-"MapData/保健室.mps",-3,-1,0,-2,"nobihazaBGM/Secure Place.mp3
+"MapData/保健室.mps",-3,-1,0,-2,"nobihazaBGM/Secure Place.ogg
 100
 100
 0","","",0,0,0,<<!--DATANAME--!>>保健室,
