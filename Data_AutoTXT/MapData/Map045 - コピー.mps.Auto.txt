@@ -1920,7 +1920,7 @@ OPTION_VAL_2=0
 COMMAND_NUM=9
 --
 WoditorEvCOMMAND_START
-[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.wav")
+[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.ogg")
 [121][4,0]<0>(1100000,1,0,0)()
 [180][1,0]<0>(2)()
 [121][4,0]<0>(1100000,2,0,0)()
@@ -1932,7 +1932,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.wav] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
+■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■変数操作: このEvのSelf0 = 1 + 0 
 ■ウェイト：2 フレーム
 ■変数操作: このEvのSelf0 = 2 + 0 
@@ -2224,7 +2224,7 @@ OPTION_VAL_2=0
 COMMAND_NUM=9
 --
 WoditorEvCOMMAND_START
-[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.wav")
+[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.ogg")
 [121][4,0]<0>(1100000,1,0,0)()
 [180][1,0]<0>(2)()
 [121][4,0]<0>(1100000,2,0,0)()
@@ -2236,7 +2236,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.wav] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
+■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■変数操作: このEvのSelf0 = 1 + 0 
 ■ウェイト：2 フレーム
 ■変数操作: このEvのSelf0 = 2 + 0 
@@ -2378,7 +2378,7 @@ OPTION_VAL_2=0
 COMMAND_NUM=11
 --
 WoditorEvCOMMAND_START
-[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.wav")
+[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.ogg")
 [121][4,0]<0>(1100000,1,0,0)()
 [180][1,0]<0>(2)()
 [121][4,0]<0>(1100000,2,0,0)()
@@ -2392,7 +2392,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.wav] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
+■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■変数操作: このEvのSelf0 = 1 + 0 
 ■ウェイト：2 フレーム
 ■変数操作: このEvのSelf0 = 2 + 0 
@@ -2536,7 +2536,7 @@ OPTION_VAL_2=0
 COMMAND_NUM=9
 --
 WoditorEvCOMMAND_START
-[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.wav")
+[140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/ドア開け.ogg")
 [121][4,0]<0>(1100000,1,0,0)()
 [180][1,0]<0>(2)()
 [121][4,0]<0>(1100000,2,0,0)()
@@ -2548,7 +2548,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.wav] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
+■サウンド：SE ﾌｧｲﾙ[nobihazaSE/ドア開け.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■変数操作: このEvのSelf0 = 1 + 0 
 ■ウェイト：2 フレーム
 ■変数操作: このEvのSelf0 = 2 + 0 
