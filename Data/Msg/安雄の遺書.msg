@@ -1,4 +1,5 @@
 Background:"Picture/ファイル4.png";
+MsgboxY:-2;
 Title:"～生きる意志のある者達へ～";
 /**/
 Sound:-1;
@@ -27,3 +28,5 @@ Text:"もしこのメモが僕の知り合いに読まれたら
 僕は本当にうれしい。がんばってこの街から
 脱出してくれ。
 　　　　　　　　　　　　　　　　安雄　END";
+Sound:2;
+Filestop;

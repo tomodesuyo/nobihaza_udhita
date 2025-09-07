@@ -1,4 +1,5 @@
 Background:"Picture/ファイル2.png";
+MsgboxY:-2;
 Title:"～報告書～";
 /**/
 Sound:-1;
@@ -12,3 +13,5 @@ Sound:-1;
 Wait:-1;
 Text:"選抜警官隊は野外、学校内に潜伏するゾンビの
 一斉排除、脱出ルートの確保を命ずる。　　END";
+Sound:2;
+Filestop;

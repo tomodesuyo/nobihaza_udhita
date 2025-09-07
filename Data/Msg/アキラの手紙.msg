@@ -1,4 +1,5 @@
 Background:"Picture/ファイル5.png";
+MsgboxY:-2;
 Title:"～ある研究員の手紙～";
 /**/
 Sound:-1;
@@ -47,3 +48,5 @@ Text:"これが私の最後の頼みだ。もし変わり果てた姿を
 私を見かけたら燐、君の手で楽にしてくれ。
 　　　　　　　　ﾊﾟｽﾜｰﾄﾞ　＋＠＋＊
 君のAKIRAより。";
+Sound:2;
+Filestop;
