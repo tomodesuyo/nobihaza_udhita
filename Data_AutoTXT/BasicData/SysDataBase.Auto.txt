@@ -228,59 +228,35 @@ DEFAULT_VAL_10=0
 "マップファイル名","BGM番号(ﾘｽﾄ読込)","BGS番号(ﾘｽﾄ読込)","ﾙｰﾌﾟ:1横2縦3両方","遠景番号","BGMﾌｧｲﾙ名[BGM番号=-3]","BGSﾌｧｲﾙ名[BGS番号=-3]","遠景ﾌｧｲﾙ名[遠景番号=-3]","-------------------------------","外か","雪が降るか",
 "MapData/TitleMap.mps",-1,-1,0,-1,"","","",0,0,0,<<!--DATANAME--!>>のびハザ,
 "MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>のび,
-"MapData/Map002_A.mps",-3,-1,0,-2,"nobihazaBGM/ff9.mid
-100
-100
-0","","",0,1,1,<<!--DATANAME--!>>街,
+"MapData/Map002_A.mps",0,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街,
 "MapData/Map003_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街2,
 "MapData/Map004_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街3,
 "MapData/デバッグ.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>デバッグ,
 "MapData/Map005_A.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>倉庫,
 "MapData/Map007.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>pien,
-"MapData/Map008.mps",-3,-1,0,-2,"nobihazaBGM/ff9.mid
-100
-100
-0","","",0,1,1,<<!--DATANAME--!>>街4,
-"MapData/Map009_A.mps",-3,-1,0,-2,"nobihazaBGM/崩壊.mid
-100
-100
-0","","",0,1,1,<<!--DATANAME--!>>学校,
-"MapData/Map010_A.mps",-3,-1,0,-2,"nobihazaBGM/The Front Hall.ogg
-100
-100
-0","","",0,0,0,<<!--DATANAME--!>>南舎1F 児童入口前,
+"MapData/Map008.mps",0,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街4,
+"MapData/Map009_A.mps",4,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>学校,
+"MapData/Map010_A.mps",5,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>南舎1F 児童入口前,
 "MapData/デバッグ2.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>デバッグ2,
 "MapData/テスト.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>test,
-"MapData/保健室.mps",-3,-1,0,-2,"nobihazaBGM/Secure Place.ogg
-100
-100
-0","","",0,0,0,<<!--DATANAME--!>>保健室,
+"MapData/保健室.mps",6,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>保健室,
 "MapData/Map014.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>デバックスタート,
 "MapData/Map015.mps",-2,-2,0,-2,"","","",0,0,0,<<!--DATANAME--!>>リロード用マップ,
 "MapData/Map016.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>南校舎1F トイレ,
 "MapData/Map017.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>会議室,
-"MapData/Map018.mps",-3,-1,0,-2,"nobihazaBGM/闇の通路.mid
-100
-100
-0","","",0,0,0,<<!--DATANAME--!>>職員室,
+"MapData/Map018.mps",7,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>職員室,
 "MapData/Map019.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>校長室,
 "MapData/Map020.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>隠し部屋,
-"MapData/Map021.mps",-3,-1,0,-2,"nobihazaBGM/Tha Flont Holl.mp3
-100
-100
-0","","",0,0,0,<<!--DATANAME--!>>1F 西渡り廊下,
+"MapData/Map021.mps",5,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1F 西渡り廊下,
 "MapData/Map022.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1F 東渡り廊下,
 "MapData/Map023.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1-2組,
 "MapData/Map024.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>資料室,
-"MapData/Map025.mps",-3,-1,0,-2,"nobihazaBGM/library.mid
-100
-100
-0","","",0,0,0,<<!--DATANAME--!>>図書室,
+"MapData/Map025.mps",8,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>図書室,
 "MapData/Map026.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>図書室倉庫,
 "MapData/Map027.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>西 北舎行き通路,
 "MapData/Map028.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>給食室,
 "MapData/Map029.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>休憩室,
-"MapData/Map030.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>家庭科室,
+"MapData/Map030.mps",10,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>家庭科室,
 "MapData/Map031.mps",-3,-1,0,-2,"nobihazaBGM/トレジャータウン.mid
 100
 100
@@ -292,10 +268,7 @@ DEFAULT_VAL_10=0
 "MapData/Map033.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>監視室,
 "MapData/Map034.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>地下1F:監視室廊下,
 "MapData/Map035.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1F:監視室,
-"MapData/Map036.mps",-3,-1,0,-2,"nobihazaBGM/闇の通路.mid
-100
-100
-0","","",0,0,0,<<!--DATANAME--!>>北舎1F,
+"MapData/Map036.mps",7,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>北舎1F,
 "MapData/Map037.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>北舎1Fトイレ,
 "MapData/Map038.mps",-3,-1,0,-2,"nobihazaBGM/ff9.mid
 100
@@ -451,32 +424,32 @@ CHOICE_VAL_2_NUM=0
 CHOICE_VAL_3_NUM=0
 DEFAULT_VAL_NUM=4
 DEFAULT_VAL_0=0
-DEFAULT_VAL_1=0
-DEFAULT_VAL_2=0
+DEFAULT_VAL_1=100
+DEFAULT_VAL_2=100
 DEFAULT_VAL_3=0
 <<--CSV_START-->>
 "ファイル名","再生音量[%] 標準100","再生周波数[%]","ループ開始位置(ms)/ｷｰ±",
-"nobihazaBGM/ff9.mid",100,100,0,<<!--DATANAME--!>>ff9,
+"nobihazaBGM/ff9.mid",100,100,0,<<!--DATANAME--!>>街,
 "nobihazaBGM/緊急事態.mid",100,100,0,<<!--DATANAME--!>>緊急事態,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
-"",0,0,0,<<!--DATANAME--!>>,
+"nobihazaBGM/ドラえもん.mid",100,100,0,<<!--DATANAME--!>>ドラえもん,
+"nobihazaBGM/ママ.mid",100,100,0,<<!--DATANAME--!>>マザー,
+"nobihazaBGM/崩壊.mid",100,100,0,<<!--DATANAME--!>>校庭,
+"nobihazaBGM/The Front Hall.ogg",100,100,0,<<!--DATANAME--!>>The Front Hall,
+"nobihazaBGM/Secure Place.ogg",100,100,0,<<!--DATANAME--!>>Secure Place,
+"nobihazaBGM/闇の通路.mid",100,100,0,<<!--DATANAME--!>>闇の通路,
+"nobihazaBGM/library.mid",100,100,0,<<!--DATANAME--!>>図書室,
+"nobihazaBGM/闇の通路.mid",100,60,0,<<!--DATANAME--!>>闇の通路2,
+"nobihazaBGM/闇の通路.mid",70,30,0,<<!--DATANAME--!>>闇の通路3,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
 ----
@@ -1397,7 +1370,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>[読]内部FPS(毎秒変化）,
 <<!--DATANAME--!>>[読]描画FPS(毎秒変化）,
 <<!--DATANAME--!>>ﾌﾚｰﾑｽｷｯﾌﾟﾚﾍﾞﾙ(0～2),
-<<!--DATANAME--!>> -----,
+<<!--DATANAME--!>>ｷｬﾗ表示Y補正[-(ﾀｲﾙ-1)～0]px,
 <<!--DATANAME--!>>主人公移動中？(1=YES) ﾏｽの間にいる?,
 <<!--DATANAME--!>>主人公の影番号(Sys9),
 <<!--DATANAME--!>>仲間の車間距離(1あたり1歩),
