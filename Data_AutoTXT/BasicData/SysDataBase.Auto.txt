@@ -3230,7 +3230,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>旧詳細設定有効,
 <<!--DATANAME--!>>旧設定画面,
 <<!--DATANAME--!>>旧FPSメーター,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>旧タイトル画面,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
