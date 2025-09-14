@@ -72,10 +72,9 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=31
+COMMAND_NUM=30
 --
 WoditorEvCOMMAND_START
-[210][2,0]<0>(500346,0)()
 [250][5,4]<0>(6,0,1,0,0)("","","","")
 [122][2,1]<0>(3000007,0)("\cdb[0:\cdb[6:0:1]:2]")
 [270][3,0]<0>(258,1,3000007)()
@@ -109,7 +108,6 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン346：[ version設定実行 ]
 ■DB書込(可変)：可変DB[ 6:0:1 ] (パーティー情報:メイン設定:メンバー1) =  0
 ■文字列操作：S7[temp] = "\cdb[0:\cdb[6:0:1]:2]"
 ■パーティ画像：1人目を[S7[temp]]に変更
