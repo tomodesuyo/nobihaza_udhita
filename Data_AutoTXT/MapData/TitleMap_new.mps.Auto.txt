@@ -57,10 +57,9 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=33
+COMMAND_NUM=32
 --
 WoditorEvCOMMAND_START
-[300][3,1]<0>(0,1,1)("ロードピクチャ")
 [123][3,0]<0>(1100009,4352,146)()
 [111][4,0]<0>(1,1100009,146,5)()
 [401][1,0]<0>(1)()
@@ -96,7 +95,6 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入[名]： ["ロードピクチャ"] <コモンEv 804>  / 1:消去
 ■キー入力：このEvのｾﾙﾌ変数9 /  [通常入力] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[146]のみ判定] ( Cｷｰ ) 
 ■条件分岐(数値):  【1】 このEvのSelf9  が   146 以外 
 -◇分岐： 【1】  [ このEvのSelf9  が  146 以外  ]の場合↓
