@@ -976,7 +976,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=8
-EVENT_NAME=ドア
+EVENT_NAME=OPイベント
 EVENT_X=2
 EVENT_Y=2
 EVENT_PAGE=2
@@ -1013,7 +1013,7 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=120
+COMMAND_NUM=121
 --
 WoditorEvCOMMAND_START
 [201][1,0]<0>(-2)()(0,[31,1])
@@ -1029,7 +1029,9 @@ WoditorEvCOMMAND_START
 [121][4,0]<1>(2000117,1,0,0)()
 [0][0,0]<1>()()
 [498][0,0]<0>()()
-[180][1,0]<0>(20)()
+[180][1,0]<0>(10)()
+[121][4,0]<0>(2000039,1,0,0)()
+[180][1,0]<0>(10)()
 [140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/どこでもドア.ogg")
 [140][8,0]<0>(512,0,0,0,0,0,0,0)()
 [180][1,0]<0>(45)()
@@ -1040,7 +1042,6 @@ WoditorEvCOMMAND_START
 [201][1,0]<0>(13)()(2,[31,1])
 [201][1,0]<0>(28)()(2,[31,1])
 [140][6,1]<0>(33554464,0,0,0,100,100)("nobihazaSE/開ける1.ogg")
-[121][4,0]<0>(2000039,1,0,0)()
 [201][1,0]<0>(10)()(2,[40],[29,2],[0],[1],[10])
 [180][1,0]<0>(20)()
 [140][6,1]<0>(33554464,0,0,0,100,100)("nobihazaSE/開ける1.ogg")
@@ -1152,7 +1153,9 @@ WoditorEvCOMMAND_END
  |■変数操作: V117[ラスタスクロール] = 1 + 0 
  |■
 ◇ループここまで◇◇
-■ウェイト：20 フレーム
+■ウェイト：10 フレーム
+■変数操作: V39[doa] = 1 + 0 
+■ウェイト：10 フレーム
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/どこでもドア.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■サウンド：BGM2「ドラえもん」再生 / 処理時間:0ﾌﾚｰﾑ
 ■ウェイト：45 フレーム
@@ -1163,7 +1166,6 @@ WoditorEvCOMMAND_END
 ■動作指定：[ｽｷｯﾌﾟ]  Ev13 / アニメ頻度を設定 => 1
 ■動作指定：[ｽｷｯﾌﾟ]  Ev28 / アニメ頻度を設定 => 1
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける1.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■変数操作: V39[doa] = 1 + 0 
 ■動作指定：[ｽｷｯﾌﾟ]  Ev10 / 主人公より上ON / 移動速度を設定 => 2 / 下 / 左 / 右向
 ■ウェイト：20 フレーム
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける1.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
@@ -1942,7 +1944,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=14
-EVENT_NAME=CharaChip/[ウ]オブジェクト100.png
+EVENT_NAME=ドア
 EVENT_X=18
 EVENT_Y=14
 EVENT_PAGE=3
@@ -2264,7 +2266,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=17
-EVENT_NAME=CharaChip/[ウ]のびママゾンビ05.png
+EVENT_NAME=死体1
 EVENT_X=31
 EVENT_Y=54
 EVENT_PAGE=2
@@ -2352,7 +2354,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=18
-EVENT_NAME=CharaChip/[ウ]のびママゾンビ05.png
+EVENT_NAME=死体2
 EVENT_X=30
 EVENT_Y=54
 EVENT_PAGE=2
