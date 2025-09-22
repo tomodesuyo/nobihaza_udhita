@@ -2187,7 +2187,7 @@ DEFAULT_VAL_1=0
 <<--CSV_START-->>
 "画像ファイル名","縦分割数(一部のみ)",
 "",6,<<!--DATANAME--!>>○入力待ちﾎﾟｰｽﾞ画像,
-"SystemFile/WindowBase.png",0,<<!--DATANAME--!>>×選択肢ｳｨﾝﾄﾞｳ画像,
+"SystemFile/WindowBase_New.png",0,<<!--DATANAME--!>>×選択肢ｳｨﾝﾄﾞｳ画像,
 "SystemFile/CursorBase_new.png",1,<<!--DATANAME--!>>○選択肢カーソル指定,
 
 <<--CSV_END-->>

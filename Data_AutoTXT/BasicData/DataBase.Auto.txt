@@ -17124,7 +17124,7 @@ DEFAULT_VAL_19=0
 DEFAULT_VAL_20=0
 <<--CSV_START-->>
 "ウィンドウ画像ファイル","カーソル画像ファイル","ﾒｯｾｰｼﾞｳｨﾝﾄﾞｳ ﾍﾞｰｽ画像","決定 効果音ファイル","キャンセル 効果音ファイル","カーソル 効果音ファイル","ブザー 効果音ファイル","装備時 効果音ファイル","装備解除 効果音ファイル","メニュー開く 効果音ファイル","メニュー閉じ 効果音ファイル","セーブ音 効果音ファイル","ロード音 効果音ファイル","購入時 効果音ファイル","売却時 効果音ファイル","戦闘行動 効果音ファイル","ダメージ 効果音ファイル","撃破時 効果音ファイル","戦闘開始 効果音ファイル","戦闘入手 効果音ファイル","レベルアップ 効果音ファイル",
-"SystemFile/WindowBase.png","SystemFile/CursorBase_new.png","SystemFile/WindowBase.png","SystemFile/[SE]Enter.ogg
+"SystemFile/WindowBase_New.png","SystemFile/CursorBase_new.png","SystemFile/WindowBase_New.png","SystemFile/[SE]Enter.ogg
 90
 100","SystemFile/[SE]Cancel.ogg
 80
