@@ -226,7 +226,7 @@ DEFAULT_VAL_9=1
 DEFAULT_VAL_10=0
 <<--CSV_START-->>
 "マップファイル名","BGM番号(ﾘｽﾄ読込)","BGS番号(ﾘｽﾄ読込)","ﾙｰﾌﾟ:1横2縦3両方","遠景番号","BGMﾌｧｲﾙ名[BGM番号=-3]","BGSﾌｧｲﾙ名[BGS番号=-3]","遠景ﾌｧｲﾙ名[遠景番号=-3]","-------------------------------","外か","雪が降るか",
-"MapData/TitleMap.mps",-1,-1,0,-1,"","","",0,0,0,<<!--DATANAME--!>>のびハザ,
+"MapData/Initial.mps",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>InitialMap,
 "MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>のび,
 "MapData/Map002_A.mps",0,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街,
 "MapData/Map003_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街2,
@@ -275,7 +275,7 @@ DEFAULT_VAL_10=0
 100
 0","","",0,0,0,<<!--DATANAME--!>>倉庫通路,
 "MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>置き換え用マップ,
-"MapData/TitleMap_new.mps",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>新タイトル,
+"MapData/TitleMap_new.mps",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>タイトル,
 "MapData/マップチップテスト2.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>テストワールド,
 "MapData/ループテスト.mps",-1,-1,3,-2,"","","",0,0,0,<<!--DATANAME--!>>ループテスト,
 "MapData/マップチップテスト.mps",-3,-1,3,-2,"nobihazaBGM/危険.mid
@@ -283,7 +283,7 @@ DEFAULT_VAL_10=0
 100
 0","","",0,0,0,<<!--DATANAME--!>>マップチップテスト,
 "MapData/Map073.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>戦闘,
-"MapData/Initial.mps",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>InitialMap,
+"MapData/TitleMap.mps",-1,-1,0,-1,"","","",0,0,0,<<!--DATANAME--!>>旧タイトル,
 
 <<--CSV_END-->>
 ----
@@ -1648,7 +1648,7 @@ DEFAULT_VAL_1=0
 DEFAULT_VAL_2=0
 <<--CSV_START-->>
 "マップID","X座標(マップ位置)","Y座標(マップ位置)",
-45,0,0,
+0,0,0,
 0,0,0,
 0,0,0,
 0,0,0,
