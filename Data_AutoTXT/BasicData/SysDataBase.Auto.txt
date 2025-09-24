@@ -3233,7 +3233,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>旧タイトル画面,
 <<!--DATANAME--!>>WASD無効化,
 <<!--DATANAME--!>>処理可能ｺﾏﾝﾄﾞ[通常0/プロ版1],
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>[ﾀﾞﾐｰ]Proモードとして実行する,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
