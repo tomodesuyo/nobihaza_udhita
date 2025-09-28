@@ -18,7 +18,7 @@ DATATYPE_9=1005
 DATATYPE_10=1006
 NUMDATA_TYPE_NUM=7
 STRDATA_TYPE_NUM=4
-DATA_NUM=46
+DATA_NUM=48
 TYPENAME=マップ設定
 ITEMNAME_NUM=11
 ITEMNAME0=マップファイル名
@@ -226,7 +226,7 @@ DEFAULT_VAL_9=1
 DEFAULT_VAL_10=0
 <<--CSV_START-->>
 "マップファイル名","BGM番号(ﾘｽﾄ読込)","BGS番号(ﾘｽﾄ読込)","ﾙｰﾌﾟ:1横2縦3両方","遠景番号","BGMﾌｧｲﾙ名[BGM番号=-3]","BGSﾌｧｲﾙ名[BGS番号=-3]","遠景ﾌｧｲﾙ名[遠景番号=-3]","-------------------------------","外か","雪が降るか",
-"MapData/Initial.mps",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>InitialMap,
+"MapData/Initial.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>InitialMap,
 "MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>のび,
 "MapData/Map002_A.mps",0,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街,
 "MapData/Map003_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街2,
@@ -284,6 +284,8 @@ DEFAULT_VAL_10=0
 0","","",0,0,0,<<!--DATANAME--!>>マップチップテスト,
 "MapData/Map073.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>戦闘,
 "MapData/TitleMap.mps",-1,-1,0,-1,"","","",0,0,0,<<!--DATANAME--!>>旧タイトル,
+"MapData/Map108.mps",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>,
+"",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
 ----
@@ -440,7 +442,7 @@ DEFAULT_VAL_3=0
 "nobihazaBGM/闇の通路.mid",100,100,0,<<!--DATANAME--!>>闇の通路,
 "nobihazaBGM/library.mid",100,100,0,<<!--DATANAME--!>>図書室,
 "nobihazaBGM/闇の通路.mid",100,60,0,<<!--DATANAME--!>>闇の通路2,
-"nobihazaBGM/闇の通路.mid",70,30,0,<<!--DATANAME--!>>闇の通路3,
+"nobihazaBGM/闇の通路.mid",80,30,-8,<<!--DATANAME--!>>闇の通路3,
 "",100,100,0,<<!--DATANAME--!>>,
 "",100,100,0,<<!--DATANAME--!>>,
 "",100,100,0,<<!--DATANAME--!>>,
@@ -3234,7 +3236,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>WASD無効化,
 <<!--DATANAME--!>>処理可能ｺﾏﾝﾄﾞ[通常0/プロ版1],
 <<!--DATANAME--!>>[ﾀﾞﾐｰ]Proモードとして実行する,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>実験メッセージウィンドウぼかし,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
