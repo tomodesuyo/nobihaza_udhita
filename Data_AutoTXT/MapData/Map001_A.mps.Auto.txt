@@ -1201,7 +1201,7 @@ WoditorEvCOMMAND_END
 ■文章:@2\n 僕もママに顔を見せてこなきゃ。
 ■変数操作: [リ] V41[いなくなった] = 1 + 0 
 ■変数操作: V111[スタート(タイム用)] = 1 + 0 
-■イベントの挿入： コモン411：[ ロード実行 ]
+■イベントの挿入： コモン411：[  ]
 ■ウェイト：5 フレーム
 ■イベントの挿入： コモン227：[ 初期アイテム ]
 ■条件分岐(数値):  【1】 V96[Original]  が   0 と同じ 
@@ -3161,7 +3161,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=29
+EVENT_ID=28
 EVENT_NAME=
 EVENT_X=2
 EVENT_Y=57
@@ -3303,7 +3303,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=32
+EVENT_ID=29
 EVENT_NAME=コン
 EVENT_X=14
 EVENT_Y=48
@@ -3353,7 +3353,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=33
+EVENT_ID=30
 EVENT_NAME=のびママゾンビmama<Enemy>
 EVENT_X=31
 EVENT_Y=55
@@ -3399,7 +3399,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■場所移動：Ev33[のびママゾンビmama<Enemy>] X:31 Y:54  [ﾄﾗﾝｼﾞｼｮﾝなし]
+■場所移動：Ev33[] X:31 Y:54  [ﾄﾗﾝｼﾞｼｮﾝなし]
 ■
 [COMMAND_TEXT_END]
 EVENT_PAGE=1
@@ -3582,7 +3582,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=34
+EVENT_ID=31
 EVENT_NAME=
 EVENT_X=3
 EVENT_Y=57
@@ -3674,7 +3674,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=35
+EVENT_ID=32
 EVENT_NAME=
 EVENT_X=34
 EVENT_Y=56
@@ -3770,7 +3770,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=36
+EVENT_ID=33
 EVENT_NAME=
 EVENT_X=22
 EVENT_Y=10
@@ -3820,7 +3820,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=39
+EVENT_ID=34
 EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
 EVENT_X=20
 EVENT_Y=17
@@ -3872,7 +3872,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=40
+EVENT_ID=35
 EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
 EVENT_X=17
 EVENT_Y=17
@@ -3922,7 +3922,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=41
+EVENT_ID=36
 EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
 EVENT_X=15
 EVENT_Y=17
@@ -3972,7 +3972,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=42
+EVENT_ID=37
 EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
 EVENT_X=22
 EVENT_Y=17
