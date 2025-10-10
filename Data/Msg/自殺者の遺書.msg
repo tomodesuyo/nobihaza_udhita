@@ -1,4 +1,5 @@
 Background:"Picture/ファイル5.png";
+MsgboxY:-2;
 Title:"～ある研究員の手紙～";
 /**/
 Sound:-1;
@@ -23,3 +24,5 @@ Sound:-1;
 Wait:-1;
 Text:"許してくれ、真理奈。
 　　　　　　　　　　　　　END";
+Sound:2;
+Filestop;

@@ -209,7 +209,7 @@ MAPLAYER=3
 [--MAP_END--]
 ----------
 [EVENTDATA_TEXT_OUTPUT]
-EVENT_NUM=42
+EVENT_NUM=39
 -----
 EVENT_ID=0
 EVENT_NAME=
@@ -346,7 +346,7 @@ OPTION_VAL_2=0
 COMMAND_NUM=16
 --
 WoditorEvCOMMAND_START
-[201][1,0]<0>(-2)()(2,[40])
+[300][4,1]<0>(0,2,0,-1)("スクリーンカットコモン")
 [130][5,0]<0>(-1,18,14,1,32)()
 [201][1,0]<0>(-2)()(2,[8])
 [101][0,1]<0>()("@2<\n> まだ夏休みの宿題をやってないのが<\n> バレたら怖いな。")
@@ -358,14 +358,14 @@ WoditorEvCOMMAND_START
 [130][5,0]<0>(-1,18,14,1,0)()
 [210][2,0]<0>(500287,0)()
 [101][0,1]<0>()("@2<\n> もうこんなに時間が立ってる。\.\.\.\.<\n> 流石にママに顔を見せてこなきゃ。")
+[300][4,1]<0>(0,2,1,-1)("スクリーンカットコモン")
 [140][7,1]<0>(33554432,300,0,0,0,100,0)("")
 [121][4,0]<0>(2000052,1,0,0)()
-[201][1,0]<0>(-2)()(2,[40])
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■動作指定：[ｽｷｯﾌﾟ]  主人公 / 主人公より上ON
+■イベントの挿入[名]： ["スクリーンカットコモン"] <コモンEv 841>  / 0:表示 / -1
 ■場所移動：主人公 ▲マップID1[のび] X:18 Y:14  [ﾄﾗﾝｼﾞｼｮﾝ + 暗転有り]
 ■動作指定：[ｽｷｯﾌﾟ]  主人公 / 下向
 ■文章:@2\n まだ夏休みの宿題をやってないのが\n バレたら怖いな。
@@ -377,9 +377,9 @@ WoditorEvCOMMAND_END
 ■場所移動：主人公 ▲マップID1[のび] X:18 Y:14  [ﾄﾗﾝｼﾞｼｮﾝなし]
 ■イベントの挿入： コモン287：[ 暗転後 ]
 ■文章:@2\n もうこんなに時間が立ってる。\.\.\.\.\n 流石にママに顔を見せてこなきゃ。
+■イベントの挿入[名]： ["スクリーンカットコモン"] <コモンEv 841>  / 1:消去 / -1
 ■サウンド：BGM ﾌｧｲﾙ[] 音 0％ 周 100％ ﾙ 0ms 再生 / 処理時間:300ﾌﾚｰﾑ
 ■変数操作: V52[最初フラグ] = 1 + 0 
-■動作指定：[ｽｷｯﾌﾟ]  主人公 / 主人公より上ON
 ■
 [COMMAND_TEXT_END]
 EVENT_PAGE=1
@@ -703,42 +703,15 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=2
-COMMAND_NUM=34
+COMMAND_NUM=7
 --
 WoditorEvCOMMAND_START
 [103][0,1]<0>()(" ")
 [121][4,0]<0>(2000035,0,0,0)()
 [201][1,0]<0>(-2)()(6,[61,31,56],[11])
-[121][4,0]<0>(1100008,9000116,2,12288)()
-[121][4,0]<0>(1100009,9000117,2,12288)()
-[150][11,1]<0>(0,100,0,1,1,1,255,0,0,100,0)("SystemFile/スクリーンカット.png")
-[150][11,1]<0>(4096,1,30,1,1,1,255,1100008,1100009,100,0)("Picture/ムービー1.png")
-[101][0,1]<0>()("@2<\n> ママ！\.\.ただいま！！")
-[140][6,1]<0>(33554464,0,0,0,100,80)("nobihazaSE/喰う.ogg")
-[180][1,0]<0>(30)()
-[130][6,0]<0>(33,31,54,0,0,0)()
-[101][0,1]<0>()("@2<\n> ママ･･･\.\.どうしたの？")
-[140][6,1]<0>(33554464,0,0,0,100,80)("nobihazaSE/喰う.ogg")
-[180][1,0]<0>(30)()
-[101][0,1]<0>()("@2<\n> ねぇママったら！！！")
-[140][6,1]<0>(33554464,0,0,0,100,110)("nobihazaSE/首粉々.ogg")
-[150][11,1]<0>(4096,11,0,1,1,1,255,1100008,1100009,100,0)("Picture/ムービー2.png")
-[180][1,0]<0>(90)()
-[101][0,1]<0>()("@9<\n> ！！！")
-[140][6,1]<0>(33554464,0,0,0,100,100)("nobihazaSE/首ゴロ.ogg")
-[150][11,1]<0>(4096,12,30,1,1,1,255,1100008,1100009,100,0)("Picture/ムービー3.png")
-[140][6,1]<0>(33554464,0,0,0,100,100)("nobihazaSE/登場音.ogg")
-[180][1,0]<0>(150)()
-[150][11,1]<0>(4096,13,30,1,1,1,255,1100008,1100009,100,0)("Picture/ムービー4.png")
-[140][6,1]<0>(33554464,0,0,0,100,90)("nobihazaSE/女ゾンビ声3.ogg")
-[130][5,0]<0>(-1,31,56,1,0)()
-[180][1,0]<0>(180)()
-[121][4,0]<0>(2000036,1,0,0)()
+[300][2,1]<0>(0,0)("のびママ最初")
 [121][4,0]<0>(1100000,1,0,0)()
-[150][3,0]<0>(2,100,0)()
-[150][6,0]<0>(16777218,10,0,0,0,13)()
-[150][3,0]<0>(2,1,0)()
-[140][7,1]<0>(33554432,0,0,0,100,100,0)("nobihazaBGM/緊急事態.mid")
+[121][4,0]<0>(2000036,1,0,0)()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
@@ -746,36 +719,9 @@ WoditorEvCOMMAND_END
 ▼  
 ■変数操作: V35[喰う] = 0 + 0 
 ■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  主人公 /  X:31,Y:56 まで自動移動 [大負荷] / 上向
-■変数操作: このEvのSelf8 = Sys116:[読]画面サイズＸ / 2 
-■変数操作: このEvのSelf9 = Sys117:[読]画面サイズＹ / 2 
-■ﾋﾟｸﾁｬ表示：100 [左上]ﾌｧｲﾙ｢SystemFile/スクリーンカット.png｣ X:0 Y:0 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
-■ﾋﾟｸﾁｬ表示：1 [中心]ﾌｧｲﾙ｢Picture/ムービー1.png｣ X:このEvのSelf8 Y:このEvのSelf9 / 30(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
-■文章:@2\n ママ！\.\.ただいま！！
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/喰う.ogg] 音 100％ 周 80％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■ウェイト：30 フレーム
-■場所移動：Ev33[のびママゾンビmama<Enemy>] X:31 Y:54  [ﾄﾗﾝｼﾞｼｮﾝなし]
-■文章:@2\n ママ･･･\.\.どうしたの？
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/喰う.ogg] 音 100％ 周 80％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■ウェイト：30 フレーム
-■文章:@2\n ねぇママったら！！！
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/首粉々.ogg] 音 100％ 周 110％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■ﾋﾟｸﾁｬ表示：11 [中心]ﾌｧｲﾙ｢Picture/ムービー2.png｣ X:このEvのSelf8 Y:このEvのSelf9 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
-■ウェイト：90 フレーム
-■文章:@9\n ！！！
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/首ゴロ.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■ﾋﾟｸﾁｬ表示：12 [中心]ﾌｧｲﾙ｢Picture/ムービー3.png｣ X:このEvのSelf8 Y:このEvのSelf9 / 30(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/登場音.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■ウェイト：150 フレーム
-■ﾋﾟｸﾁｬ表示：13 [中心]ﾌｧｲﾙ｢Picture/ムービー4.png｣ X:このEvのSelf8 Y:このEvのSelf9 / 30(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
-■サウンド：SE ﾌｧｲﾙ[nobihazaSE/女ゾンビ声3.ogg] 音 100％ 周 90％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■場所移動：主人公 ▲マップID1[のび] X:31 Y:56  [ﾄﾗﾝｼﾞｼｮﾝなし]
-■ウェイト：180 フレーム
-■変数操作: V36[ママ回収] = 1 + 0 
+■イベントの挿入[名]： ["のびママ最初"] <コモンEv 842> 
 ■変数操作: このEvのSelf0 = 1 + 0 
-■ﾋﾟｸﾁｬ消去：100  / 0(0)ﾌﾚｰﾑ
-■ﾋﾟｸﾁｬ消去：10 ～ 13  / 0(0)ﾌﾚｰﾑ
-■ﾋﾟｸﾁｬ消去：1  / 0(0)ﾌﾚｰﾑ
-■サウンド：BGM ﾌｧｲﾙ[nobihazaBGM/緊急事態.mid] 音 100％ 周 100％ ﾙ 0ms 再生 / 処理時間:0ﾌﾚｰﾑ
+■変数操作: V36[ママ回収] = 1 + 0 
 ■
 [COMMAND_TEXT_END]
 EVENT_PAGE=1
@@ -972,7 +918,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=8
-EVENT_NAME=ドア
+EVENT_NAME=OPイベント
 EVENT_X=2
 EVENT_Y=2
 EVENT_PAGE=2
@@ -1009,7 +955,7 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=120
+COMMAND_NUM=135
 --
 WoditorEvCOMMAND_START
 [201][1,0]<0>(-2)()(0,[31,1])
@@ -1025,9 +971,12 @@ WoditorEvCOMMAND_START
 [121][4,0]<1>(2000117,1,0,0)()
 [0][0,0]<1>()()
 [498][0,0]<0>()()
-[180][1,0]<0>(20)()
+[180][1,0]<0>(10)()
+[121][4,0]<0>(2000039,1,0,0)()
+[201][1,0]<0>(10)()(2,[45,0])
+[180][1,0]<0>(10)()
 [140][7,1]<0>(33554464,0,0,0,100,100,0)("nobihazaSE/どこでもドア.ogg")
-[140][7,1]<0>(33554432,0,0,5,100,100,0)("nobihazaBGM/ドラえもん.mid")
+[140][8,0]<0>(512,0,0,0,0,0,0,0)()
 [180][1,0]<0>(45)()
 [201][1,0]<0>(9)()(2,[31,1])
 [201][1,0]<0>(10)()(2,[31,1])
@@ -1036,8 +985,7 @@ WoditorEvCOMMAND_START
 [201][1,0]<0>(13)()(2,[31,1])
 [201][1,0]<0>(28)()(2,[31,1])
 [140][6,1]<0>(33554464,0,0,0,100,100)("nobihazaSE/開ける1.ogg")
-[121][4,0]<0>(2000039,1,0,0)()
-[201][1,0]<0>(10)()(2,[40],[29,2],[0],[1],[10])
+[201][1,0]<0>(10)()(2,[45,255],[40],[29,2],[0],[1],[10])
 [180][1,0]<0>(20)()
 [140][6,1]<0>(33554464,0,0,0,100,100)("nobihazaSE/開ける1.ogg")
 [201][1,0]<0>(12)()(2,[40],[29,2],[0],[0],[1],[10])
@@ -1052,24 +1000,33 @@ WoditorEvCOMMAND_START
 [201][1,0]<0>(11)()(2,[40],[29,2],[0])
 [201][1,0]<0>(11)()(2,[40])
 [180][1,0]<0>(1)()
-[121][4,0]<0>(9000001,80,0,0)()
-[121][4,0]<0>(9000002,171,0,0)()
+[121][4,0]<0>(9000001,240,0,0)()
+[121][4,0]<0>(9000002,513,0,0)()
 [180][1,0]<0>(1)()
 [101][0,1]<0>()("@6<\n> うわぁ～すっげー楽しかったぜ！！")
+[180][1,0]<0>(1)()
 [101][0,1]<0>()("@5<\n> あ～やっとママに会えるよ。")
+[180][1,0]<0>(1)()
 [101][0,1]<0>()("@4<\n> いざ家族の顔を何日も見ないとなると<\n> こいしい思いをするものね。")
+[180][1,0]<0>(1)()
 [111][4,0]<0>(17,2000096,1,2)()
 [401][1,0]<0>(1)()
 [101][0,1]<1>()("@2<\n> でも楽しかったよ。<\n> ありがとう\.\.\.\.ドラえもん。")
+[180][1,0]<1>(1)()
 [101][0,1]<1>()("@23<\n> おやすいごようだよ。")
+[180][1,0]<1>(1)()
 [101][0,1]<1>()("@23<\n> じゃあ僕は久しぶりにミーちゃんに<\n> 会いにいってくるよ。")
 [0][0,0]<1>()()
 [420][1,0]<0>(0)()
+[180][1,0]<1>(1)()
 [101][0,1]<1>()("@21<\n> でも楽しかったよ。<\n> ありがとう\.\.\.\.ドラえもん。")
+[180][1,0]<1>(1)()
 [101][0,1]<1>()("@25<\n> おやすいごようだよ。")
+[180][1,0]<1>(1)()
 [101][0,1]<1>()("@7<\n> じゃあ僕は久しぶりにミーちゃんに<\n> 会いにいってくるよ。")
 [0][0,0]<1>()()
 [499][0,0]<0>()()
+[180][1,0]<0>(1)()
 [111][4,0]<0>(1,2000096,0,2)()
 [401][1,0]<0>(1)()
 [201][1,0]<1>(11)()(6,[29,2],[11],[47,20])
@@ -1078,17 +1035,21 @@ WoditorEvCOMMAND_START
 [180][1,0]<1>(30)()
 [0][0,0]<1>()()
 [499][0,0]<0>()()
-[201][1,0]<0>(11)()(6,[38],[29,2],[8],[0],[0],[1],[1],[3],[3],[3],[3],[9],[38],[21,-1,0])
+[201][1,0]<0>(11)()(6,[38],[29,2],[31,1],[60,16,13],[38],[21,-1,0])
+[179][1,0]<0>(0)()
+[201][1,0]<1>(11)()(6,[38],[29,2],[8],[0],[0],[1],[1],[3],[3],[3],[3],[9],[38],[21,-1,0])
+[0][0,0]<1>()()
+[498][0,0]<0>()()
 [140][6,1]<0>(33554464,0,0,0,100,100)("nobihazaSE/開ける2.ogg")
 [121][4,0]<0>(2000040,1,0,0)()
 [101][0,1]<0>()("@6<\n> そんじゃあ俺達も帰るからな。")
 [111][4,0]<0>(1,2000096,0,2)()
 [401][1,0]<0>(1)()
-[201][1,0]<1>(10)()(6,[29,2],[3],[3],[3],[2],[2],[11])
+[201][1,0]<1>(10)()(6,[29,2],[31,1],[60,19,12],[11])
 [140][6,1]<1>(33554464,0,0,0,100,100)("nobihazaSE/開ける1.ogg")
 [121][4,0]<1>(2000049,1,0,0)()
 [180][1,0]<1>(20)()
-[201][1,0]<1>(12)()(6,[38],[29,2],[3],[3],[3],[3],[2],[2],[11])
+[201][1,0]<1>(12)()(6,[38],[29,2],[31,1],[60,19,12],[11])
 [140][6,1]<1>(33554464,0,0,0,100,100)("nobihazaSE/開ける1.ogg")
 [121][4,0]<1>(2000050,1,0,0)()
 [0][0,0]<1>()()
@@ -1097,7 +1058,7 @@ WoditorEvCOMMAND_START
 [111][4,0]<0>(1,2000096,0,2)()
 [401][1,0]<0>(1)()
 [180][1,0]<1>(10)()
-[201][1,0]<1>(9)()(4,[38],[29,2],[3],[3],[3])
+[201][1,0]<1>(9)()(4,[38],[29,2],[31,1],[60,19,12],[11])
 [140][6,1]<1>(33554464,0,0,0,100,100)("nobihazaSE/開ける1.ogg")
 [121][4,0]<1>(2000051,1,0,0)()
 [0][0,0]<1>()()
@@ -1121,7 +1082,7 @@ WoditorEvCOMMAND_START
 [210][2,0]<0>(500227,0)()
 [111][4,0]<0>(1,2000096,0,2)()
 [401][1,0]<0>(1)()
-[140][7,1]<1>(33554432,0,0,0,100,100,0)("nobihazaBGM/ママ.mid")
+[140][8,0]<1>(768,0,0,0,0,0,0,0)()
 [0][0,0]<1>()()
 [499][0,0]<0>()()
 [111][4,0]<0>(1,2000096,1,2)()
@@ -1148,9 +1109,12 @@ WoditorEvCOMMAND_END
  |■変数操作: V117[ラスタスクロール] = 1 + 0 
  |■
 ◇ループここまで◇◇
-■ウェイト：20 フレーム
+■ウェイト：10 フレーム
+■変数操作: V39[doa] = 1 + 0 
+■動作指定：[ｽｷｯﾌﾟ]  Ev10 / 不透明度設定 0
+■ウェイト：10 フレーム
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/どこでもドア.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■サウンド：BGM ﾌｧｲﾙ[nobihazaBGM/ドラえもん.mid] 音 100％ 周 100％ ﾙ 0ms 再生 / 処理時間:0ﾌﾚｰﾑ / 途中再生:5 ms
+■サウンド：BGM2「ドラえもん」再生 / 処理時間:0ﾌﾚｰﾑ
 ■ウェイト：45 フレーム
 ■動作指定：[ｽｷｯﾌﾟ]  Ev9 / アニメ頻度を設定 => 1
 ■動作指定：[ｽｷｯﾌﾟ]  Ev10 / アニメ頻度を設定 => 1
@@ -1159,8 +1123,7 @@ WoditorEvCOMMAND_END
 ■動作指定：[ｽｷｯﾌﾟ]  Ev13 / アニメ頻度を設定 => 1
 ■動作指定：[ｽｷｯﾌﾟ]  Ev28 / アニメ頻度を設定 => 1
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける1.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■変数操作: V39[doa] = 1 + 0 
-■動作指定：[ｽｷｯﾌﾟ]  Ev10 / 主人公より上ON / 移動速度を設定 => 2 / 下 / 左 / 右向
+■動作指定：[ｽｷｯﾌﾟ]  Ev10 / 不透明度設定 255 / 主人公より上ON / 移動速度を設定 => 2 / 下 / 左 / 右向
 ■ウェイト：20 フレーム
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける1.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■動作指定：[ｽｷｯﾌﾟ]  Ev12 / 主人公より上ON / 移動速度を設定 => 2 / 下 / 下 / 左 / 右向
@@ -1175,24 +1138,33 @@ WoditorEvCOMMAND_END
 ■動作指定：[ｽｷｯﾌﾟ]  Ev11 / 主人公より上ON / 移動速度を設定 => 2 / 下
 ■動作指定：[ｽｷｯﾌﾟ]  Ev11 / 主人公より上ON
 ■ウェイト：1 フレーム
-■変数操作: Sys1:ﾒｯｾｰｼﾞｳｨﾝﾄﾞｳ X座標 = 80 + 0 
-■変数操作: Sys2:ﾒｯｾｰｼﾞｳｨﾝﾄﾞｳ Y座標 = 171 + 0 
+■変数操作: Sys1:ﾒｯｾｰｼﾞｳｨﾝﾄﾞｳ X座標 = 240 + 0 
+■変数操作: Sys2:ﾒｯｾｰｼﾞｳｨﾝﾄﾞｳ Y座標 = 513 + 0 
 ■ウェイト：1 フレーム
 ■文章:@6\n うわぁ～すっげー楽しかったぜ！！
+■ウェイト：1 フレーム
 ■文章:@5\n あ～やっとママに会えるよ。
+■ウェイト：1 フレーム
 ■文章:@4\n いざ家族の顔を何日も見ないとなると\n こいしい思いをするものね。
+■ウェイト：1 フレーム
 ■条件分岐(数値):  【1】 V96[Original]  が   1 と同じ 
 -◇分岐： 【1】  [ V96[Original]  が  1 と同じ  ]の場合↓
  |■文章:@2\n でも楽しかったよ。\n ありがとう\.\.\.\.ドラえもん。
+ |■ウェイト：1 フレーム
  |■文章:@23\n おやすいごようだよ。
+ |■ウェイト：1 フレーム
  |■文章:@23\n じゃあ僕は久しぶりにミーちゃんに\n 会いにいってくるよ。
  |■
 -◇上記以外
+ |■ウェイト：1 フレーム
  |■文章:@21\n でも楽しかったよ。\n ありがとう\.\.\.\.ドラえもん。
+ |■ウェイト：1 フレーム
  |■文章:@25\n おやすいごようだよ。
+ |■ウェイト：1 フレーム
  |■文章:@7\n じゃあ僕は久しぶりにミーちゃんに\n 会いにいってくるよ。
  |■
 ◇分岐終了◇
+■ウェイト：1 フレーム
 ■条件分岐(数値):  【1】 V96[Original]  が   0 と同じ 
 -◇分岐： 【1】  [ V96[Original]  が  0 と同じ  ]の場合↓
  |■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev11 / 移動速度を設定 => 2 / 上向 / ウェイト 20フレーム
@@ -1201,17 +1173,21 @@ WoditorEvCOMMAND_END
  |■ウェイト：30 フレーム
  |■
 ◇分岐終了◇
-■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev11 / すり抜けON / 移動速度を設定 => 2 / 下向 / 下 / 下 / 左 / 左 / 上 / 上 / 上 / 上 / 左向 / すり抜けON / ジャンプ - 右:[-1] 下:[0]
+■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev11 / すり抜けON / 移動速度を設定 => 2 / アニメ頻度を設定 => 1 /  X:16,Y:13 まで自動移動･短 [スマート] / すり抜けON / ジャンプ - 右:[-1] 下:[0]
+■回数付きループ [ 0 ]回
+ |■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev11 / すり抜けON / 移動速度を設定 => 2 / 下向 / 下 / 下 / 左 / 左 / 上 / 上 / 上 / 上 / 左向 / すり抜けON / ジャンプ - 右:[-1] 下:[0]
+ |■
+◇ループここまで◇◇
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける2.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■変数操作: V40[dara] = 1 + 0 
 ■文章:@6\n そんじゃあ俺達も帰るからな。
 ■条件分岐(数値):  【1】 V96[Original]  が   0 と同じ 
 -◇分岐： 【1】  [ V96[Original]  が  0 と同じ  ]の場合↓
- |■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev10 / 移動速度を設定 => 2 / 上 / 上 / 上 / 右 / 右 / 上向
+ |■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev10 / 移動速度を設定 => 2 / アニメ頻度を設定 => 1 /  X:19,Y:12 まで自動移動･短 [スマート] / 上向
  |■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける1.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
  |■変数操作: V49[ジャイ] = 1 + 0 
  |■ウェイト：20 フレーム
- |■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev12 / すり抜けON / 移動速度を設定 => 2 / 上 / 上 / 上 / 上 / 右 / 右 / 上向
+ |■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  Ev12 / すり抜けON / 移動速度を設定 => 2 / アニメ頻度を設定 => 1 /  X:19,Y:12 まで自動移動･短 [スマート] / 上向
  |■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける1.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
  |■変数操作: V50[スネ] = 1 + 0 
  |■
@@ -1220,7 +1196,7 @@ WoditorEvCOMMAND_END
 ■条件分岐(数値):  【1】 V96[Original]  が   0 と同じ 
 -◇分岐： 【1】  [ V96[Original]  が  0 と同じ  ]の場合↓
  |■ウェイト：10 フレーム
- |■動作指定：[ｳｪｲﾄ] Ev9 / すり抜けON / 移動速度を設定 => 2 / 上 / 上 / 上
+ |■動作指定：[ｳｪｲﾄ] Ev9 / すり抜けON / 移動速度を設定 => 2 / アニメ頻度を設定 => 1 /  X:19,Y:12 まで自動移動･短 [スマート] / 上向
  |■サウンド：SE ﾌｧｲﾙ[nobihazaSE/開ける1.ogg] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
  |■変数操作: V51[静] = 1 + 0 
  |■
@@ -1239,12 +1215,12 @@ WoditorEvCOMMAND_END
 ■文章:@2\n 僕もママに顔を見せてこなきゃ。
 ■変数操作: [リ] V41[いなくなった] = 1 + 0 
 ■変数操作: V111[スタート(タイム用)] = 1 + 0 
-■イベントの挿入： コモン411：[ ロード実行 ]
+■イベントの挿入： コモン411：[  ]
 ■ウェイト：5 フレーム
 ■イベントの挿入： コモン227：[ 初期アイテム ]
 ■条件分岐(数値):  【1】 V96[Original]  が   0 と同じ 
 -◇分岐： 【1】  [ V96[Original]  が  0 と同じ  ]の場合↓
- |■サウンド：BGM ﾌｧｲﾙ[nobihazaBGM/ママ.mid] 音 100％ 周 100％ ﾙ 0ms 再生 / 処理時間:0ﾌﾚｰﾑ
+ |■サウンド：BGM3「マザー」再生 / 処理時間:0ﾌﾚｰﾑ
  |■
 ◇分岐終了◇
 ■条件分岐(数値):  【1】 V96[Original]  が   1 と同じ 
@@ -1938,7 +1914,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=14
-EVENT_NAME=CharaChip/[ウ]オブジェクト100.png
+EVENT_NAME=ドア
 EVENT_X=18
 EVENT_Y=14
 EVENT_PAGE=3
@@ -2260,7 +2236,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=17
-EVENT_NAME=CharaChip/[ウ]のびママゾンビ05.png
+EVENT_NAME=死体1
 EVENT_X=31
 EVENT_Y=54
 EVENT_PAGE=2
@@ -2348,7 +2324,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=18
-EVENT_NAME=CharaChip/[ウ]のびママゾンビ05.png
+EVENT_NAME=死体2
 EVENT_X=30
 EVENT_Y=54
 EVENT_PAGE=2
@@ -3200,58 +3176,6 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 -----
 EVENT_ID=28
-EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_X=22
-EVENT_Y=17
-EVENT_PAGE=1
-OPTION_DATA_NUM=0
-EVENT_PAGE_NUM=1
-EVENT_PAGE=0
-EVENT_TILE_ID=-1
-GRAPHIC_FILENAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_DIRECTION=8
-EVENT_PATTERN=1
-EVENT_OPACITY=255
-EVENT_BLENDTYPE=0
-EVENT_TRIGGER_TYPE=0
-EVENT_CONDITION_0_USE=33
-EVENT_CONDITION_TARGET_0=2000017
-EVENT_CONDITION_VALUE_0=1
-EVENT_CONDITION_1_USE=32
-EVENT_CONDITION_TARGET_1=1000000
-EVENT_CONDITION_VALUE_1=0
-EVENT_CONDITION_2_USE=32
-EVENT_CONDITION_TARGET_2=1000000
-EVENT_CONDITION_VALUE_2=0
-EVENT_CONDITION_3_USE=32
-EVENT_CONDITION_TARGET_3=1000000
-EVENT_CONDITION_VALUE_3=0
-ANIME_SPEED=3
-MOVE_SPEED=3
-MOVE_FREQUENCY=3
-MOVE_TYPE=0
-CHARA_OPTION_FLAG=35
-ROUTE_OPTION_FLAG=2
-ROUTE_COMMAND_NUM=0
-OPTION_VAL_NUM=3
-OPTION_VAL_0=0
-OPTION_VAL_1=0
-OPTION_VAL_2=0
-COMMAND_NUM=3
---
-WoditorEvCOMMAND_START
-[210][2,0]<0>(500481,0)()
-[150][6,0]<0>(16777218,-1410065407,0,0,0,999999)()
-[0][0,0]<0>()()
-WoditorEvCOMMAND_END
---
-[COMMAND_TEXT_START]
-■イベントの挿入： コモン481：[ 健治死亡アニメ ]
-■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
-■
-[COMMAND_TEXT_END]
------
-EVENT_ID=29
 EVENT_NAME=
 EVENT_X=2
 EVENT_Y=57
@@ -3298,7 +3222,7 @@ WoditorEvCOMMAND_START
 [151][2,0]<0>(6574160,0)()
 [130][6,0]<0>(-1,25,5,2,32,0)()
 [180][1,0]<0>(30)()
-[150][11,1]<0>(0,1,30,1,1,1,255,0,0,100,0)("SystemFile/スクリーンカット.png")
+[300][4,1]<0>(0,2,0,-1)("スクリーンカットコモン")
 [180][1,0]<0>(60)()
 [201][1,0]<0>(-2)()(6,[0],[0],[0],[0])
 [101][0,1]<0>()("@3<\n> \>何だこれは･･･！\.\.\<<\n> 一体何が起こってるんだ！？\.\.\.\.\.\^")
@@ -3307,12 +3231,12 @@ WoditorEvCOMMAND_START
 [140][8,1]<0>(33554464,0,0,0,50,100,0,-255)("nobihazaSE/悲鳴.ogg")
 [180][1,0]<0>(30)()
 [201][1,0]<0>(-2)()(2,[9])
-[281][3,0]<0>(304,-10,0)()
+[281][3,0]<0>(320,-10,0)()
 [180][1,0]<0>(60)()
-[281][3,0]<0>(304,10,0)()
+[281][3,0]<0>(320,10,0)()
 [180][1,0]<0>(30)()
 [201][1,0]<0>(-2)()(2,[8])
-[150][3,0]<0>(2,1,30)()
+[300][4,1]<0>(0,2,1,-1)("スクリーンカットコモン")
 [121][4,0]<0>(2000046,1,0,0)()
 [121][4,0]<0>(2000025,0,0,0)()
 [0][0,0]<0>()()
@@ -3325,7 +3249,7 @@ WoditorEvCOMMAND_END
 ■色調変更： R80 G80 B100 / 0ﾌﾚｰﾑ
 ■場所移動：主人公 ▲マップID2[街] X:25 Y:5  [ﾄﾗﾝｼﾞｼｮﾝ + 暗転有り]
 ■ウェイト：30 フレーム
-■ﾋﾟｸﾁｬ表示：1 [左上]ﾌｧｲﾙ｢SystemFile/スクリーンカット.png｣ X:0 Y:0 / 30(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
+■イベントの挿入[名]： ["スクリーンカットコモン"] <コモンEv 841>  / 0:表示 / -1
 ■ウェイト：60 フレーム
 ■動作指定：[ｳｪｲﾄ][ｽｷｯﾌﾟ]  主人公 / 下 / 下 / 下 / 下
 ■文章:@3\n \>何だこれは･･･！\.\.\<\n 一体何が起こってるんだ！？\.\.\.\.\.\^
@@ -3334,12 +3258,12 @@ WoditorEvCOMMAND_END
 ■サウンド：SE ﾌｧｲﾙ[nobihazaSE/悲鳴.ogg] 音 50％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ / パン:-255
 ■ウェイト：30 フレーム
 ■動作指定：[ｽｷｯﾌﾟ]  主人公 / 左向
-■画面スクロール：画面移動 1倍速 右方向:-10 下方向:0[ｳｪｲﾄ]
+■画面スクロール：画面移動 2倍速 右方向:-10 下方向:0[ｳｪｲﾄ]
 ■ウェイト：60 フレーム
-■画面スクロール：画面移動 1倍速 右方向:10 下方向:0[ｳｪｲﾄ]
+■画面スクロール：画面移動 2倍速 右方向:10 下方向:0[ｳｪｲﾄ]
 ■ウェイト：30 フレーム
 ■動作指定：[ｽｷｯﾌﾟ]  主人公 / 下向
-■ﾋﾟｸﾁｬ消去：1  / 30(0)ﾌﾚｰﾑ
+■イベントの挿入[名]： ["スクリーンカットコモン"] <コモンEv 841>  / 1:消去 / -1
 ■変数操作: V46[何が起こってる！] = 1 + 0 
 ■変数操作: V25[ダッシュ禁止] = 0 + 0 
 ■
@@ -3393,111 +3317,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=30
-EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_X=15
-EVENT_Y=17
-EVENT_PAGE=1
-OPTION_DATA_NUM=0
-EVENT_PAGE_NUM=1
-EVENT_PAGE=0
-EVENT_TILE_ID=-1
-GRAPHIC_FILENAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_DIRECTION=8
-EVENT_PATTERN=1
-EVENT_OPACITY=255
-EVENT_BLENDTYPE=0
-EVENT_TRIGGER_TYPE=0
-EVENT_CONDITION_0_USE=33
-EVENT_CONDITION_TARGET_0=2000017
-EVENT_CONDITION_VALUE_0=1
-EVENT_CONDITION_1_USE=32
-EVENT_CONDITION_TARGET_1=1000000
-EVENT_CONDITION_VALUE_1=0
-EVENT_CONDITION_2_USE=32
-EVENT_CONDITION_TARGET_2=1000000
-EVENT_CONDITION_VALUE_2=0
-EVENT_CONDITION_3_USE=32
-EVENT_CONDITION_TARGET_3=1000000
-EVENT_CONDITION_VALUE_3=0
-ANIME_SPEED=3
-MOVE_SPEED=3
-MOVE_FREQUENCY=3
-MOVE_TYPE=0
-CHARA_OPTION_FLAG=35
-ROUTE_OPTION_FLAG=2
-ROUTE_COMMAND_NUM=0
-OPTION_VAL_NUM=3
-OPTION_VAL_0=0
-OPTION_VAL_1=0
-OPTION_VAL_2=0
-COMMAND_NUM=3
---
-WoditorEvCOMMAND_START
-[210][2,0]<0>(500482,0)()
-[150][6,0]<0>(16777218,-1410065407,0,0,0,999999)()
-[0][0,0]<0>()()
-WoditorEvCOMMAND_END
---
-[COMMAND_TEXT_START]
-■イベントの挿入： コモン482：[ ブレインディモス登場 ]
-■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
-■
-[COMMAND_TEXT_END]
------
-EVENT_ID=31
-EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_X=17
-EVENT_Y=17
-EVENT_PAGE=1
-OPTION_DATA_NUM=0
-EVENT_PAGE_NUM=1
-EVENT_PAGE=0
-EVENT_TILE_ID=-1
-GRAPHIC_FILENAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_DIRECTION=8
-EVENT_PATTERN=1
-EVENT_OPACITY=255
-EVENT_BLENDTYPE=0
-EVENT_TRIGGER_TYPE=0
-EVENT_CONDITION_0_USE=33
-EVENT_CONDITION_TARGET_0=2000017
-EVENT_CONDITION_VALUE_0=1
-EVENT_CONDITION_1_USE=32
-EVENT_CONDITION_TARGET_1=1000000
-EVENT_CONDITION_VALUE_1=0
-EVENT_CONDITION_2_USE=32
-EVENT_CONDITION_TARGET_2=1000000
-EVENT_CONDITION_VALUE_2=0
-EVENT_CONDITION_3_USE=32
-EVENT_CONDITION_TARGET_3=1000000
-EVENT_CONDITION_VALUE_3=0
-ANIME_SPEED=3
-MOVE_SPEED=3
-MOVE_FREQUENCY=3
-MOVE_TYPE=0
-CHARA_OPTION_FLAG=35
-ROUTE_OPTION_FLAG=2
-ROUTE_COMMAND_NUM=0
-OPTION_VAL_NUM=3
-OPTION_VAL_0=0
-OPTION_VAL_1=0
-OPTION_VAL_2=0
-COMMAND_NUM=3
---
-WoditorEvCOMMAND_START
-[210][2,0]<0>(500483,0)()
-[150][6,0]<0>(16777218,-1410065407,0,0,0,999999)()
-[0][0,0]<0>()()
-WoditorEvCOMMAND_END
---
-[COMMAND_TEXT_START]
-■イベントの挿入： コモン483：[ バイオげラス登場 ]
-■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
-■
-[COMMAND_TEXT_END]
------
-EVENT_ID=32
+EVENT_ID=29
 EVENT_NAME=コン
 EVENT_X=14
 EVENT_Y=48
@@ -3547,7 +3367,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=33
+EVENT_ID=30
 EVENT_NAME=のびママゾンビmama<Enemy>
 EVENT_X=31
 EVENT_Y=55
@@ -3593,7 +3413,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■場所移動：Ev33[のびママゾンビmama<Enemy>] X:31 Y:54  [ﾄﾗﾝｼﾞｼｮﾝなし]
+■場所移動：Ev33[] X:31 Y:54  [ﾄﾗﾝｼﾞｼｮﾝなし]
 ■
 [COMMAND_TEXT_END]
 EVENT_PAGE=1
@@ -3776,7 +3596,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=34
+EVENT_ID=31
 EVENT_NAME=
 EVENT_X=3
 EVENT_Y=57
@@ -3868,7 +3688,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=35
+EVENT_ID=32
 EVENT_NAME=
 EVENT_X=34
 EVENT_Y=56
@@ -3964,7 +3784,7 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=36
+EVENT_ID=33
 EVENT_NAME=
 EVENT_X=22
 EVENT_Y=10
@@ -4014,114 +3834,10 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=37
-EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_X=19
-EVENT_Y=17
-EVENT_PAGE=1
-OPTION_DATA_NUM=0
-EVENT_PAGE_NUM=1
-EVENT_PAGE=0
-EVENT_TILE_ID=-1
-GRAPHIC_FILENAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_DIRECTION=8
-EVENT_PATTERN=1
-EVENT_OPACITY=255
-EVENT_BLENDTYPE=0
-EVENT_TRIGGER_TYPE=0
-EVENT_CONDITION_0_USE=33
-EVENT_CONDITION_TARGET_0=2000017
-EVENT_CONDITION_VALUE_0=1
-EVENT_CONDITION_1_USE=32
-EVENT_CONDITION_TARGET_1=1000000
-EVENT_CONDITION_VALUE_1=0
-EVENT_CONDITION_2_USE=32
-EVENT_CONDITION_TARGET_2=1000000
-EVENT_CONDITION_VALUE_2=0
-EVENT_CONDITION_3_USE=32
-EVENT_CONDITION_TARGET_3=1000000
-EVENT_CONDITION_VALUE_3=0
-ANIME_SPEED=3
-MOVE_SPEED=3
-MOVE_FREQUENCY=3
-MOVE_TYPE=0
-CHARA_OPTION_FLAG=35
-ROUTE_OPTION_FLAG=2
-ROUTE_COMMAND_NUM=0
-OPTION_VAL_NUM=3
-OPTION_VAL_0=0
-OPTION_VAL_1=0
-OPTION_VAL_2=0
-COMMAND_NUM=3
---
-WoditorEvCOMMAND_START
-[210][2,0]<0>(500484,0)()
-[150][6,0]<0>(16777218,-1410065407,0,0,0,999999)()
-[0][0,0]<0>()()
-WoditorEvCOMMAND_END
---
-[COMMAND_TEXT_START]
-■イベントの挿入： コモン484：[ タイラント出現 ]
-■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
-■
-[COMMAND_TEXT_END]
------
-EVENT_ID=38
-EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_X=22
-EVENT_Y=15
-EVENT_PAGE=1
-OPTION_DATA_NUM=0
-EVENT_PAGE_NUM=1
-EVENT_PAGE=0
-EVENT_TILE_ID=-1
-GRAPHIC_FILENAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_DIRECTION=8
-EVENT_PATTERN=1
-EVENT_OPACITY=255
-EVENT_BLENDTYPE=0
-EVENT_TRIGGER_TYPE=0
-EVENT_CONDITION_0_USE=33
-EVENT_CONDITION_TARGET_0=2000017
-EVENT_CONDITION_VALUE_0=1
-EVENT_CONDITION_1_USE=32
-EVENT_CONDITION_TARGET_1=1000000
-EVENT_CONDITION_VALUE_1=0
-EVENT_CONDITION_2_USE=32
-EVENT_CONDITION_TARGET_2=1000000
-EVENT_CONDITION_VALUE_2=0
-EVENT_CONDITION_3_USE=32
-EVENT_CONDITION_TARGET_3=1000000
-EVENT_CONDITION_VALUE_3=0
-ANIME_SPEED=3
-MOVE_SPEED=3
-MOVE_FREQUENCY=3
-MOVE_TYPE=0
-CHARA_OPTION_FLAG=35
-ROUTE_OPTION_FLAG=2
-ROUTE_COMMAND_NUM=0
-OPTION_VAL_NUM=3
-OPTION_VAL_0=0
-OPTION_VAL_1=0
-OPTION_VAL_2=0
-COMMAND_NUM=3
---
-WoditorEvCOMMAND_START
-[210][2,0]<0>(500485,0)()
-[150][6,0]<0>(16777218,-1410065407,0,0,0,999999)()
-[0][0,0]<0>()()
-WoditorEvCOMMAND_END
---
-[COMMAND_TEXT_START]
-■イベントの挿入： コモン485：[ スタッフロール ]
-■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
-■
-[COMMAND_TEXT_END]
------
-EVENT_ID=39
+EVENT_ID=34
 EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
 EVENT_X=20
-EVENT_Y=15
+EVENT_Y=17
 EVENT_PAGE=1
 OPTION_DATA_NUM=0
 EVENT_PAGE_NUM=1
@@ -4170,10 +3886,10 @@ WoditorEvCOMMAND_END
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=40
+EVENT_ID=35
 EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_X=15
-EVENT_Y=15
+EVENT_X=17
+EVENT_Y=17
 EVENT_PAGE=1
 OPTION_DATA_NUM=0
 EVENT_PAGE_NUM=1
@@ -4216,14 +3932,14 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン742：[ マニュアルスプリクト ] / \sysS[52]Msg/生徒の手帳開く.msg
+■イベントの挿入： コモン742：[ メッセージスプリクト ] / \sysS[52]Msg/生徒の手帳開く.msg
 ■
 [COMMAND_TEXT_END]
 -----
-EVENT_ID=41
+EVENT_ID=36
 EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
-EVENT_X=17
-EVENT_Y=15
+EVENT_X=15
+EVENT_Y=17
 EVENT_PAGE=1
 OPTION_DATA_NUM=0
 EVENT_PAGE_NUM=1
@@ -4258,12 +3974,120 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=1
+COMMAND_NUM=2
 --
 WoditorEvCOMMAND_START
+[210][3,2]<0>(500742,4112,0)("","\sysS[52]Msg/test.msg")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■イベントの挿入： コモン742：[ メッセージスプリクト ] / \sysS[52]Msg/test.msg
+■
+[COMMAND_TEXT_END]
+-----
+EVENT_ID=37
+EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
+EVENT_X=22
+EVENT_Y=17
+EVENT_PAGE=1
+OPTION_DATA_NUM=0
+EVENT_PAGE_NUM=1
+EVENT_PAGE=0
+EVENT_TILE_ID=-1
+GRAPHIC_FILENAME=CharaChip/[ウ]ちょい役セット01.png
+EVENT_DIRECTION=8
+EVENT_PATTERN=1
+EVENT_OPACITY=255
+EVENT_BLENDTYPE=0
+EVENT_TRIGGER_TYPE=0
+EVENT_CONDITION_0_USE=33
+EVENT_CONDITION_TARGET_0=2000017
+EVENT_CONDITION_VALUE_0=1
+EVENT_CONDITION_1_USE=32
+EVENT_CONDITION_TARGET_1=1000000
+EVENT_CONDITION_VALUE_1=0
+EVENT_CONDITION_2_USE=32
+EVENT_CONDITION_TARGET_2=1000000
+EVENT_CONDITION_VALUE_2=0
+EVENT_CONDITION_3_USE=32
+EVENT_CONDITION_TARGET_3=1000000
+EVENT_CONDITION_VALUE_3=0
+ANIME_SPEED=3
+MOVE_SPEED=3
+MOVE_FREQUENCY=3
+MOVE_TYPE=0
+CHARA_OPTION_FLAG=35
+ROUTE_OPTION_FLAG=2
+ROUTE_COMMAND_NUM=0
+OPTION_VAL_NUM=3
+OPTION_VAL_0=0
+OPTION_VAL_1=0
+OPTION_VAL_2=0
+COMMAND_NUM=4
+--
+WoditorEvCOMMAND_START
+[103][0,1]<0>()(" ")
+[103][0,1]<0>()(" ")
+[150][11,1]<0>(4128,5,0,1,1,1,255,2000186,2000187,300,0)("\f[14]\font[1]\A-テストメッセージあいうえお漢字てすとテストTEST<\n>test")
+[0][0,0]<0>()()
+WoditorEvCOMMAND_END
+--
+[COMMAND_TEXT_START]
+▼  
+▼  
+■ﾋﾟｸﾁｬ表示：5 [中心]文字列[\f[14]\font[1]\A] X:V186[X中心] Y:V187[Y中心] / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 300％ / ｶﾗｰ R[100] G[100] B[100]
+■
+[COMMAND_TEXT_END]
+-----
+EVENT_ID=38
+EVENT_NAME=CharaChip/[ウ]ちょい役セット01.png
+EVENT_X=19
+EVENT_Y=17
+EVENT_PAGE=1
+OPTION_DATA_NUM=0
+EVENT_PAGE_NUM=1
+EVENT_PAGE=0
+EVENT_TILE_ID=-1
+GRAPHIC_FILENAME=CharaChip/[ウ]ちょい役セット01.png
+EVENT_DIRECTION=8
+EVENT_PATTERN=1
+EVENT_OPACITY=255
+EVENT_BLENDTYPE=0
+EVENT_TRIGGER_TYPE=0
+EVENT_CONDITION_0_USE=33
+EVENT_CONDITION_TARGET_0=2000017
+EVENT_CONDITION_VALUE_0=1
+EVENT_CONDITION_1_USE=32
+EVENT_CONDITION_TARGET_1=1000000
+EVENT_CONDITION_VALUE_1=0
+EVENT_CONDITION_2_USE=32
+EVENT_CONDITION_TARGET_2=1000000
+EVENT_CONDITION_VALUE_2=0
+EVENT_CONDITION_3_USE=32
+EVENT_CONDITION_TARGET_3=1000000
+EVENT_CONDITION_VALUE_3=0
+ANIME_SPEED=3
+MOVE_SPEED=3
+MOVE_FREQUENCY=3
+MOVE_TYPE=0
+CHARA_OPTION_FLAG=35
+ROUTE_OPTION_FLAG=2
+ROUTE_COMMAND_NUM=0
+OPTION_VAL_NUM=3
+OPTION_VAL_0=0
+OPTION_VAL_1=0
+OPTION_VAL_2=0
+COMMAND_NUM=3
+--
+WoditorEvCOMMAND_START
+[300][5,1]<0>(0,16777218,8,3,1100000)("文字サイズ計算")
+[101][0,1]<0>()("\self[0]")
+[0][0,0]<0>()()
+WoditorEvCOMMAND_END
+--
+[COMMAND_TEXT_START]
+■イベントの挿入[名]： このEvのSelf0 = ["文字サイズ計算"] <コモンEv 528>  / 8 / 3:XY基準
+■文章:\self[0]
 ■
 [COMMAND_TEXT_END]

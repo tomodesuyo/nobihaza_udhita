@@ -2102,7 +2102,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_START]
 ■サウンド：SE3「アイテムゲット_old」(0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
 ■文章:ハンドガンの弾を手に入れた
-■イベントの挿入： コモン0：[ ○アイテム増減 ] / 38:ハンドガンの弾 / 30 / 0:なし
+■イベントの挿入： コモン0：[ ○アイテム増減 ] / 38:古い弾 / 30 / 0:なし
 ■変数操作: V53[ハンドガンのたま] = 1 + 0 
 ■
 [COMMAND_TEXT_END]
@@ -3218,7 +3218,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン481：[ 健治死亡アニメ ]
+■イベントの挿入： コモン481：[  ]
 ■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
 ■
 [COMMAND_TEXT_END]
@@ -3412,7 +3412,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン482：[ ブレインディモス登場 ]
+■イベントの挿入： コモン482：[  ]
 ■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
 ■
 [COMMAND_TEXT_END]
@@ -3464,7 +3464,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン483：[ バイオげラス登場 ]
+■イベントの挿入： コモン483：[  ]
 ■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
 ■
 [COMMAND_TEXT_END]
@@ -4148,7 +4148,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン484：[ タイラント出現 ]
+■イベントの挿入： コモン484：[  ]
 ■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
 ■
 [COMMAND_TEXT_END]
@@ -4200,7 +4200,7 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入： コモン485：[ スタッフロール ]
+■イベントの挿入： コモン485：[  ]
 ■ﾋﾟｸﾁｬ消去：-1410065407 ～ 999999  / 0(0)ﾌﾚｰﾑ
 ■
 [COMMAND_TEXT_END]

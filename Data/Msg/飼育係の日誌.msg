@@ -1,4 +1,5 @@
 Background:"Picture/ファイル1.png";
+MsgboxY:-2;
 Title:"～飼育係の日誌～";
 /**/
 Sound:-1;
@@ -44,3 +45,5 @@ Sound:-1;
 Wait:-1;
 Text:"\n　　　　　　　　　かゆい\n　　　　　　　　　うま    END";
 MStart;
+Sound:2;
+Filestop;

@@ -1,4 +1,5 @@
 Background:"Picture/ファイル4.png";
+MsgboxY:-2;
 Title:"～研究所･警備システム資料～";
 /**/
 Sound:-1;
@@ -48,3 +49,5 @@ Text:"B4F
 ～最重要機密事項～
 ｢T-ウィルス｣投与による｢タイラント｣経過報告
 について･･･　（以下判読不能）END";
+Sound:2;
+Filestop;

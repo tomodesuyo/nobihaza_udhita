@@ -1,0 +1,180 @@
+[MAPDATA_TEXT_OUTPUT]
+MAPDATA_EXIST=1
+TILESET_ID=8
+MAP_WIDTH=3
+MAP_HEIGHT=1
+MAPLAYER=3
+[--MAP_START--]
+[MAPLAYER_1_START]
+104444,104444,104444,
+[MAPLAYER_1_END]
+[MAPLAYER_2_START]
+104444,104444,104444,
+[MAPLAYER_2_END]
+[MAPLAYER_3_START]
+100000,100000,100000,
+[MAPLAYER_3_END]
+[--MAP_END--]
+----------
+[EVENTDATA_TEXT_OUTPUT]
+EVENT_NUM=2
+-----
+EVENT_ID=0
+EVENT_NAME=タイトル用イベント
+EVENT_X=1
+EVENT_Y=0
+EVENT_PAGE=1
+OPTION_DATA_NUM=0
+EVENT_PAGE_NUM=1
+EVENT_PAGE=0
+EVENT_TILE_ID=-1
+GRAPHIC_FILENAME=
+EVENT_DIRECTION=2
+EVENT_PATTERN=1
+EVENT_OPACITY=255
+EVENT_BLENDTYPE=0
+EVENT_TRIGGER_TYPE=1
+EVENT_CONDITION_0_USE=32
+EVENT_CONDITION_TARGET_0=1000000
+EVENT_CONDITION_VALUE_0=0
+EVENT_CONDITION_1_USE=32
+EVENT_CONDITION_TARGET_1=1000000
+EVENT_CONDITION_VALUE_1=0
+EVENT_CONDITION_2_USE=32
+EVENT_CONDITION_TARGET_2=1000000
+EVENT_CONDITION_VALUE_2=0
+EVENT_CONDITION_3_USE=32
+EVENT_CONDITION_TARGET_3=1000000
+EVENT_CONDITION_VALUE_3=0
+ANIME_SPEED=3
+MOVE_SPEED=3
+MOVE_FREQUENCY=3
+MOVE_TYPE=0
+CHARA_OPTION_FLAG=3
+ROUTE_OPTION_FLAG=2
+ROUTE_COMMAND_NUM=0
+OPTION_VAL_NUM=3
+OPTION_VAL_0=0
+OPTION_VAL_1=0
+OPTION_VAL_2=0
+COMMAND_NUM=32
+--
+WoditorEvCOMMAND_START
+[123][3,0]<0>(1100009,4352,146)()
+[111][4,0]<0>(1,1100009,146,5)()
+[401][1,0]<0>(1)()
+[111][4,0]<1>(1,2000017,1,2)()
+[401][1,0]<1>(1)()
+[130][6,0]<2>(-1,0,0,14,0,0)()
+[172][0,0]<2>()()
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[111][4,0]<0>(1,2000005,0,2)()
+[401][1,0]<0>(1)()
+[121][4,0]<1>(2000005,1,0,0)()
+[300][2,1]<1>(0,0)("注意喚起アニメーション")
+[180][1,0]<1>(1)()
+[103][0,1]<1>()("初回起動フラグ書き込み")
+[122][3,1]<1>(3000029,0,0)("true")
+[300][9,4]<1>(0,28724,29,3,0,1,0,0,0)("■Write&GetINIFile","Config.ini","Option","InitialStartup")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[179][1,0]<0>(0)()
+[300][2,1]<1>(0,0)("タイトルオープニング")
+[0][0,0]<1>()()
+[498][0,0]<0>()()
+[300][2,1]<0>(0,0)("タイトルウディタ文字表示")
+[300][2,1]<0>(0,0)("タイトルバージョン表示")
+[300][2,1]<0>(0,0)("タイトルウディタ文字アニメ")
+[150][11,1]<0>(4096,2,0,1,1,1,255,2000186,2000187,300,0)("Picture/タイトル.png")
+[151][2,0]<0>(0,0)()
+[300][2,1]<0>(0,0)("タイトルメイン処理")
+[0][0,0]<0>()()
+WoditorEvCOMMAND_END
+--
+[COMMAND_TEXT_START]
+■キー入力：このEvのｾﾙﾌ変数9 /  [通常入力] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[146]のみ判定] ( Cｷｰ ) 
+■条件分岐(数値):  【1】 このEvのSelf9  が   146 以外 
+-◇分岐： 【1】  [ このEvのSelf9  が  146 以外  ]の場合↓
+ |■条件分岐(数値):  【1】 V17[デバッグ]  が   1 と同じ 
+ |-◇分岐： 【1】  [ V17[デバッグ]  が  1 と同じ  ]の場合↓
+ | |■場所移動：主人公 ▲マップID14[デバックスタート] X:0 Y:0  [ﾄﾗﾝｼﾞｼｮﾝなし]
+ | |■イベント処理中断
+ | |■
+ |◇分岐終了◇
+ |■
+◇分岐終了◇
+■条件分岐(数値):  【1】 V5[初回起動]  が   0 と同じ 
+-◇分岐： 【1】  [ V5[初回起動]  が  0 と同じ  ]の場合↓
+ |■変数操作: V5[初回起動] = 1 + 0 
+ |■イベントの挿入[名]： ["注意喚起アニメーション"] <コモンEv 810> 
+ |■ウェイト：1 フレーム
+ |▼ 初回起動フラグ書き込み
+ |■文字列操作：S29[初回起動フラグ設定] = "true"
+ |■イベントの挿入[名]： ["■Write&GetINIFile"] <コモンEv 435>  / 29 / 3:文字列変数 / 0 / 1:値の書き出し / Config.ini / Option / InitialStartup
+ |■
+◇分岐終了◇
+■回数付きループ [ 0 ]回
+ |■イベントの挿入[名]： ["タイトルオープニング"] <コモンEv 809> 
+ |■
+◇ループここまで◇◇
+■イベントの挿入[名]： ["タイトルウディタ文字表示"] <コモンEv 812> 
+■イベントの挿入[名]： ["タイトルバージョン表示"] <コモンEv 811> 
+■イベントの挿入[名]： ["タイトルウディタ文字アニメ"] <コモンEv 813> 
+■ﾋﾟｸﾁｬ表示：2 [中心]ﾌｧｲﾙ｢Picture/タイトル.png｣ X:V186[X中心] Y:V187[Y中心] / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 300％ / ｶﾗｰ R[100] G[100] B[100]
+■色調変更： R0 G0 B0 / 0ﾌﾚｰﾑ
+■イベントの挿入[名]： ["タイトルメイン処理"] <コモンEv 801> 
+■
+[COMMAND_TEXT_END]
+-----
+EVENT_ID=1
+EVENT_NAME=
+EVENT_X=2
+EVENT_Y=0
+EVENT_PAGE=1
+OPTION_DATA_NUM=0
+EVENT_PAGE_NUM=1
+EVENT_PAGE=0
+EVENT_TILE_ID=-1
+GRAPHIC_FILENAME=
+EVENT_DIRECTION=2
+EVENT_PATTERN=1
+EVENT_OPACITY=255
+EVENT_BLENDTYPE=0
+EVENT_TRIGGER_TYPE=2
+EVENT_CONDITION_0_USE=32
+EVENT_CONDITION_TARGET_0=1000000
+EVENT_CONDITION_VALUE_0=0
+EVENT_CONDITION_1_USE=32
+EVENT_CONDITION_TARGET_1=1000000
+EVENT_CONDITION_VALUE_1=0
+EVENT_CONDITION_2_USE=32
+EVENT_CONDITION_TARGET_2=1000000
+EVENT_CONDITION_VALUE_2=0
+EVENT_CONDITION_3_USE=32
+EVENT_CONDITION_TARGET_3=1000000
+EVENT_CONDITION_VALUE_3=0
+ANIME_SPEED=3
+MOVE_SPEED=3
+MOVE_FREQUENCY=3
+MOVE_TYPE=0
+CHARA_OPTION_FLAG=35
+ROUTE_OPTION_FLAG=2
+ROUTE_COMMAND_NUM=0
+OPTION_VAL_NUM=3
+OPTION_VAL_0=0
+OPTION_VAL_1=0
+OPTION_VAL_2=0
+COMMAND_NUM=2
+--
+WoditorEvCOMMAND_START
+[210][2,0]<0>(500339,0)()
+[0][0,0]<0>()()
+WoditorEvCOMMAND_END
+--
+[COMMAND_TEXT_START]
+■イベントの挿入： コモン339：[ デバック解禁 ]
+■
+[COMMAND_TEXT_END]
