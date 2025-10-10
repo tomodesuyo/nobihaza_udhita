@@ -17124,7 +17124,7 @@ WoditorEvCOMMAND_END
  | | | |■ﾋﾟｸﾁｬ移動：CSelf20[基本ピクチャ番号]  X:CSelf30[基本表示位置X] Y:CSelf31[基本表示位置Y] / 5(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 同値 / 透 同値 / 表示形式:同値  / 角 同値 / 拡 同値 / ｶﾗｰ 同値
  | | | |■ﾋﾟｸﾁｬ移動：CSelf20[基本ピクチャ番号]  X:CSelf30[基本表示位置X] Y:CSelf31[基本表示位置Y] / 5(3)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 同値 / 透 同値 / 表示形式:同値  / 角 同値 / 拡 同値 / ｶﾗｰ 同値
  | | | |■ウェイト：3 フレーム
- | | | |■イベントの挿入[名]： ["マスクウィンドウ"] <コモンEv 908>  / CSelf30[基本表示位置X] / CSelf31[基本表示位置Y] / CSelf38[サイズX] / CSelf39[サイズY]
+ | | | |■イベントの挿入[名]： ["マスクウィンドウ"] <コモンEv 531>  / CSelf30[基本表示位置X] / CSelf31[基本表示位置Y] / CSelf38[サイズX] / CSelf39[サイズY]
  | | | |■変数操作: CSelf35[ウィンドウ表示中フラグ] = 1 + 0 
  | | | |■変数操作: Sys10:ﾒｯｾｰｼﾞ表示ｳｪｲﾄ(X ﾌﾚｰﾑ) = 1 + 0 
  | | | |■
@@ -111348,8 +111348,8 @@ WoditorEvCOMMAND_END
  | | |■イベントの挿入： コモン391：[ [E+]イージング選択 ] / 0:加速1
  | | |■
  | |-◇選択肢：【7】 sys改変                                    の場合↓
- | | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 12 / 2 / 30 / CSelf5
- | | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 0 / 2 / 0 / 0 / MapData/デバッグ.mps
+ | | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 12 / 2 / 30 / CSelf5
+ | | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 0 / 2 / 0 / 0 / MapData/デバッグ.mps
  | | |■
  | |-◇選択肢：【8】 ピクセル移動                                   の場合↓
  | | |■イベントの挿入： コモン427：[ ピクセル移動 ]
@@ -194432,13 +194432,12 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=137
+COMMAND_NUM=136
 --
 WoditorEvCOMMAND_START
 [179][1,0]<0>(1)()
 [210][6,0]<1>(500021,16777219,0,1,0,1600000)()
-[121][4,0]<1>(1600030,8,9000117,8192)()
-[121][4,0]<1>(1600030,1600030,240,12288)()
+[300][5,1]<1>(0,16777218,8,2,1600030)("文字サイズ計算")
 [122][3,1]<1>(1600007,0,0)("\space[0]\font[1]\f[\cself[30]]\A-")
 [121][4,0]<1>(1600031,100,0,0)()
 [124][4,0]<1>(2000006,4096,-2,0)()
@@ -194577,8 +194576,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_START]
 ■回数付きループ [ 1 ]回
  |■イベントの挿入： CSelf0 = コモン21：[ ▲装備取得 ] / 0:のび太 / 1:武器欄 / 0:武器
- |■変数操作: CSelf30[フォントサイズ] = 8 * Sys117:[読]画面サイズＹ 
- |■変数操作: CSelf30[フォントサイズ] = CSelf30[フォントサイズ] / 240 
+ |■イベントの挿入[名]： CSelf30[フォントサイズ] = ["文字サイズ計算"] <コモンEv 528>  / 8 / 2:Y基準
  |■文字列操作：CSelf7[文字接頭] = "\space[0]\font[1]\f[\cself[30]]\A-"
  |■変数操作: CSelf31[拡大率] = 100 + 0 
  |■変数操作+: V6[X] = 主人公 の X座標(標準)
@@ -196891,8 +196889,8 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=309
-COMMON_NAME=【呼】UDB書き込み
-COMMAND_COLOR=2
+COMMON_NAME=【呼】UDB書き込み_old
+COMMAND_COLOR=6
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
@@ -197955,8 +197953,8 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=312
-COMMON_NAME=【呼】SysDB書き込み
-COMMAND_COLOR=1
+COMMON_NAME=【呼】SysDB書き込み_old
+COMMAND_COLOR=6
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
@@ -219746,7 +219744,7 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=147
+COMMAND_NUM=146
 --
 WoditorEvCOMMAND_START
 [121][4,0]<0>(2000178,1600000,0,0)()
@@ -219794,8 +219792,7 @@ WoditorEvCOMMAND_START
 [124][3,0]<1>(1600013,12288,22)()
 [124][3,0]<1>(1600014,12288,23)()
 [121][4,0]<1>(1600015,1600013,1600014,0)()
-[121][4,0]<1>(1600026,4,9000117,8192)()
-[121][4,0]<1>(1600026,1600026,240,12288)()
+[300][5,1]<1>(0,16777218,4,2,1600026)("文字サイズ計算")
 [121][4,0]<1>(1600028,200,0,0)()
 [122][3,1]<1>(1600006,0,0)("\f[\cself[26]]\font[1]\A-")
 [121][4,0]<1>(1600026,1600026,2,8192)()
@@ -219944,8 +219941,7 @@ WoditorEvCOMMAND_END
  |■変数操作+: CSelf13 = [ﾒﾓﾘ]消費メモリ量[MB]
  |■変数操作+: CSelf14 = [ﾒﾓﾘ]残りメモリ量(不安定)[MB]
  |■変数操作: CSelf15 = CSelf13 + CSelf14 
- |■変数操作: CSelf26[改行幅] = 4 * Sys117:[読]画面サイズＹ 
- |■変数操作: CSelf26[改行幅] = CSelf26[改行幅] / 240 
+ |■イベントの挿入[名]： CSelf26[改行幅] = ["文字サイズ計算"] <コモンEv 528>  / 4 / 2:Y基準
  |■変数操作: CSelf28[拡大率] = 200 + 0 
  |■文字列操作：CSelf6[文字接頭] = "\f[\cself[26]]\font[1]\A-"
  |■変数操作: CSelf26[改行幅] = CSelf26[改行幅] * 2 
@@ -221376,24 +221372,24 @@ WoditorEvCOMMAND_END
 ◇分岐終了◇
 ●ラベル地点「保存」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
 ■変数操作: V97[ウディタモード] = 0 + 0 
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 0 / 0 / \cself[8]
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 2 / 0 / \cself[8]
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 10 / 1 / 0 / 0 / \cself[8]
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 0 / 0 / \cself[8]
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 2 / 0 / \cself[8]
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 10 / 1 / 0 / 0 / \cself[8]
 ■文字列操作：CSelf9 = CSelf8
 ●ラベル「スキップ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「保存複数ウィンドウ」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
 ■変数操作: V97[ウディタモード] = 0 + 0 
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 0 / 0 / \cself[8]
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 2 / 0 / \cself[9]
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 10 / 1 / 0 / 0 / \cself[8]
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 0 / 0 / \cself[8]
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 2 / 0 / \cself[9]
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 10 / 1 / 0 / 0 / \cself[8]
 ●ラベル「スキップ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「ウディタモード」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
 ■変数操作: V97[ウディタモード] = 1 + 0 
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 0 / 0 / \cself[8]
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 2 / 0 / \cself[9]
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 10 / 1 / 0 / 0 / \cself[8]
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 10 / 0 / 0 / 0 / SystemFile/Text_Pause.png
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 10 / 0 / 1 / 6 / 
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 0 / 0 / \cself[8]
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 2 / 0 / \cself[9]
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 10 / 1 / 0 / 0 / \cself[8]
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 10 / 0 / 0 / 0 / SystemFile/Text_Pause.png
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 10 / 0 / 1 / 6 / 
 ■文字列操作：CSelf5 = "\cself[0]\nウィンドウ読みこみプログラム\n再起動してもウィンドウがもとに戻らないよう\nにするファイルです。\n削除しないでください。\nudb 16 0 0 "\cself[9]"\nu..."
 ●ラベル「スキップ2」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「スキップ」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
@@ -222369,14 +222365,14 @@ WoditorEvCOMMAND_END
 -◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
  |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
  |■変数操作: CSelf4 = CSelf8 + 0 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
  |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
  |■
 ◇分岐終了◇
 ■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
 ■デバッグ文:dir:\cself[9]
 ■デバッグ文:\cself[5]
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
 ■デバッグ文:\cself[5]
 ●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「Sysdb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
@@ -222399,14 +222395,14 @@ WoditorEvCOMMAND_END
 -◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
  |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
  |■変数操作: CSelf4 = CSelf8 + 0 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
  |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
  |■
 ◇分岐終了◇
 ■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
 ■デバッグ文:dir:\cself[9]
 ■デバッグ文:\cself[5]
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
 ■デバッグ文:\cself[5]
 ●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「wait」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
@@ -223022,7 +223018,7 @@ WoditorEvCOMMAND_END
  | | |■変数操作+: CSelf1 = 主人公 の X座標(標準)
  | | |■変数操作+: CSelf2 = 主人公 の Y座標(標準)
  | | |■場所移動：主人公 ▲マップID15[リロード用マップ] X:0 Y:0  [ﾄﾗﾝｼﾞｼｮﾝなし]
- | | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 0 / 39 / 0 / 0 / CSelf5
+ | | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 0 / 39 / 0 / 0 / CSelf5
  | | |■場所移動：主人公 ▲マップID39[置き換え用マップ] X:CSelf1 Y:CSelf2  [ﾄﾗﾝｼﾞｼｮﾝなし]
  | | |■ﾋﾟｸﾁｬ表示：799998 [左下]ｳｨﾝﾄﾞｳ「Picture/HP下地.png」ｻｲｽﾞ[220,9] X:0 Y:240 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 100 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[0] G[0] B[0]
  | | |■ﾋﾟｸﾁｬ表示：799999 [左下]文字列[\f[8]\font[1]\A-] X:0 Y:240 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[100] G[100] B[100]
@@ -223892,12 +223888,12 @@ WoditorEvCOMMAND_END
 -◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
  |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
  |■変数操作: CSelf4 = CSelf8 + 0 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
  |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
  |■
 ◇分岐終了◇
 ■デバッグ文:\cself[5]
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
 ■デバッグ文:\cself[5]
 ●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「wait」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
@@ -247935,135 +247931,135 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_START]
 ■条件分岐(数値):  【1】 V131[GameID]  が   0 と同じ  【2】 V131[GameID]  が   1 と同じ  【3】 V131[GameID]  が   2 と同じ 
 -◇分岐： 【1】  [ V131[GameID]  が  0 と同じ  ]の場合↓
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 9 / 12 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 7 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 65 / 213 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 9 / 0 / 0 / 0 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 0 / 0 / 0 / nobihazaSE/m決定.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 0 / 0 / nobihazaSE/mカーソル.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 1 / 90 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 2 / 100 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 2 / 0 / 0 / nobihazaSE/mキャンセル.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 3 / 0 / nobihazaSE/m決定.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 4 / 0 / nobihazaSE/mキャンセル.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 5 / 0 / nobihazaSE/mカーソル.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 6 / 0 / nobihazaSE/mエラー.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 9 / 0 / nobihazaSE/m決定.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 10 / 0 / nobihazaSE/mキャンセル.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 11 / 0 / nobihazaSE/m決定.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 12 / 0 / nobihazaSE/バイオハザード.ogg
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 27 / 0 / 2 / 0 / ドラえもんのび太のバイオハザード
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 27 / 0 / 3 / 0 / のびハザ
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 22 / 0 / 0 / nobihazaSE/mエラー.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 22 / 1 / 100 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 23 / 0 / 0 / nobihazaSE/mエラー.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 24 / 0 / 0 / nobihazaSE/mエラー.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 9 / 12 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 7 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 65 / 213 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 9 / 0 / 0 / 0 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 0 / 0 / 0 / nobihazaSE/m決定.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 0 / 0 / nobihazaSE/mカーソル.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 1 / 90 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 2 / 100 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 2 / 0 / 0 / nobihazaSE/mキャンセル.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 3 / 0 / nobihazaSE/m決定.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 4 / 0 / nobihazaSE/mキャンセル.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 5 / 0 / nobihazaSE/mカーソル.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 6 / 0 / nobihazaSE/mエラー.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 9 / 0 / nobihazaSE/m決定.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 10 / 0 / nobihazaSE/mキャンセル.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 11 / 0 / nobihazaSE/m決定.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 12 / 0 / nobihazaSE/バイオハザード.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 27 / 0 / 2 / 0 / ドラえもんのび太のバイオハザード
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 27 / 0 / 3 / 0 / のびハザ
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 22 / 0 / 0 / nobihazaSE/mエラー.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 22 / 1 / 100 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 23 / 0 / 0 / nobihazaSE/mエラー.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 24 / 0 / 0 / nobihazaSE/mエラー.ogg
  |■イベントの挿入： コモン660：[ フォントDB読み込み ]
  |■
 -◇分岐： 【2】  [ V131[GameID]  が  1 と同じ  ]の場合↓
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 9 / 12 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 7 / 4 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 30 / 344 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 9 / 0 / 0 / 0 / SystemFile/CharaShade_4dir.png
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 0 / 0 / 0 / SystemFile/[SE]Enter.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 0 / 0 / SystemFile/[SE]Cursor.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 1 / 50 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 2 / 120 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 2 / 0 / 0 / SystemFile/[SE]Cancel.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 2 / 1 / 80 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 3 / 0 / SystemFile/[SE]Enter.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 9 / 12 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 7 / 4 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 30 / 344 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 9 / 0 / 0 / 0 / SystemFile/CharaShade_4dir.png
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 0 / 0 / 0 / SystemFile/[SE]Enter.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 0 / 0 / SystemFile/[SE]Cursor.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 1 / 50 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 2 / 120 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 2 / 0 / 0 / SystemFile/[SE]Cancel.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 2 / 1 / 80 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 3 / 0 / SystemFile/[SE]Enter.ogg
 90
 100
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 4 / 0 / SystemFile/[SE]Cancel.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 4 / 0 / SystemFile/[SE]Cancel.ogg
 80
 100
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 5 / 0 / SystemFile/[SE]Cursor.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 5 / 0 / SystemFile/[SE]Cursor.ogg
 50
 120
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 6 / 0 / SystemFile/[SE]Buzzer.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 6 / 0 / SystemFile/[SE]Buzzer.ogg
 60
 100
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 9 / 0 / SystemFile/[SE]MenuOpen.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 9 / 0 / SystemFile/[SE]MenuOpen.ogg
 80
 108
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 10 / 0 / SystemFile/[SE]Cancel.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 10 / 0 / SystemFile/[SE]Cancel.ogg
 80
 100
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 11 / 0 / SystemFile/[SE]Enter.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 11 / 0 / SystemFile/[SE]Enter.ogg
 80
 100
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 12 / 0 / SystemFile/[SE]Enter.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 12 / 0 / SystemFile/[SE]Enter.ogg
 80
 100
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 27 / 0 / 2 / 0 / 魔王を討伐するゲーム
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 27 / 0 / 3 / 0 / テストゲーム
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 22 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 22 / 1 / 60 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 23 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 24 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 27 / 0 / 2 / 0 / 魔王を討伐するゲーム
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 27 / 0 / 3 / 0 / テストゲーム
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 22 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 22 / 1 / 60 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 23 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 24 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
  |■イベントの挿入： コモン660：[ フォントDB読み込み ]
  |■
 -◇分岐： 【3】  [ V131[GameID]  が  2 と同じ  ]の場合↓
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 9 / 12 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 7 / 4 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 17 / 0 / 30 / 344 / 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 9 / 0 / 0 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 9 / 12 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 7 / 4 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 17 / 0 / 30 / 344 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 9 / 0 / 0 / 0 / 
  |■回数付きループ [ 0 ]回
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 9 / 0 / 0 / 0 / SystemFile/CharaShade_4dir.png
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 0 / 0 / 0 / SystemFile/[SE]Enter.ogg
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 0 / 0 / SystemFile/[SE]Cursor.ogg
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 1 / 50 / 
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 1 / 2 / 120 / 
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 2 / 0 / 0 / 
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 9 / 0 / 0 / 0 / SystemFile/CharaShade_4dir.png
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 0 / 0 / 0 / SystemFile/[SE]Enter.ogg
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 0 / 0 / SystemFile/[SE]Cursor.ogg
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 1 / 50 / 
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 1 / 2 / 120 / 
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 2 / 0 / 0 / 
  | |■
  |◇ループここまで◇◇
  |■回数付きループ [ 0 ]回
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 2 / 0 / 0 / SystemFile/[SE]Cancel.ogg
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 2 / 0 / 0 / SystemFile/[SE]Cancel.ogg
  | |■
  |◇ループここまで◇◇
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 2 / 1 / 80 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 3 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 4 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 5 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 6 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 9 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 10 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 11 / 0 / 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 12 / 0 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 2 / 1 / 80 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 3 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 4 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 5 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 6 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 9 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 10 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 11 / 0 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 12 / 0 / 
  |■回数付きループ [ 0 ]回
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 3 / 0 / SystemFile/[SE]Enter.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 3 / 0 / SystemFile/[SE]Enter.ogg
 90
 100
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 4 / 0 / SystemFile/[SE]Cancel.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 4 / 0 / SystemFile/[SE]Cancel.ogg
 80
 100
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 5 / 0 / SystemFile/[SE]Cursor.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 5 / 0 / SystemFile/[SE]Cursor.ogg
 50
 120
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 6 / 0 / SystemFile/[SE]Buzzer.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 6 / 0 / SystemFile/[SE]Buzzer.ogg
 60
 100
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 9 / 0 / SystemFile/[SE]MenuOpen.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 9 / 0 / SystemFile/[SE]MenuOpen.ogg
 80
 108
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 10 / 0 / SystemFile/[SE]Cancel.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 10 / 0 / SystemFile/[SE]Cancel.ogg
 80
 100
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 11 / 0 / SystemFile/[SE]Enter.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 11 / 0 / SystemFile/[SE]Enter.ogg
 80
 100
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 16 / 0 / 12 / 0 / SystemFile/[SE]Enter.ogg
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 16 / 0 / 12 / 0 / SystemFile/[SE]Enter.ogg
 80
 100
  | |■
  |◇ループここまで◇◇
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 27 / 0 / 2 / 0 / ゲーム
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 27 / 0 / 3 / 0 / テストゲーム
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 27 / 0 / 2 / 0 / ゲーム
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 27 / 0 / 3 / 0 / テストゲーム
  |■回数付きループ [ 0 ]回
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 22 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 22 / 1 / 60 / 
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 23 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / 3 / 24 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 22 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 22 / 1 / 60 / 
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 23 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / 3 / 24 / 0 / 0 / SystemFile/[SE]Buzzer.ogg
  | |■
  |◇ループここまで◇◇
  |■イベントの挿入： コモン660：[ フォントDB読み込み ]
@@ -257711,7 +257707,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=525
-COMMON_NAME=
+COMMON_NAME=-----演算-----
 COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
@@ -257883,17 +257879,17 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=526
-COMMON_NAME=
+COMMON_NAME=最大公約数算出
 COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
 MEMO=
-VALINPUT_NUM=0
+VALINPUT_NUM=2
 STRINPUT_NUM=0
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=
-VALINPUT_NAME_1=
+VALINPUT_NAME_0=A
+VALINPUT_NAME_1=B
 VALINPUT_NAME_2=
 VALINPUT_NAME_3=
 VALINPUT_NAME_4=
@@ -257942,10 +257938,10 @@ DEFAULT_VAL_1=0
 DEFAULT_VAL_2=0
 DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
-RETURN_VAL_NAME=
-RETURN_VAL_TARGET=-1
-CSELF_NAME_0=
-CSELF_NAME_1=
+RETURN_VAL_NAME=GCD
+RETURN_VAL_TARGET=0
+CSELF_NAME_0=A
+CSELF_NAME_1=B
 CSELF_NAME_2=
 CSELF_NAME_3=
 CSELF_NAME_4=
@@ -257954,8 +257950,8 @@ CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=
-CSELF_NAME_11=
+CSELF_NAME_10=GCD
+CSELF_NAME_11=temp
 CSELF_NAME_12=
 CSELF_NAME_13=
 CSELF_NAME_14=
@@ -258044,30 +258040,58 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=15
 --
 WoditorEvCOMMAND_START
+[103][0,1]<0>()(" ")
+[103][0,1]<0>()(" ")
+[170][0,0]<0>()()
+[111][4,0]<1>(1,1600001,0,2)()
+[401][1,0]<1>(1)()
+[171][0,0]<2>()()
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[121][4,0]<1>(1600011,1600001,0,0)()
+[121][4,0]<1>(1600001,1600000,1600001,16384)()
+[121][4,0]<1>(1600000,1600011,0,0)()
+[176][0,0]<1>()()
+[0][0,0]<1>()()
+[498][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+▼  
+▼  
+■ループ開始
+ |■条件分岐(数値):  【1】 CSelf1[B]  が   0 と同じ 
+ |-◇分岐： 【1】  [ CSelf1[B]  が  0 と同じ  ]の場合↓
+ | |■ループ中断
+ | |■
+ |◇分岐終了◇
+ |■変数操作: CSelf11[temp] = CSelf1[B] + 0 
+ |■変数操作: CSelf1[B] = CSelf0[A] % CSelf1[B] 
+ |■変数操作: CSelf0[A] = CSelf11[temp] + 0 
+ |■ループ開始へ戻る
+ |■
+◇ループここまで◇◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=527
-COMMON_NAME=
+COMMON_NAME=比率計算
 COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
 MEMO=
-VALINPUT_NUM=0
+VALINPUT_NUM=4
 STRINPUT_NUM=0
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=
-VALINPUT_NAME_1=
-VALINPUT_NAME_2=
-VALINPUT_NAME_3=
+VALINPUT_NAME_0=値1
+VALINPUT_NAME_1=値2
+VALINPUT_NAME_2=戻り値1
+VALINPUT_NAME_3=戻り値2
 VALINPUT_NAME_4=
 VALINPUT_NAME_5=
 VALINPUT_NAME_6=
@@ -258116,17 +258140,17 @@ DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
 RETURN_VAL_NAME=
 RETURN_VAL_TARGET=-1
-CSELF_NAME_0=
-CSELF_NAME_1=
-CSELF_NAME_2=
-CSELF_NAME_3=
+CSELF_NAME_0=値1
+CSELF_NAME_1=値2
+CSELF_NAME_2=戻り値1
+CSELF_NAME_3=戻り値2
 CSELF_NAME_4=
 CSELF_NAME_5=
 CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=
+CSELF_NAME_10=GCD
 CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
@@ -258216,28 +258240,42 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=8
 --
 WoditorEvCOMMAND_START
+[103][0,1]<0>()(" ")
+[103][0,1]<0>()(" ")
+[300][5,1]<0>(0,16777218,1600000,1600001,1600010)("最大公約数算出")
+[121][4,0]<0>(1600000,1600000,1600010,12288)()
+[121][4,0]<0>(1600001,1600001,1600010,12288)()
+[121][4,0]<0>(1600002,1600000,0,16)()
+[121][4,0]<0>(1600003,1600001,0,16)()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+▼  
+▼  
+■イベントの挿入[名]： CSelf10[GCD] = ["最大公約数算出"] <コモンEv 526>  / CSelf0[値1] / CSelf1[値2]
+■変数操作: CSelf0[値1] = CSelf0[値1] / CSelf10[GCD] 
+■変数操作: CSelf1[値2] = CSelf1[値2] / CSelf10[GCD] 
+■変数操作: V[CSelf2[戻り値1]] = CSelf0[値1] + 0 
+■変数操作: V[CSelf3[戻り値2]] = CSelf1[値2] + 0 
 ■
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=528
-COMMON_NAME=
+COMMON_NAME=文字サイズ計算
 COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
 MEMO=
-VALINPUT_NUM=0
+VALINPUT_NUM=2
 STRINPUT_NUM=0
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=
-VALINPUT_NAME_1=
+VALINPUT_NAME_0=仮想文字サイズ
+VALINPUT_NAME_1=計算方法
 VALINPUT_NAME_2=
 VALINPUT_NAME_3=
 VALINPUT_NAME_4=
@@ -258249,7 +258287,7 @@ VALINPUT_NAME_9=
 VALINPUT_NAME_10=
 LOADTYPE_NUM=10
 LOADTYPE0=0
-LOADTYPE1=0
+LOADTYPE1=2
 LOADTYPE2=0
 LOADTYPE3=0
 LOADTYPE4=0
@@ -258260,7 +258298,10 @@ LOADTYPE8=0
 LOADTYPE9=0
 CHOICE_STR_NUM=10
 CHOICE_STR_0_NUM=0
-CHOICE_STR_1_NUM=0
+CHOICE_STR_1_NUM=3
+CHOICE_STR_1_0=X基準
+CHOICE_STR_1_1=Y基準
+CHOICE_STR_1_2=XY基準
 CHOICE_STR_2_NUM=0
 CHOICE_STR_3_NUM=0
 CHOICE_STR_4_NUM=0
@@ -258271,7 +258312,10 @@ CHOICE_STR_8_NUM=0
 CHOICE_STR_9_NUM=0
 CHOICE_VAL_NUM=10
 CHOICE_VAL_0_NUM=0
-CHOICE_VAL_1_NUM=0
+CHOICE_VAL_1_NUM=3
+CHOICE_VAL_1_0=1
+CHOICE_VAL_1_1=2
+CHOICE_VAL_1_2=3
 CHOICE_VAL_2_NUM=0
 CHOICE_VAL_3_NUM=0
 CHOICE_VAL_4_NUM=0
@@ -258282,14 +258326,14 @@ CHOICE_VAL_8_NUM=0
 CHOICE_VAL_9_NUM=0
 DEFAULT_VAL_NUM=5
 DEFAULT_VAL_0=0
-DEFAULT_VAL_1=0
+DEFAULT_VAL_1=2
 DEFAULT_VAL_2=0
 DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
 RETURN_VAL_NAME=
-RETURN_VAL_TARGET=-1
-CSELF_NAME_0=
-CSELF_NAME_1=
+RETURN_VAL_TARGET=10
+CSELF_NAME_0=仮想文字サイズ
+CSELF_NAME_1=計算方法
 CSELF_NAME_2=
 CSELF_NAME_3=
 CSELF_NAME_4=
@@ -258298,15 +258342,15 @@ CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=
+CSELF_NAME_10=文字サイズ
 CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
 CSELF_NAME_14=
-CSELF_NAME_15=
-CSELF_NAME_16=
-CSELF_NAME_17=
-CSELF_NAME_18=
+CSELF_NAME_15=X基準サイズ
+CSELF_NAME_16=Y基準サイズ
+CSELF_NAME_17=XY基準サイズ
+CSELF_NAME_18=XY画面サイズ
 CSELF_NAME_19=
 CSELF_NAME_20=
 CSELF_NAME_21=
@@ -258388,32 +258432,82 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=26
 --
 WoditorEvCOMMAND_START
+[103][0,1]<0>()("基準サイズ設定")
+[121][4,0]<0>(1600015,320,0,0)()
+[121][4,0]<0>(1600016,240,0,0)()
+[121][4,0]<0>(1600017,1600015,1600016,8192)()
+[121][4,0]<0>(1600018,9000116,9000117,8192)()
+[103][0,1]<0>()("文字サイズ計算")
+[111][10,0]<0>(3,1600001,1,2,1600001,2,2,1600001,3,2)()
+[401][1,0]<0>(1)()
+[103][0,1]<1>()("X基準")
+[121][4,0]<1>(1600010,1600000,9000116,8192)()
+[121][4,0]<1>(1600010,1600010,1600015,12288)()
+[0][0,0]<1>()()
+[401][1,0]<0>(2)()
+[103][0,1]<1>()("Y基準")
+[121][4,0]<1>(1600010,1600000,9000117,8192)()
+[121][4,0]<1>(1600010,1600010,1600016,12288)()
+[0][0,0]<1>()()
+[401][1,0]<0>(3)()
+[103][0,1]<1>()("XY基準")
+[121][4,0]<1>(1600010,1600018,1600017,12288)()
+[121][4,0]<1>(1600010,1600010,0,3072)()
+[121][4,0]<1>(1600010,1600010,1600000,8192)()
+[121][4,0]<1>(1600010,1600010,1000,12288)()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+▼ 基準サイズ設定
+■変数操作: CSelf15[X基準サイズ] = 320 + 0 
+■変数操作: CSelf16[Y基準サイズ] = 240 + 0 
+■変数操作: CSelf17[XY基準サイズ] = CSelf15[X基準サイズ] * CSelf16[Y基準サイズ] 
+■変数操作: CSelf18[XY画面サイズ] = Sys116:[読]画面サイズＸ * Sys117:[読]画面サイズＹ 
+▼ 文字サイズ計算
+■条件分岐(数値):  【1】 CSelf1[計算方法]  が   1 と同じ  【2】 CSelf1[計算方法]  が   2 と同じ  【3】 CSelf1[計算方法]  が   3 と同じ 
+-◇分岐： 【1】  [ CSelf1[計算方法]  が  1 と同じ  ]の場合↓
+ |▼ X基準
+ |■変数操作: CSelf10[文字サイズ] = CSelf0[仮想文字サイズ] * Sys116:[読]画面サイズＸ 
+ |■変数操作: CSelf10[文字サイズ] = CSelf10[文字サイズ] / CSelf15[X基準サイズ] 
+ |■
+-◇分岐： 【2】  [ CSelf1[計算方法]  が  2 と同じ  ]の場合↓
+ |▼ Y基準
+ |■変数操作: CSelf10[文字サイズ] = CSelf0[仮想文字サイズ] * Sys117:[読]画面サイズＹ 
+ |■変数操作: CSelf10[文字サイズ] = CSelf10[文字サイズ] / CSelf16[Y基準サイズ] 
+ |■
+-◇分岐： 【3】  [ CSelf1[計算方法]  が  3 と同じ  ]の場合↓
+ |▼ XY基準
+ |■変数操作: CSelf10[文字サイズ] = CSelf18[XY画面サイズ] / CSelf17[XY基準サイズ] 
+ |■変数操作: CSelf10[文字サイズ] = √[x1000] = CSelf10[文字サイズ] + 0 
+ |■変数操作: CSelf10[文字サイズ] = CSelf10[文字サイズ] * CSelf0[仮想文字サイズ] 
+ |■変数操作: CSelf10[文字サイズ] = CSelf10[文字サイズ] / 1000 
+ |■
+◇分岐終了◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=529
-COMMON_NAME=
-COMMAND_COLOR=0
+COMMON_NAME=【呼】UDB書き込み
+COMMAND_COLOR=2
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
-MEMO=
-VALINPUT_NUM=0
-STRINPUT_NUM=0
+MEMO=\udb[\cself[0]:\cself[1]:\cself[2]]が変数なら\cself[3]を文字列なら\cself[5]を代入する
+VALINPUT_NUM=4
+STRINPUT_NUM=1
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=
-VALINPUT_NAME_1=
-VALINPUT_NAME_2=
-VALINPUT_NAME_3=
+VALINPUT_NAME_0=タイプ
+VALINPUT_NAME_1=データ
+VALINPUT_NAME_2=内容
+VALINPUT_NAME_3=数値
 VALINPUT_NAME_4=
-VALINPUT_NAME_5=
+VALINPUT_NAME_5=文字列
 VALINPUT_NAME_6=
 VALINPUT_NAME_7=
 VALINPUT_NAME_8=
@@ -258460,17 +258554,17 @@ DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
 RETURN_VAL_NAME=
 RETURN_VAL_TARGET=-1
-CSELF_NAME_0=
-CSELF_NAME_1=
-CSELF_NAME_2=
-CSELF_NAME_3=
+CSELF_NAME_0=タイプ
+CSELF_NAME_1=データ
+CSELF_NAME_2=内容
+CSELF_NAME_3=数値
 CSELF_NAME_4=
-CSELF_NAME_5=
-CSELF_NAME_6=
+CSELF_NAME_5=文字列
+CSELF_NAME_6=変数・文字列判別用
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=
+CSELF_NAME_10=書き込み先
 CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
@@ -258560,32 +258654,64 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=17
 --
 WoditorEvCOMMAND_START
+[121][4,0]<0>(1600010,1000000000,0,4)()
+[121][4,0]<0>(1600010,1600000,1000000,8456)()
+[121][4,0]<0>(1600010,1600001,100,8448)()
+[121][4,0]<0>(1600010,1600002,0,256)()
+[103][0,1]<0>()(" ")
+[122][3,0]<0>(1600006,2,1600010)()
+[112][2,4]<0>(17,1600006)("<<ERROR>>","","","")
+[401][1,0]<0>(1)()
+[103][0,1]<1>()("変数")
+[121][4,0]<1>(1600010,1600003,0,16)()
+[0][0,0]<1>()()
+[420][1,0]<0>(0)()
+[103][0,1]<1>()("文字列")
+[122][2,1]<1>(1600010,16)("\cself[5]")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■変数操作: CSelf10[書き込み先] = 1000000000 + 0 
+■変数操作: CSelf10[書き込み先] += CSelf0[タイプ] * 1000000 
+■変数操作: CSelf10[書き込み先] += CSelf1[データ] * 100 
+■変数操作: CSelf10[書き込み先] += CSelf2[内容] + 0 
+▼  
+■文字列操作：CSelf6[変数・文字列判別用] = 位置[CSelf10[書き込み先]]の文字列
+■条件分岐(文字):  【1】 CSelf6[変数・文字列判別用] が "<<ERROR>>" と同じ
+-◇分岐： 【1】 [ CSelf6[変数・文字列判別用] が "<<ERROR>>" と同じ ]の場合↓
+ |▼ 変数
+ |■変数操作: V[CSelf10[書き込み先]] = CSelf3[数値] + 0 
+ |■
+-◇上記以外
+ |▼ 文字列
+ |■文字列操作：V[CSelf10[書き込み先]] = "\cself[5]"
+ |■
+◇分岐終了◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=530
-COMMON_NAME=
-COMMAND_COLOR=0
+COMMON_NAME=【呼】SysDB書き込み
+COMMAND_COLOR=1
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
-MEMO=
-VALINPUT_NUM=0
-STRINPUT_NUM=0
+MEMO=\udb[\cself[0]:\cself[1]:\cself[2]]が変数なら\cself[3]を文字列なら\cself[5]を代入する
+VALINPUT_NUM=4
+STRINPUT_NUM=1
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=
-VALINPUT_NAME_1=
-VALINPUT_NAME_2=
-VALINPUT_NAME_3=
+VALINPUT_NAME_0=タイプ
+VALINPUT_NAME_1=データ
+VALINPUT_NAME_2=内容
+VALINPUT_NAME_3=数値
 VALINPUT_NAME_4=
-VALINPUT_NAME_5=
+VALINPUT_NAME_5=文字列
 VALINPUT_NAME_6=
 VALINPUT_NAME_7=
 VALINPUT_NAME_8=
@@ -258632,17 +258758,17 @@ DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
 RETURN_VAL_NAME=
 RETURN_VAL_TARGET=-1
-CSELF_NAME_0=
-CSELF_NAME_1=
-CSELF_NAME_2=
-CSELF_NAME_3=
+CSELF_NAME_0=タイプ
+CSELF_NAME_1=データ
+CSELF_NAME_2=内容
+CSELF_NAME_3=数値
 CSELF_NAME_4=
-CSELF_NAME_5=
-CSELF_NAME_6=
+CSELF_NAME_5=文字列
+CSELF_NAME_6=変数・文字列判別用
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=
+CSELF_NAME_10=書き込み先
 CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
@@ -258732,30 +258858,62 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=17
 --
 WoditorEvCOMMAND_START
+[121][4,0]<0>(1600010,1300000000,0,4)()
+[121][4,0]<0>(1600010,1600000,1000000,8456)()
+[121][4,0]<0>(1600010,1600001,100,8448)()
+[121][4,0]<0>(1600010,1600002,0,256)()
+[103][0,1]<0>()(" ")
+[122][3,0]<0>(1600006,2,1600010)()
+[112][2,4]<0>(17,1600006)("<<ERROR>>","","","")
+[401][1,0]<0>(1)()
+[103][0,1]<1>()("変数")
+[121][4,0]<1>(1600010,1600003,0,16)()
+[0][0,0]<1>()()
+[420][1,0]<0>(0)()
+[103][0,1]<1>()("文字列")
+[122][2,1]<1>(1600010,16)("\cself[5]")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■変数操作: CSelf10[書き込み先] = 1300000000 + 0 
+■変数操作: CSelf10[書き込み先] += CSelf0[タイプ] * 1000000 
+■変数操作: CSelf10[書き込み先] += CSelf1[データ] * 100 
+■変数操作: CSelf10[書き込み先] += CSelf2[内容] + 0 
+▼  
+■文字列操作：CSelf6[変数・文字列判別用] = 位置[CSelf10[書き込み先]]の文字列
+■条件分岐(文字):  【1】 CSelf6[変数・文字列判別用] が "<<ERROR>>" と同じ
+-◇分岐： 【1】 [ CSelf6[変数・文字列判別用] が "<<ERROR>>" と同じ ]の場合↓
+ |▼ 変数
+ |■変数操作: V[CSelf10[書き込み先]] = CSelf3[数値] + 0 
+ |■
+-◇上記以外
+ |▼ 文字列
+ |■文字列操作：V[CSelf10[書き込み先]] = "\cself[5]"
+ |■
+◇分岐終了◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=531
-COMMON_NAME=
+COMMON_NAME=マスクウィンドウ
 COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
 MEMO=
-VALINPUT_NUM=0
+VALINPUT_NUM=4
 STRINPUT_NUM=0
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=
-VALINPUT_NAME_1=
-VALINPUT_NAME_2=
-VALINPUT_NAME_3=
+VALINPUT_NAME_0=X開始
+VALINPUT_NAME_1=Y開始
+VALINPUT_NAME_2=横
+VALINPUT_NAME_3=縦
 VALINPUT_NAME_4=
 VALINPUT_NAME_5=
 VALINPUT_NAME_6=
@@ -258804,20 +258962,20 @@ DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
 RETURN_VAL_NAME=
 RETURN_VAL_TARGET=-1
-CSELF_NAME_0=
-CSELF_NAME_1=
-CSELF_NAME_2=
-CSELF_NAME_3=
+CSELF_NAME_0=X開始
+CSELF_NAME_1=Y開始
+CSELF_NAME_2=横
+CSELF_NAME_3=縦
 CSELF_NAME_4=
 CSELF_NAME_5=
 CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=
-CSELF_NAME_11=
-CSELF_NAME_12=
-CSELF_NAME_13=
+CSELF_NAME_10=xtemp
+CSELF_NAME_11=ytemp
+CSELF_NAME_12=横ループ
+CSELF_NAME_13=縦ループ
 CSELF_NAME_14=
 CSELF_NAME_15=
 CSELF_NAME_16=
@@ -258904,13 +259062,99 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=44
 --
 WoditorEvCOMMAND_START
+[121][4,0]<0>(1600010,1600002,2,12288)()
+[121][4,0]<0>(1600011,1600003,2,12288)()
+[121][4,0]<0>(1600010,1600000,1600010,4096)()
+[121][4,0]<0>(1600011,1600001,1600011,4096)()
+[121][4,0]<0>(1600012,1600002,-54,0)()
+[121][4,0]<0>(1600013,1600003,-54,0)()
+[121][4,0]<0>(1600012,1600012,30,12288)()
+[121][4,0]<0>(1600013,1600013,30,12288)()
+[179][1,0]<0>(1600013)()
+[179][1,0]<1>(1600012)()
+[290][7,1]<2>(83,0,0,0,1600010,1600011,0)("SystemFile/WindowBase_New_Mask.png")
+[121][4,0]<2>(1600010,30,0,256)()
+[0][0,0]<2>()()
+[498][0,0]<1>()()
+[121][4,0]<1>(1600011,30,0,256)()
+[121][4,0]<1>(1600010,1600002,2,12288)()
+[121][4,0]<1>(1600010,1600000,1600010,4096)()
+[0][0,0]<1>()()
+[498][0,0]<0>()()
+[121][4,0]<0>(1600010,1600002,2,12288)()
+[121][4,0]<0>(1600011,1600003,2,12288)()
+[121][4,0]<0>(1600010,1600000,1600010,4096)()
+[121][4,0]<0>(1600011,1600001,1600011,4096)()
+[121][4,0]<0>(1600012,1600002,-54,0)()
+[121][4,0]<0>(1600013,1600003,-54,0)()
+[121][4,0]<0>(1600010,1600002,-54,256)()
+[179][1,0]<0>(1600013)()
+[290][7,1]<1>(83,0,0,0,1600010,1600011,0)("SystemFile/WindowBase_New_Mask.png")
+[121][4,0]<1>(1600011,1,0,256)()
+[0][0,0]<1>()()
+[498][0,0]<0>()()
+[121][4,0]<0>(1600010,1600002,2,12288)()
+[121][4,0]<0>(1600011,1600003,2,12288)()
+[121][4,0]<0>(1600010,1600000,1600010,4096)()
+[121][4,0]<0>(1600011,1600001,1600011,4096)()
+[121][4,0]<0>(1600012,1600002,-54,0)()
+[121][4,0]<0>(1600013,1600003,-54,0)()
+[121][4,0]<0>(1600011,1600003,-54,256)()
+[179][1,0]<0>(1600012)()
+[290][7,1]<1>(83,0,0,0,1600010,1600011,0)("SystemFile/WindowBase_New_Mask.png")
+[121][4,0]<1>(1600010,1,0,256)()
+[0][0,0]<1>()()
+[498][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
+■変数操作: CSelf11[ytemp] = CSelf3[縦] / 2 
+■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
+■変数操作: CSelf11[ytemp] = CSelf1[Y開始] - CSelf11[ytemp] 
+■変数操作: CSelf12[横ループ] = CSelf2[横] + -54 
+■変数操作: CSelf13[縦ループ] = CSelf3[縦] + -54 
+■変数操作: CSelf12[横ループ] = CSelf12[横ループ] / 30 
+■変数操作: CSelf13[縦ループ] = CSelf13[縦ループ] / 30 
+■回数付きループ [ CSelf13[縦ループ] ]回
+ |■回数付きループ [ CSelf12[横ループ] ]回
+ | |■マスク機能：[ﾏｽｸに表示範囲(黒)を追加] =>[SystemFile/WindowBase_New_Mask.png] XCSelf10[xtemp] YCSelf11[ytemp] (左上)
+ | |■変数操作: CSelf10[xtemp] += 30 + 0 
+ | |■
+ |◇ループここまで◇◇
+ |■変数操作: CSelf11[ytemp] += 30 + 0 
+ |■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
+ |■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
+ |■
+◇ループここまで◇◇
+■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
+■変数操作: CSelf11[ytemp] = CSelf3[縦] / 2 
+■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
+■変数操作: CSelf11[ytemp] = CSelf1[Y開始] - CSelf11[ytemp] 
+■変数操作: CSelf12[横ループ] = CSelf2[横] + -54 
+■変数操作: CSelf13[縦ループ] = CSelf3[縦] + -54 
+■変数操作: CSelf10[xtemp] += CSelf2[横] + -54 
+■回数付きループ [ CSelf13[縦ループ] ]回
+ |■マスク機能：[ﾏｽｸに表示範囲(黒)を追加] =>[SystemFile/WindowBase_New_Mask.png] XCSelf10[xtemp] YCSelf11[ytemp] (左上)
+ |■変数操作: CSelf11[ytemp] += 1 + 0 
+ |■
+◇ループここまで◇◇
+■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
+■変数操作: CSelf11[ytemp] = CSelf3[縦] / 2 
+■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
+■変数操作: CSelf11[ytemp] = CSelf1[Y開始] - CSelf11[ytemp] 
+■変数操作: CSelf12[横ループ] = CSelf2[横] + -54 
+■変数操作: CSelf13[縦ループ] = CSelf3[縦] + -54 
+■変数操作: CSelf11[ytemp] += CSelf3[縦] + -54 
+■回数付きループ [ CSelf12[横ループ] ]回
+ |■マスク機能：[ﾏｽｸに表示範囲(黒)を追加] =>[SystemFile/WindowBase_New_Mask.png] XCSelf10[xtemp] YCSelf11[ytemp] (左上)
+ |■変数操作: CSelf10[xtemp] += 1 + 0 
+ |■
+◇ループここまで◇◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
@@ -261323,8 +261567,8 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=546
-COMMON_NAME=[未使用]カスタムファイル
-COMMAND_COLOR=5
+COMMON_NAME=
+COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
@@ -261389,18 +261633,18 @@ CSELF_NAME_1=
 CSELF_NAME_2=
 CSELF_NAME_3=
 CSELF_NAME_4=
-CSELF_NAME_5=tempFileContent
+CSELF_NAME_5=
 CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
-CSELF_NAME_9=currentFileName
+CSELF_NAME_9=
 CSELF_NAME_10=
 CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
 CSELF_NAME_14=
 CSELF_NAME_15=
-CSELF_NAME_16=csv識別
+CSELF_NAME_16=
 CSELF_NAME_17=
 CSELF_NAME_18=
 CSELF_NAME_19=
@@ -261484,871 +261728,13 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=430
+COMMAND_NUM=1
 --
 WoditorEvCOMMAND_START
-[103][0,1]<0>()("―――――――――――――――――――――――――――――――――――――――")
-[103][0,1]<0>()("カスタムバージョン定義")
-[250][5,4]<0>(27,1,1,4608,2000089)("","","","")
-[103][0,1]<0>()("―――――――――――――――――――――――――――――――――――――――")
-[122][3,0]<0>(1600009,1,3000011)()
-[111][4,0]<0>(1,9000112,1,2)()
-[401][1,0]<0>(1)()
-[112][2,4]<1>(1,3000011)("","","","")
-[401][1,0]<1>(1)()
-[101][0,1]<2>()("(テストプレイ限定)<\n>読み込むファイルが指定されていません。<\n>s11の変数を確認してください<\n>S11=\s[11]")
-[172][0,0]<2>()()
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[122][2,1]<0>(1600005,1280)("\cself[9]")
-[150][3,0]<0>(34,842266,30)()
-[112][2,4]<0>(1,538470917)("<NoFile>","","","")
-[401][1,0]<0>(1)()
-[101][0,1]<1>()("(テストプレイ限定)<\n>読み込むファイルが存在していません。<\n>s11の変数を確認してください<\n>S11=\s[11]")
-[150][6,0]<1>(16777218,10300,30,0,0,10299)()
-[172][0,0]<1>()()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(3000021,1,1600006)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(1600008,769,1600005)()
-[122][3,0]<0>(1600009,769,1600005)()
-[212][0,1]<0>()("cs1")
-[212][0,1]<0>()("ループ")
-[122][3,0]<0>(1600007,769,1600005)()
-[101][0,1]<0>()("5:\cself[5]")
-[111][4,0]<0>(1,2000124,0,2)()
-[401][1,0]<0>(1)()
-[121][4,0]<1>(2000101,1,0,0)()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[112][5,4]<0>(20,538470919,538470919,538470919,538470919)("#cdb","#sysdb","#error","#udb")
-[401][1,0]<0>(1)()
-[213][0,1]<1>()("cdb")
-[0][0,0]<1>()()
-[401][1,0]<0>(2)()
-[213][0,1]<1>()("Sysdb")
-[0][0,0]<1>()()
-[401][1,0]<0>(3)()
-[213][0,1]<1>()("error")
-[0][0,0]<1>()()
-[401][1,0]<0>(4)()
-[213][0,1]<1>()("udb")
-[0][0,0]<1>()()
-[420][1,0]<0>(0)()
-[111][4,0]<1>(1,1600000,5,3)()
-[401][1,0]<1>(1)()
-[112][2,4]<2>(1,538470919)("wait","","","")
-[401][1,0]<2>(1)()
-[213][0,1]<3>()("wait_old")
-[0][0,0]<3>()()
-[499][0,0]<2>()()
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[112][5,4]<1>(20,538470919,538470919,538470919,1600007)("#wait","#msg","#mapchip","#debugmsg")
-[401][1,0]<1>(1)()
-[213][0,1]<2>()("wait")
-[0][0,0]<2>()()
-[401][1,0]<1>(2)()
-[213][0,1]<2>()("msg")
-[0][0,0]<2>()()
-[401][1,0]<1>(3)()
-[213][0,1]<2>()("mapchip")
-[0][0,0]<2>()()
-[401][1,0]<1>(4)()
-[213][0,1]<2>()("debugmsg")
-[0][0,0]<2>()()
-[420][1,0]<1>(0)()
-[112][5,4]<2>(20,538470919,538470919,538470919,538470919)("#v","#sysv","#s","#syss")
-[401][1,0]<2>(1)()
-[213][0,1]<3>()("V")
-[0][0,0]<3>()()
-[401][1,0]<2>(2)()
-[213][0,1]<3>()("SysV")
-[0][0,0]<3>()()
-[401][1,0]<2>(3)()
-[213][0,1]<3>()("S")
-[0][0,0]<3>()()
-[401][1,0]<2>(4)()
-[213][0,1]<3>()("SysS")
-[0][0,0]<3>()()
-[420][1,0]<2>(0)()
-[112][5,4]<3>(20,538470919,538470919,1600007,538470919)("#common","[end]","","#se")
-[401][1,0]<3>(1)()
-[213][0,1]<4>()("Common")
-[0][0,0]<4>()()
-[401][1,0]<3>(2)()
-[213][0,1]<4>()("end")
-[0][0,0]<4>()()
-[401][1,0]<3>(3)()
-[213][0,1]<4>()("end")
-[0][0,0]<4>()()
-[401][1,0]<3>(4)()
-[213][0,1]<4>()("SE")
-[0][0,0]<4>()()
-[420][1,0]<3>(0)()
-[112][5,4]<4>(20,538470919,538470919,538470919,806906375)("#bgm","#bgs","#csv","//")
-[401][1,0]<4>(1)()
-[213][0,1]<5>()("BGM")
-[0][0,0]<5>()()
-[401][1,0]<4>(2)()
-[213][0,1]<5>()("BGS")
-[0][0,0]<5>()()
-[401][1,0]<4>(3)()
-[213][0,1]<5>()("CSV")
-[0][0,0]<5>()()
-[401][1,0]<4>(4)()
-[213][0,1]<5>()("ループ")
-[0][0,0]<5>()()
-[420][1,0]<4>(0)()
-[121][4,0]<5>(2000090,2,0,0)()
-[101][0,1]<5>()("エラー:実行対象が定義されていません。<\n>\cself[5]")
-[150][6,0]<5>(16777218,10300,30,0,0,10299)()
-[172][0,0]<5>()()
-[0][0,0]<5>()()
-[499][0,0]<4>()()
-[0][0,0]<4>()()
-[499][0,0]<3>()()
-[0][0,0]<3>()()
-[499][0,0]<2>()()
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[212][0,1]<0>()("cdb")
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600000,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600001,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600002,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[122][3,0]<0>(1600008,1,1600007)()
-[112][2,4]<0>(1,806906376)(":","","","")
-[401][1,0]<0>(1)()
-[122][2,1]<1>(1600008,2048)(":")
-[121][4,0]<1>(1600004,1600008,0,0)()
-[250][5,4]<1>(1600000,1600001,1600002,0,1600004)("","","","")
-[213][0,1]<1>()("ループ")
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[106][0,1]<0>()("dir:\cself[9]")
-[106][0,1]<0>()("\cself[5]")
-[122][3,2]<0>(1600008,2304,0)("%moddir%","assets/\s[21]")
-[250][5,4]<0>(1600000,1600001,1600002,0,1600008)("","","","")
-[106][0,1]<0>()("\cself[5]")
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("error")
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[121][4,0]<0>(1600000,1600007,0,0)()
-[111][4,0]<0>(1,1600000,666,2)()
-[401][1,0]<0>(1)()
-[121][4,0]<1>(2000090,2,0,0)()
-[210][2,0]<1>(500255,0)()
-[150][6,0]<1>(16777218,10300,30,0,0,10299)()
-[172][0,0]<1>()()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[210][3,0]<0>(500397,1,1600000)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("udb")
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600000,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600001,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600002,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[122][3,0]<0>(1600008,1,1600007)()
-[112][2,4]<0>(1,806906376)(":","","","")
-[401][1,0]<0>(1)()
-[122][2,1]<1>(1600008,2048)(":")
-[121][4,0]<1>(1600004,1600008,0,0)()
-[210][7,2]<1>(500309,4116,1600000,1600001,1600002,1600004,0)("","")
-[213][0,1]<1>()("ループ")
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[122][3,2]<0>(1600008,2304,0)("%moddir%","assets/\s[21]")
-[106][0,1]<0>()("dir:\cself[9]")
-[106][0,1]<0>()("\cself[5]")
-[210][7,0]<0>(500309,20,1600000,1600001,1600002,0,1600008)()
-[106][0,1]<0>()("\cself[5]")
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("Sysdb")
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600000,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600001,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[106][0,1]<0>()("\cself[5]")
-[121][4,0]<0>(1600002,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[122][3,0]<0>(1600008,1,1600007)()
-[112][2,4]<0>(1,806906376)(":","","","")
-[401][1,0]<0>(1)()
-[122][2,1]<1>(1600008,2048)(":")
-[121][4,0]<1>(1600004,1600008,0,0)()
-[210][7,2]<1>(500312,4116,1600000,1600001,1600002,1600004,0)("","")
-[213][0,1]<1>()("ループ")
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[122][3,2]<0>(1600008,2304,0)("%moddir%","assets/\s[21]")
-[106][0,1]<0>()("dir:\cself[9]")
-[106][0,1]<0>()("\cself[5]")
-[210][7,0]<0>(500312,20,1600000,1600001,1600002,0,1600008)()
-[106][0,1]<0>()("\cself[5]")
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("wait")
-[122][3,0]<0>(1600007,769,1600005)()
-[121][4,0]<0>(1600000,1600007,0,0)()
-[121][4,0]<0>(2000090,0,0,0)()
-[180][1,0]<0>(1600000)()
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("wait_old")
-[122][2,1]<0>(1600007,2048)("wait")
-[122][2,1]<0>(1600007,2048)("]")
-[122][2,1]<0>(1600007,2048)("[")
-[122][2,1]<0>(1600007,2048)(" ")
-[121][4,0]<0>(1600000,1600007,0,0)()
-[121][4,0]<0>(2000090,0,0,0)()
-[180][1,0]<0>(1600000)()
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("msg")
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(1600008,769,1600005)()
-[122][3,0]<0>(1600009,769,1600005)()
-[122][3,1]<0>(1600006,0,0)("\cself[6]<\n>\cself[7]<\n>\cself[8]<\n>\cself[9]")
-[121][4,0]<0>(2000090,0,0,0)()
-[101][0,1]<0>()("\cself[6]")
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("debugmsg")
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(1600008,769,1600005)()
-[122][3,0]<0>(1600009,769,1600005)()
-[121][4,0]<0>(2000090,0,0,0)()
-[106][0,1]<0>()("\cself[6]<\n>\cself[7]<\n>\cself[8]<\n>\cself[9]")
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("V")
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(1600007,769,1600005)()
-[121][4,0]<0>(2000082,2000000,1600006,4)()
-[121][4,0]<0>(2000069,1600007,0,0)()
-[112][3,4]<0>(2,538470918,538470918)("124","101","","")
-[401][1,0]<0>(1)()
-[111][4,0]<1>(1,9000112,1,2)()
-[401][1,0]<1>(1)()
-[101][0,1]<2>()("エラー:変数\cself[6]は書き換えできません。")
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[213][0,1]<1>()("ループ")
-[0][0,0]<1>()()
-[401][1,0]<0>(2)()
-[111][4,0]<1>(1,9000112,1,2)()
-[401][1,0]<1>(1)()
-[101][0,1]<2>()("エラー:変数\cself[6]は書き換えできません。")
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[213][0,1]<1>()("ループ")
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[121][4,0]<0>(2000090,0,0,0)()
-[121][4,0]<0>(2000082,2000069,0,16)()
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("SysV")
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(1600007,769,1600005)()
-[121][4,0]<0>(2000082,9000000,1600006,4)()
-[121][4,0]<0>(2000069,1600007,0,0)()
-[121][4,0]<0>(2000090,0,0,0)()
-[121][4,0]<0>(2000082,2000069,0,16)()
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("S")
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(3000007,769,1600005)()
-[121][4,0]<0>(2000082,3000000,1600006,4)()
-[121][4,0]<0>(2000090,0,0,0)()
-[122][3,0]<0>(2000082,17,3000007)()
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("SysS")
-[122][3,0]<0>(1600006,769,1600005)()
-[122][3,0]<0>(3000007,769,1600005)()
-[121][4,0]<0>(2000082,9900000,1600006,4)()
-[121][4,0]<0>(2000090,0,0,0)()
-[122][3,0]<0>(2000082,17,3000007)()
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("Common")
-[122][3,0]<0>(1600006,769,1600005)()
-[112][2,4]<0>(1,538470918)("326","","","")
-[401][1,0]<0>(1)()
-[121][4,0]<1>(2000090,0,0,0)()
-[111][4,0]<1>(1,2200013,0,2)()
-[401][1,0]<1>(1)()
-[101][0,1]<2>()("エラー:通常版のウディタでは実行できないプログラ<\n>ムがありました。<\n>無視してそのまま実行します。")
-[121][4,0]<2>(2000090,1,0,0)()
-[213][0,1]<2>()("ループ")
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[101][0,1]<1>()("実行しているプログラムの中にファイルの削除<\n>に関するものが含まれていました。")
-[140][7,0]<1>(5920,0,0,0,0,0,0)()
-[101][0,1]<1>()("実行しますか?<\n>\f[8]※いいえの場合は無視してそのまま実行します。")
-[102][1,2]<1>(18)("いいえ","はい")
-[401][1,0]<1>(2)()
-[121][4,0]<2>(2000090,1,0,0)()
-[213][0,1]<2>()("ループ")
-[0][0,0]<2>()()
-[401][1,0]<1>(3)()
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[121][4,0]<1>(2000090,1,0,0)()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[121][4,0]<0>(2000082,500000,1600006,0)()
-[121][4,0]<0>(2000090,0,0,0)()
-[210][2,0]<0>(2000082,0)()
-[121][4,0]<0>(2000090,1,0,0)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("mapchip")
-[122][3,0]<0>(1600006,769,1600005)()
-[121][4,0]<0>(1600015,1600006,0,0)()
-[241][1,0]<0>(1600015)()
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("SE")
-[103][0,1]<0>()("se")
-[122][3,0]<0>(1600006,769,1600005)()
-[140][7,1]<0>(33554464,0,0,0,100,100,0)("\cself[6]")
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("BGM")
-[103][0,1]<0>()("bgm")
-[122][3,0]<0>(1600006,769,1600005)()
-[140][7,1]<0>(33554432,0,0,0,100,100,0)("\cself[6]")
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("BGS")
-[103][0,1]<0>()("bgs")
-[122][3,0]<0>(1600006,769,1600005)()
-[140][7,1]<0>(33554448,0,0,0,100,100,0)("\cself[6]")
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("CSV")
-[122][3,0]<0>(1600006,769,1600005)()
-[112][4,4]<0>(19,1600006,1600006,1600006)("cdb","udb","sysdb","")
-[401][1,0]<0>(1)()
-[121][4,0]<1>(1600016,1,0,0)()
-[0][0,0]<1>()()
-[401][1,0]<0>(2)()
-[121][4,0]<1>(1600016,2,0,0)()
-[0][0,0]<1>()()
-[401][1,0]<0>(3)()
-[121][4,0]<1>(1600016,3,0,0)()
-[0][0,0]<1>()()
-[420][1,0]<0>(0)()
-[101][0,1]<1>()("エラー:cdb,udb,sysdbのどれかを指定してください。")
-[172][0,0]<1>()()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[121][4,0]<0>(1600000,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,0]<0>(3000007,1,1600007)()
-[121][4,0]<0>(1600001,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[121][4,0]<0>(1600002,1600007,0,0)()
-[122][3,0]<0>(1600007,769,1600005)()
-[122][3,2]<0>(1600007,2304,0)("%csv%","\sysS[52]assets/CSV")
-[122][3,2]<0>(1600007,2304,0)("%moddir%","\sysS[52]assets/\s[21]")
-[111][10,0]<0>(19,1600016,1,2,1600016,2,2,1600016,3,2)()
-[401][1,0]<0>(1)()
-[106][0,1]<1>()("cdb")
-[251][5,4]<1>(1600000,1600001,0,0,1600002)("\cself[7]","","","")
-[0][0,0]<1>()()
-[401][1,0]<0>(2)()
-[106][0,1]<1>()("udb")
-[251][5,4]<1>(1600000,1600001,0,512,1600002)("\cself[7]","","","")
-[0][0,0]<1>()()
-[401][1,0]<0>(3)()
-[106][0,1]<1>()("sysdb")
-[251][5,4]<1>(1600000,1600001,0,256,1600002)("\cself[7]","","","")
-[0][0,0]<1>()()
-[420][1,0]<0>(0)()
-[101][0,1]<1>()("エラー:cdb,udb,sysdbのどれかを指定してください。")
-[172][0,0]<1>()()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[106][0,1]<0>()("以下csv<\n>\cself[0]<\n>\cself[1]<\n>\cself[2]<\n>\cself[7]<\n>---")
-[213][0,1]<0>()("ループ")
-[212][0,1]<0>()("end")
-[121][4,0]<0>(1600016,0,0,0)()
-[121][4,0]<0>(2000090,2,0,0)()
-[122][3,1]<0>(3000011,0,0)("")
-[172][0,0]<0>()()
-[213][0,1]<0>()("ループ")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-▼ ―――――――――――――――――――――――――――――――――――――――
-▼ カスタムバージョン定義
-■DB読込(ﾕｰｻﾞ)： V89[カスタムファイルバージョン] = ﾕｰｻﾞDB[ 27:1:1 ] (バージョン情報:カスタムファイルバージョン:バージョンID) 
-▼ ―――――――――――――――――――――――――――――――――――――――
-■文字列操作：CSelf9[currentFileName] = S11[loadedCustomFile]
-■条件分岐(数値):  【1】 Sys112:[読]テストプレイ中？(1=YES)  が   1 と同じ 
--◇分岐： 【1】  [ Sys112:[読]テストプレイ中？(1=YES)  が  1 と同じ  ]の場合↓
- |■条件分岐(文字):  【1】 S11[loadedCustomFile] が "" と同じ
- |-◇分岐： 【1】 [ S11[loadedCustomFile] が "" と同じ ]の場合↓
- | |■文章:(テストプレイ限定)\n読み込むファイルが指定されていません。\ns11の変数を確認してください\nS11=\s[11]
- | |■イベント処理中断
- | |■
- |◇分岐終了◇
- |■
-◇分岐終了◇
-■文字列操作：CSelf5[tempFileContent] =<ﾌｧｲﾙ内容読込> [自動文字ｺｰﾄﾞ判別] "\cself[9]"
-■ﾋﾟｸﾁｬ消去：842266  / 30(0)ﾌﾚｰﾑ
-■条件分岐(文字):  【1】 CSelf5[tempFileContent] が "<NoFile>" を含む
--◇分岐： 【1】 [ CSelf5[tempFileContent] が "<NoFile>" を含む ]の場合↓
- |■文章:(テストプレイ限定)\n読み込むファイルが存在していません。\ns11の変数を確認してください\nS11=\s[11]
- |■ﾋﾟｸﾁｬ消去：10300 ～ 10299  / 30(0)ﾌﾚｰﾑ
- |■イベント処理中断
- |■
-◇分岐終了◇
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S21[CFディレクトリ] = CSelf6
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf8 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf9[currentFileName] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-●ラベル地点「cs1」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-●ラベル地点「ループ」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文章:5:\cself[5]
-■条件分岐(数値):  【1】 V124[CFnoMod]  が   0 と同じ 
--◇分岐： 【1】  [ V124[CFnoMod]  が  0 と同じ  ]の場合↓
- |■変数操作: V101[moded] = 1 + 0 
- |■
-◇分岐終了◇
-■条件分岐(文字):  【1】 CSelf7 が "#cdb" を含む 【2】 CSelf7 が "#sysdb" を含む 【3】 CSelf7 が "#error" を含む 【4】 CSelf7 が "#udb" を含む
--◇分岐： 【1】 [ CSelf7 が "#cdb" を含む ]の場合↓
- |●ラベル「cdb」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
--◇分岐： 【2】 [ CSelf7 が "#sysdb" を含む ]の場合↓
- |●ラベル「Sysdb」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
--◇分岐： 【3】 [ CSelf7 が "#error" を含む ]の場合↓
- |●ラベル「error」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
--◇分岐： 【4】 [ CSelf7 が "#udb" を含む ]の場合↓
- |●ラベル「udb」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
--◇上記以外
- |■条件分岐(数値):  【1】 CSelf0  が   5 以下 
- |-◇分岐： 【1】  [ CSelf0  が  5 以下  ]の場合↓
- | |■条件分岐(文字):  【1】 CSelf7 が "wait" を含む
- | |-◇分岐： 【1】 [ CSelf7 が "wait" を含む ]の場合↓
- | | |●ラベル「wait_old」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | |■
- | |◇分岐終了◇
- | |■
- |◇分岐終了◇
- |■条件分岐(文字):  【1】 CSelf7 が "#wait" を含む 【2】 CSelf7 が "#msg" を含む 【3】 CSelf7 が "#mapchip" を含む 【4】 CSelf7 が "#debugmsg" と同じ
- |-◇分岐： 【1】 [ CSelf7 が "#wait" を含む ]の場合↓
- | |●ラベル「wait」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | |■
- |-◇分岐： 【2】 [ CSelf7 が "#msg" を含む ]の場合↓
- | |●ラベル「msg」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | |■
- |-◇分岐： 【3】 [ CSelf7 が "#mapchip" を含む ]の場合↓
- | |●ラベル「mapchip」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | |■
- |-◇分岐： 【4】 [ CSelf7 が "#debugmsg" と同じ ]の場合↓
- | |●ラベル「debugmsg」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | |■
- |-◇上記以外
- | |■条件分岐(文字):  【1】 CSelf7 が "#v" を含む 【2】 CSelf7 が "#sysv" を含む 【3】 CSelf7 が "#s" を含む 【4】 CSelf7 が "#syss" を含む
- | |-◇分岐： 【1】 [ CSelf7 が "#v" を含む ]の場合↓
- | | |●ラベル「V」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | |■
- | |-◇分岐： 【2】 [ CSelf7 が "#sysv" を含む ]の場合↓
- | | |●ラベル「SysV」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | |■
- | |-◇分岐： 【3】 [ CSelf7 が "#s" を含む ]の場合↓
- | | |●ラベル「S」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | |■
- | |-◇分岐： 【4】 [ CSelf7 が "#syss" を含む ]の場合↓
- | | |●ラベル「SysS」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | |■
- | |-◇上記以外
- | | |■条件分岐(文字):  【1】 CSelf7 が "#common" を含む 【2】 CSelf7 が "[end]" を含む 【3】 CSelf7 が "" と同じ 【4】 CSelf7 が "#se" を含む
- | | |-◇分岐： 【1】 [ CSelf7 が "#common" を含む ]の場合↓
- | | | |●ラベル「Common」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | |■
- | | |-◇分岐： 【2】 [ CSelf7 が "[end]" を含む ]の場合↓
- | | | |●ラベル「end」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | |■
- | | |-◇分岐： 【3】 [ CSelf7 が "" と同じ ]の場合↓
- | | | |●ラベル「end」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | |■
- | | |-◇分岐： 【4】 [ CSelf7 が "#se" を含む ]の場合↓
- | | | |●ラベル「SE」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | |■
- | | |-◇上記以外
- | | | |■条件分岐(文字):  【1】 CSelf7 が "#bgm" を含む 【2】 CSelf7 が "#bgs" を含む 【3】 CSelf7 が "#csv" を含む 【4】 CSelf7 が "//" が先頭にある
- | | | |-◇分岐： 【1】 [ CSelf7 が "#bgm" を含む ]の場合↓
- | | | | |●ラベル「BGM」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | | |■
- | | | |-◇分岐： 【2】 [ CSelf7 が "#bgs" を含む ]の場合↓
- | | | | |●ラベル「BGS」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | | |■
- | | | |-◇分岐： 【3】 [ CSelf7 が "#csv" を含む ]の場合↓
- | | | | |●ラベル「CSV」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | | |■
- | | | |-◇分岐： 【4】 [ CSelf7 が "//" が先頭にある ]の場合↓
- | | | | |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | | | |■
- | | | |-◇上記以外
- | | | | |■変数操作: V90[ロード画面] = 2 + 0 
- | | | | |■文章:エラー:実行対象が定義されていません。\n\cself[5]
- | | | | |■ﾋﾟｸﾁｬ消去：10300 ～ 10299  / 30(0)ﾌﾚｰﾑ
- | | | | |■イベント処理中断
- | | | | |■
- | | | |◇分岐終了◇
- | | | |■
- | | |◇分岐終了◇
- | | |■
- | |◇分岐終了◇
- | |■
- |◇分岐終了◇
- |■
-◇分岐終了◇
-●ラベル地点「cdb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf0 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf1 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf2 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■文字列操作：CSelf8 = CSelf7
-■条件分岐(文字):  【1】 CSelf8 が ":" が先頭にある
--◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
- |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
- |■変数操作: CSelf4 = CSelf8 + 0 
- |■DB書込(可変)：可変DB[ CSelf0:CSelf1:CSelf2 ] (-:-:-) =  CSelf4
- |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
-◇分岐終了◇
-■デバッグ文:dir:\cself[9]
-■デバッグ文:\cself[5]
-■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
-■DB書込(可変)：可変DB[ CSelf0:CSelf1:CSelf2 ] (-:-:-) =  CSelf8
-■デバッグ文:\cself[5]
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「error」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■変数操作: CSelf0 = CSelf7 + 0 
-■条件分岐(数値):  【1】 CSelf0  が   666 と同じ 
--◇分岐： 【1】  [ CSelf0  が  666 と同じ  ]の場合↓
- |■変数操作: V90[ロード画面] = 2 + 0 
- |■イベントの挿入： コモン255：[  ]
- |■ﾋﾟｸﾁｬ消去：10300 ～ 10299  / 30(0)ﾌﾚｰﾑ
- |■イベント処理中断
- |■
-◇分岐終了◇
-■イベントの挿入： コモン397：[ エラーメッセージv3 ] / CSelf0
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「udb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf0 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf1 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf2 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■文字列操作：CSelf8 = CSelf7
-■条件分岐(文字):  【1】 CSelf8 が ":" が先頭にある
--◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
- |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
- |■変数操作: CSelf4 = CSelf8 + 0 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
- |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
-◇分岐終了◇
-■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
-■デバッグ文:dir:\cself[9]
-■デバッグ文:\cself[5]
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
-■デバッグ文:\cself[5]
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「Sysdb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf0 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf1 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■デバッグ文:\cself[5]
-■変数操作: CSelf2 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■文字列操作：CSelf8 = CSelf7
-■条件分岐(文字):  【1】 CSelf8 が ":" が先頭にある
--◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
- |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
- |■変数操作: CSelf4 = CSelf8 + 0 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
- |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
-◇分岐終了◇
-■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
-■デバッグ文:dir:\cself[9]
-■デバッグ文:\cself[5]
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
-■デバッグ文:\cself[5]
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「wait」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: CSelf0 = CSelf7 + 0 
-■変数操作: V90[ロード画面] = 0 + 0 
-■ウェイト：CSelf0 フレーム
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「wait_old」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf7 =<から→の文字列を全消去> "wait"
-■文字列操作：CSelf7 =<から→の文字列を全消去> "]"
-■文字列操作：CSelf7 =<から→の文字列を全消去> "["
-■文字列操作：CSelf7 =<から→の文字列を全消去> " "
-■変数操作: CSelf0 = CSelf7 + 0 
-■変数操作: V90[ロード画面] = 0 + 0 
-■ウェイト：CSelf0 フレーム
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「msg」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf8 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf9[currentFileName] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf6 = "\cself[6]\n\cself[7]\n\cself[8]\n\cself[9]"
-■変数操作: V90[ロード画面] = 0 + 0 
-■文章:\cself[6]
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「debugmsg」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf8 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf9[currentFileName] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: V90[ロード画面] = 0 + 0 
-■デバッグ文:\cself[6]\n\cself[7]\n\cself[8]\n\cself[9]
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「V」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: V82[temp2] = 2000000 + CSelf6 
-■変数操作: V69[temp] = CSelf7 + 0 
-■条件分岐(文字):  【1】 CSelf6 が "124" を含む 【2】 CSelf6 が "101" を含む
--◇分岐： 【1】 [ CSelf6 が "124" を含む ]の場合↓
- |■条件分岐(数値):  【1】 Sys112:[読]テストプレイ中？(1=YES)  が   1 と同じ 
- |-◇分岐： 【1】  [ Sys112:[読]テストプレイ中？(1=YES)  が  1 と同じ  ]の場合↓
- | |■文章:エラー:変数\cself[6]は書き換えできません。
- | |■
- |◇分岐終了◇
- |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
--◇分岐： 【2】 [ CSelf6 が "101" を含む ]の場合↓
- |■条件分岐(数値):  【1】 Sys112:[読]テストプレイ中？(1=YES)  が   1 と同じ 
- |-◇分岐： 【1】  [ Sys112:[読]テストプレイ中？(1=YES)  が  1 と同じ  ]の場合↓
- | |■文章:エラー:変数\cself[6]は書き換えできません。
- | |■
- |◇分岐終了◇
- |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
-◇分岐終了◇
-■変数操作: V90[ロード画面] = 0 + 0 
-■変数操作: V[V82[temp2]] = V69[temp] + 0 
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「SysV」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: V82[temp2] = 9000000 + CSelf6 
-■変数操作: V69[temp] = CSelf7 + 0 
-■変数操作: V90[ロード画面] = 0 + 0 
-■変数操作: V[V82[temp2]] = V69[temp] + 0 
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「S」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: V82[temp2] = 3000000 + CSelf6 
-■変数操作: V90[ロード画面] = 0 + 0 
-■文字列操作：V[V82[temp2]] = S7[temp]
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「SysS」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: V82[temp2] = 9900000 + CSelf6 
-■変数操作: V90[ロード画面] = 0 + 0 
-■文字列操作：V[V82[temp2]] = S7[temp]
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「Common」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■条件分岐(文字):  【1】 CSelf6 が "326" を含む
--◇分岐： 【1】 [ CSelf6 が "326" を含む ]の場合↓
- |■変数操作: V90[ロード画面] = 0 + 0 
- |■条件分岐(数値):  【1】 V2-13[処理可能ｺﾏﾝﾄﾞ[通常0/プロ版1]]  が   0 と同じ 
- |-◇分岐： 【1】  [ V2-13[処理可能ｺﾏﾝﾄﾞ[通常0/プロ版1]]  が  0 と同じ  ]の場合↓
- | |■文章:エラー:通常版のウディタでは実行できないプログラ\nムがありました。\n無視してそのまま実行します。
- | |■変数操作: V90[ロード画面] = 1 + 0 
- | |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | |■
- |◇分岐終了◇
- |■文章:実行しているプログラムの中にファイルの削除\nに関するものが含まれていました。
- |■サウンド：SE23「ブザー90」(0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
- |■文章:実行しますか?\n\f[8]※いいえの場合は無視してそのまま実行します。
- |■文章選択肢:/ 【1】いいえ / 【2】はい 
- |-◇選択肢：【1】 いいえ                                      の場合↓
- | |■変数操作: V90[ロード画面] = 1 + 0 
- | |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | |■
- |-◇選択肢：【2】 はい                                       の場合↓
- | |■
- |◇分岐終了◇
- |■変数操作: V90[ロード画面] = 1 + 0 
- |■
-◇分岐終了◇
-■変数操作: V82[temp2] = 500000 + CSelf6 
-■変数操作: V90[ロード画面] = 0 + 0 
-■イベントの挿入： 変数[V82[temp2]]のEv ページ[1]
-■変数操作: V90[ロード画面] = 1 + 0 
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「mapchip」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: CSelf15 = CSelf6 + 0 
-■ﾁｯﾌﾟｾｯﾄ切り替え： [CSelf15] 番
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「SE」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-▼ se
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■サウンド：SE ﾌｧｲﾙ[\cself[6]] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「BGM」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-▼ bgm
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■サウンド：BGM ﾌｧｲﾙ[\cself[6]] 音 100％ 周 100％ ﾙ 0ms 再生 / 処理時間:0ﾌﾚｰﾑ
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「BGS」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-▼ bgs
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■サウンド：BGS ﾌｧｲﾙ[\cself[6]] 音 100％ 周 100％ ﾙ 0ms (0 ﾁｬﾝﾈﾙ) 再生 / 処理時間:0ﾌﾚｰﾑ
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「CSV」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■条件分岐(文字):  【1】 CSelf6 が "cdb" と同じ 【2】 CSelf6 が "udb" と同じ 【3】 CSelf6 が "sysdb" と同じ
--◇分岐： 【1】 [ CSelf6 が "cdb" と同じ ]の場合↓
- |■変数操作: CSelf16[csv識別] = 1 + 0 
- |■
--◇分岐： 【2】 [ CSelf6 が "udb" と同じ ]の場合↓
- |■変数操作: CSelf16[csv識別] = 2 + 0 
- |■
--◇分岐： 【3】 [ CSelf6 が "sysdb" と同じ ]の場合↓
- |■変数操作: CSelf16[csv識別] = 3 + 0 
- |■
--◇上記以外
- |■文章:エラー:cdb,udb,sysdbのどれかを指定してください。
- |■イベント処理中断
- |■
-◇分岐終了◇
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■変数操作: CSelf0 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：S7[temp] = CSelf7
-■変数操作: CSelf1 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■変数操作: CSelf2 = CSelf7 + 0 
-■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
-■文字列操作：CSelf7 =<から文字列を置換> "%csv%" → "\sysS[52]assets/CSV"
-■文字列操作：CSelf7 =<から文字列を置換> "%moddir%" → "\sysS[52]assets/\s[21]"
-■条件分岐(数値):  【1】 CSelf16[csv識別]  が   1 と同じ  【2】 CSelf16[csv識別]  が   2 と同じ  【3】 CSelf16[csv識別]  が   3 と同じ 
--◇分岐： 【1】  [ CSelf16[csv識別]  が  1 と同じ  ]の場合↓
- |■デバッグ文:cdb
- |■CSVﾌｧｲﾙからDBに読込:　ﾌｧｲﾙ "\cself[7]"　→　可変DB[ CSelf0:CSelf1 ] から [ CSelf2 ]データ
- |■
--◇分岐： 【2】  [ CSelf16[csv識別]  が  2 と同じ  ]の場合↓
- |■デバッグ文:udb
- |■CSVﾌｧｲﾙからDBに読込:　ﾌｧｲﾙ "\cself[7]"　→　ﾕｰｻﾞDB[ CSelf0:CSelf1 ] から [ CSelf2 ]データ
- |■
--◇分岐： 【3】  [ CSelf16[csv識別]  が  3 と同じ  ]の場合↓
- |■デバッグ文:sysdb
- |■CSVﾌｧｲﾙからDBに読込:　ﾌｧｲﾙ "\cself[7]"　→　ｼｽﾃﾑDB[ CSelf0:CSelf1 ] から [ CSelf2 ]データ
- |■
--◇上記以外
- |■文章:エラー:cdb,udb,sysdbのどれかを指定してください。
- |■イベント処理中断
- |■
-◇分岐終了◇
-■デバッグ文:以下csv\n\cself[0]\n\cself[1]\n\cself[2]\n\cself[7]\n---
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
-●ラベル地点「end」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■変数操作: CSelf16[csv識別] = 0 + 0 
-■変数操作: V90[ロード画面] = 2 + 0 
-■文字列操作：S11[loadedCustomFile] = ""
-■イベント処理中断
-●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ■
 [COMMAND_TEXT_END]
 --------------------------
@@ -264484,10 +263870,10 @@ WoditorEvCOMMAND_END
  | |■DB書込(可変)：可変DB[ CSelf0:CSelf1:CSelf2 ] (-:-:-) =  CSelf8
  | |■
  |-◇分岐： 【2】  [ CSelf18[db判別]  が  1 と同じ  ]の場合↓
- | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+ | |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
  | |■
  |-◇分岐： 【3】  [ CSelf18[db判別]  が  2 と同じ  ]の場合↓
- | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+ | |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
  | |■
  |◇分岐終了◇
  |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
@@ -264515,10 +263901,10 @@ WoditorEvCOMMAND_END
  |■DB書込(可変)：可変DB[ CSelf0:CSelf1:CSelf2 ] (-:-:-) =  CSelf4
  |■
 -◇分岐： 【2】  [ CSelf18[db判別]  が  1 と同じ  ]の場合↓
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
  |■
 -◇分岐： 【3】  [ CSelf18[db判別]  が  2 と同じ  ]の場合↓
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
  |■
 ◇分岐終了◇
 ●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
@@ -265651,8 +265037,8 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=556
-COMMON_NAME=
-COMMAND_COLOR=0
+COMMON_NAME=[未使用]カスタムファイル
+COMMAND_COLOR=5
 TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
@@ -265717,18 +265103,18 @@ CSELF_NAME_1=
 CSELF_NAME_2=
 CSELF_NAME_3=
 CSELF_NAME_4=
-CSELF_NAME_5=
+CSELF_NAME_5=tempFileContent
 CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
-CSELF_NAME_9=
+CSELF_NAME_9=currentFileName
 CSELF_NAME_10=
 CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
 CSELF_NAME_14=
 CSELF_NAME_15=
-CSELF_NAME_16=
+CSELF_NAME_16=csv識別
 CSELF_NAME_17=
 CSELF_NAME_18=
 CSELF_NAME_19=
@@ -265812,13 +265198,871 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=430
 --
 WoditorEvCOMMAND_START
+[103][0,1]<0>()("―――――――――――――――――――――――――――――――――――――――")
+[103][0,1]<0>()("カスタムバージョン定義")
+[250][5,4]<0>(27,1,1,4608,2000089)("","","","")
+[103][0,1]<0>()("―――――――――――――――――――――――――――――――――――――――")
+[122][3,0]<0>(1600009,1,3000011)()
+[111][4,0]<0>(1,9000112,1,2)()
+[401][1,0]<0>(1)()
+[112][2,4]<1>(1,3000011)("","","","")
+[401][1,0]<1>(1)()
+[101][0,1]<2>()("(テストプレイ限定)<\n>読み込むファイルが指定されていません。<\n>s11の変数を確認してください<\n>S11=\s[11]")
+[172][0,0]<2>()()
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[122][2,1]<0>(1600005,1280)("\cself[9]")
+[150][3,0]<0>(34,842266,30)()
+[112][2,4]<0>(1,538470917)("<NoFile>","","","")
+[401][1,0]<0>(1)()
+[101][0,1]<1>()("(テストプレイ限定)<\n>読み込むファイルが存在していません。<\n>s11の変数を確認してください<\n>S11=\s[11]")
+[150][6,0]<1>(16777218,10300,30,0,0,10299)()
+[172][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(3000021,1,1600006)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(1600008,769,1600005)()
+[122][3,0]<0>(1600009,769,1600005)()
+[212][0,1]<0>()("cs1")
+[212][0,1]<0>()("ループ")
+[122][3,0]<0>(1600007,769,1600005)()
+[101][0,1]<0>()("5:\cself[5]")
+[111][4,0]<0>(1,2000124,0,2)()
+[401][1,0]<0>(1)()
+[121][4,0]<1>(2000101,1,0,0)()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[112][5,4]<0>(20,538470919,538470919,538470919,538470919)("#cdb","#sysdb","#error","#udb")
+[401][1,0]<0>(1)()
+[213][0,1]<1>()("cdb")
+[0][0,0]<1>()()
+[401][1,0]<0>(2)()
+[213][0,1]<1>()("Sysdb")
+[0][0,0]<1>()()
+[401][1,0]<0>(3)()
+[213][0,1]<1>()("error")
+[0][0,0]<1>()()
+[401][1,0]<0>(4)()
+[213][0,1]<1>()("udb")
+[0][0,0]<1>()()
+[420][1,0]<0>(0)()
+[111][4,0]<1>(1,1600000,5,3)()
+[401][1,0]<1>(1)()
+[112][2,4]<2>(1,538470919)("wait","","","")
+[401][1,0]<2>(1)()
+[213][0,1]<3>()("wait_old")
+[0][0,0]<3>()()
+[499][0,0]<2>()()
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[112][5,4]<1>(20,538470919,538470919,538470919,1600007)("#wait","#msg","#mapchip","#debugmsg")
+[401][1,0]<1>(1)()
+[213][0,1]<2>()("wait")
+[0][0,0]<2>()()
+[401][1,0]<1>(2)()
+[213][0,1]<2>()("msg")
+[0][0,0]<2>()()
+[401][1,0]<1>(3)()
+[213][0,1]<2>()("mapchip")
+[0][0,0]<2>()()
+[401][1,0]<1>(4)()
+[213][0,1]<2>()("debugmsg")
+[0][0,0]<2>()()
+[420][1,0]<1>(0)()
+[112][5,4]<2>(20,538470919,538470919,538470919,538470919)("#v","#sysv","#s","#syss")
+[401][1,0]<2>(1)()
+[213][0,1]<3>()("V")
+[0][0,0]<3>()()
+[401][1,0]<2>(2)()
+[213][0,1]<3>()("SysV")
+[0][0,0]<3>()()
+[401][1,0]<2>(3)()
+[213][0,1]<3>()("S")
+[0][0,0]<3>()()
+[401][1,0]<2>(4)()
+[213][0,1]<3>()("SysS")
+[0][0,0]<3>()()
+[420][1,0]<2>(0)()
+[112][5,4]<3>(20,538470919,538470919,1600007,538470919)("#common","[end]","","#se")
+[401][1,0]<3>(1)()
+[213][0,1]<4>()("Common")
+[0][0,0]<4>()()
+[401][1,0]<3>(2)()
+[213][0,1]<4>()("end")
+[0][0,0]<4>()()
+[401][1,0]<3>(3)()
+[213][0,1]<4>()("end")
+[0][0,0]<4>()()
+[401][1,0]<3>(4)()
+[213][0,1]<4>()("SE")
+[0][0,0]<4>()()
+[420][1,0]<3>(0)()
+[112][5,4]<4>(20,538470919,538470919,538470919,806906375)("#bgm","#bgs","#csv","//")
+[401][1,0]<4>(1)()
+[213][0,1]<5>()("BGM")
+[0][0,0]<5>()()
+[401][1,0]<4>(2)()
+[213][0,1]<5>()("BGS")
+[0][0,0]<5>()()
+[401][1,0]<4>(3)()
+[213][0,1]<5>()("CSV")
+[0][0,0]<5>()()
+[401][1,0]<4>(4)()
+[213][0,1]<5>()("ループ")
+[0][0,0]<5>()()
+[420][1,0]<4>(0)()
+[121][4,0]<5>(2000090,2,0,0)()
+[101][0,1]<5>()("エラー:実行対象が定義されていません。<\n>\cself[5]")
+[150][6,0]<5>(16777218,10300,30,0,0,10299)()
+[172][0,0]<5>()()
+[0][0,0]<5>()()
+[499][0,0]<4>()()
+[0][0,0]<4>()()
+[499][0,0]<3>()()
+[0][0,0]<3>()()
+[499][0,0]<2>()()
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[212][0,1]<0>()("cdb")
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600000,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600001,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600002,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[122][3,0]<0>(1600008,1,1600007)()
+[112][2,4]<0>(1,806906376)(":","","","")
+[401][1,0]<0>(1)()
+[122][2,1]<1>(1600008,2048)(":")
+[121][4,0]<1>(1600004,1600008,0,0)()
+[250][5,4]<1>(1600000,1600001,1600002,0,1600004)("","","","")
+[213][0,1]<1>()("ループ")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[106][0,1]<0>()("dir:\cself[9]")
+[106][0,1]<0>()("\cself[5]")
+[122][3,2]<0>(1600008,2304,0)("%moddir%","assets/\s[21]")
+[250][5,4]<0>(1600000,1600001,1600002,0,1600008)("","","","")
+[106][0,1]<0>()("\cself[5]")
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("error")
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[121][4,0]<0>(1600000,1600007,0,0)()
+[111][4,0]<0>(1,1600000,666,2)()
+[401][1,0]<0>(1)()
+[121][4,0]<1>(2000090,2,0,0)()
+[210][2,0]<1>(500255,0)()
+[150][6,0]<1>(16777218,10300,30,0,0,10299)()
+[172][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[210][3,0]<0>(500397,1,1600000)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("udb")
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600000,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600001,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600002,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[122][3,0]<0>(1600008,1,1600007)()
+[112][2,4]<0>(1,806906376)(":","","","")
+[401][1,0]<0>(1)()
+[122][2,1]<1>(1600008,2048)(":")
+[121][4,0]<1>(1600004,1600008,0,0)()
+[210][7,2]<1>(500309,4116,1600000,1600001,1600002,1600004,0)("","")
+[213][0,1]<1>()("ループ")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[122][3,2]<0>(1600008,2304,0)("%moddir%","assets/\s[21]")
+[106][0,1]<0>()("dir:\cself[9]")
+[106][0,1]<0>()("\cself[5]")
+[210][7,0]<0>(500309,20,1600000,1600001,1600002,0,1600008)()
+[106][0,1]<0>()("\cself[5]")
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("Sysdb")
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600000,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600001,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[106][0,1]<0>()("\cself[5]")
+[121][4,0]<0>(1600002,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[122][3,0]<0>(1600008,1,1600007)()
+[112][2,4]<0>(1,806906376)(":","","","")
+[401][1,0]<0>(1)()
+[122][2,1]<1>(1600008,2048)(":")
+[121][4,0]<1>(1600004,1600008,0,0)()
+[210][7,2]<1>(500312,4116,1600000,1600001,1600002,1600004,0)("","")
+[213][0,1]<1>()("ループ")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[122][3,2]<0>(1600008,2304,0)("%moddir%","assets/\s[21]")
+[106][0,1]<0>()("dir:\cself[9]")
+[106][0,1]<0>()("\cself[5]")
+[210][7,0]<0>(500312,20,1600000,1600001,1600002,0,1600008)()
+[106][0,1]<0>()("\cself[5]")
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("wait")
+[122][3,0]<0>(1600007,769,1600005)()
+[121][4,0]<0>(1600000,1600007,0,0)()
+[121][4,0]<0>(2000090,0,0,0)()
+[180][1,0]<0>(1600000)()
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("wait_old")
+[122][2,1]<0>(1600007,2048)("wait")
+[122][2,1]<0>(1600007,2048)("]")
+[122][2,1]<0>(1600007,2048)("[")
+[122][2,1]<0>(1600007,2048)(" ")
+[121][4,0]<0>(1600000,1600007,0,0)()
+[121][4,0]<0>(2000090,0,0,0)()
+[180][1,0]<0>(1600000)()
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("msg")
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(1600008,769,1600005)()
+[122][3,0]<0>(1600009,769,1600005)()
+[122][3,1]<0>(1600006,0,0)("\cself[6]<\n>\cself[7]<\n>\cself[8]<\n>\cself[9]")
+[121][4,0]<0>(2000090,0,0,0)()
+[101][0,1]<0>()("\cself[6]")
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("debugmsg")
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(1600008,769,1600005)()
+[122][3,0]<0>(1600009,769,1600005)()
+[121][4,0]<0>(2000090,0,0,0)()
+[106][0,1]<0>()("\cself[6]<\n>\cself[7]<\n>\cself[8]<\n>\cself[9]")
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("V")
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(1600007,769,1600005)()
+[121][4,0]<0>(2000082,2000000,1600006,4)()
+[121][4,0]<0>(2000069,1600007,0,0)()
+[112][3,4]<0>(2,538470918,538470918)("124","101","","")
+[401][1,0]<0>(1)()
+[111][4,0]<1>(1,9000112,1,2)()
+[401][1,0]<1>(1)()
+[101][0,1]<2>()("エラー:変数\cself[6]は書き換えできません。")
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[213][0,1]<1>()("ループ")
+[0][0,0]<1>()()
+[401][1,0]<0>(2)()
+[111][4,0]<1>(1,9000112,1,2)()
+[401][1,0]<1>(1)()
+[101][0,1]<2>()("エラー:変数\cself[6]は書き換えできません。")
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[213][0,1]<1>()("ループ")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[121][4,0]<0>(2000090,0,0,0)()
+[121][4,0]<0>(2000082,2000069,0,16)()
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("SysV")
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(1600007,769,1600005)()
+[121][4,0]<0>(2000082,9000000,1600006,4)()
+[121][4,0]<0>(2000069,1600007,0,0)()
+[121][4,0]<0>(2000090,0,0,0)()
+[121][4,0]<0>(2000082,2000069,0,16)()
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("S")
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(3000007,769,1600005)()
+[121][4,0]<0>(2000082,3000000,1600006,4)()
+[121][4,0]<0>(2000090,0,0,0)()
+[122][3,0]<0>(2000082,17,3000007)()
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("SysS")
+[122][3,0]<0>(1600006,769,1600005)()
+[122][3,0]<0>(3000007,769,1600005)()
+[121][4,0]<0>(2000082,9900000,1600006,4)()
+[121][4,0]<0>(2000090,0,0,0)()
+[122][3,0]<0>(2000082,17,3000007)()
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("Common")
+[122][3,0]<0>(1600006,769,1600005)()
+[112][2,4]<0>(1,538470918)("326","","","")
+[401][1,0]<0>(1)()
+[121][4,0]<1>(2000090,0,0,0)()
+[111][4,0]<1>(1,2200013,0,2)()
+[401][1,0]<1>(1)()
+[101][0,1]<2>()("エラー:通常版のウディタでは実行できないプログラ<\n>ムがありました。<\n>無視してそのまま実行します。")
+[121][4,0]<2>(2000090,1,0,0)()
+[213][0,1]<2>()("ループ")
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[101][0,1]<1>()("実行しているプログラムの中にファイルの削除<\n>に関するものが含まれていました。")
+[140][7,0]<1>(5920,0,0,0,0,0,0)()
+[101][0,1]<1>()("実行しますか?<\n>\f[8]※いいえの場合は無視してそのまま実行します。")
+[102][1,2]<1>(18)("いいえ","はい")
+[401][1,0]<1>(2)()
+[121][4,0]<2>(2000090,1,0,0)()
+[213][0,1]<2>()("ループ")
+[0][0,0]<2>()()
+[401][1,0]<1>(3)()
+[0][0,0]<2>()()
+[499][0,0]<1>()()
+[121][4,0]<1>(2000090,1,0,0)()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[121][4,0]<0>(2000082,500000,1600006,0)()
+[121][4,0]<0>(2000090,0,0,0)()
+[210][2,0]<0>(2000082,0)()
+[121][4,0]<0>(2000090,1,0,0)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("mapchip")
+[122][3,0]<0>(1600006,769,1600005)()
+[121][4,0]<0>(1600015,1600006,0,0)()
+[241][1,0]<0>(1600015)()
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("SE")
+[103][0,1]<0>()("se")
+[122][3,0]<0>(1600006,769,1600005)()
+[140][7,1]<0>(33554464,0,0,0,100,100,0)("\cself[6]")
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("BGM")
+[103][0,1]<0>()("bgm")
+[122][3,0]<0>(1600006,769,1600005)()
+[140][7,1]<0>(33554432,0,0,0,100,100,0)("\cself[6]")
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("BGS")
+[103][0,1]<0>()("bgs")
+[122][3,0]<0>(1600006,769,1600005)()
+[140][7,1]<0>(33554448,0,0,0,100,100,0)("\cself[6]")
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("CSV")
+[122][3,0]<0>(1600006,769,1600005)()
+[112][4,4]<0>(19,1600006,1600006,1600006)("cdb","udb","sysdb","")
+[401][1,0]<0>(1)()
+[121][4,0]<1>(1600016,1,0,0)()
+[0][0,0]<1>()()
+[401][1,0]<0>(2)()
+[121][4,0]<1>(1600016,2,0,0)()
+[0][0,0]<1>()()
+[401][1,0]<0>(3)()
+[121][4,0]<1>(1600016,3,0,0)()
+[0][0,0]<1>()()
+[420][1,0]<0>(0)()
+[101][0,1]<1>()("エラー:cdb,udb,sysdbのどれかを指定してください。")
+[172][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[121][4,0]<0>(1600000,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,0]<0>(3000007,1,1600007)()
+[121][4,0]<0>(1600001,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[121][4,0]<0>(1600002,1600007,0,0)()
+[122][3,0]<0>(1600007,769,1600005)()
+[122][3,2]<0>(1600007,2304,0)("%csv%","\sysS[52]assets/CSV")
+[122][3,2]<0>(1600007,2304,0)("%moddir%","\sysS[52]assets/\s[21]")
+[111][10,0]<0>(19,1600016,1,2,1600016,2,2,1600016,3,2)()
+[401][1,0]<0>(1)()
+[106][0,1]<1>()("cdb")
+[251][5,4]<1>(1600000,1600001,0,0,1600002)("\cself[7]","","","")
+[0][0,0]<1>()()
+[401][1,0]<0>(2)()
+[106][0,1]<1>()("udb")
+[251][5,4]<1>(1600000,1600001,0,512,1600002)("\cself[7]","","","")
+[0][0,0]<1>()()
+[401][1,0]<0>(3)()
+[106][0,1]<1>()("sysdb")
+[251][5,4]<1>(1600000,1600001,0,256,1600002)("\cself[7]","","","")
+[0][0,0]<1>()()
+[420][1,0]<0>(0)()
+[101][0,1]<1>()("エラー:cdb,udb,sysdbのどれかを指定してください。")
+[172][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[106][0,1]<0>()("以下csv<\n>\cself[0]<\n>\cself[1]<\n>\cself[2]<\n>\cself[7]<\n>---")
+[213][0,1]<0>()("ループ")
+[212][0,1]<0>()("end")
+[121][4,0]<0>(1600016,0,0,0)()
+[121][4,0]<0>(2000090,2,0,0)()
+[122][3,1]<0>(3000011,0,0)("")
+[172][0,0]<0>()()
+[213][0,1]<0>()("ループ")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+▼ ―――――――――――――――――――――――――――――――――――――――
+▼ カスタムバージョン定義
+■DB読込(ﾕｰｻﾞ)： V89[カスタムファイルバージョン] = ﾕｰｻﾞDB[ 27:1:1 ] (バージョン情報:カスタムファイルバージョン:バージョンID) 
+▼ ―――――――――――――――――――――――――――――――――――――――
+■文字列操作：CSelf9[currentFileName] = S11[loadedCustomFile]
+■条件分岐(数値):  【1】 Sys112:[読]テストプレイ中？(1=YES)  が   1 と同じ 
+-◇分岐： 【1】  [ Sys112:[読]テストプレイ中？(1=YES)  が  1 と同じ  ]の場合↓
+ |■条件分岐(文字):  【1】 S11[loadedCustomFile] が "" と同じ
+ |-◇分岐： 【1】 [ S11[loadedCustomFile] が "" と同じ ]の場合↓
+ | |■文章:(テストプレイ限定)\n読み込むファイルが指定されていません。\ns11の変数を確認してください\nS11=\s[11]
+ | |■イベント処理中断
+ | |■
+ |◇分岐終了◇
+ |■
+◇分岐終了◇
+■文字列操作：CSelf5[tempFileContent] =<ﾌｧｲﾙ内容読込> [自動文字ｺｰﾄﾞ判別] "\cself[9]"
+■ﾋﾟｸﾁｬ消去：842266  / 30(0)ﾌﾚｰﾑ
+■条件分岐(文字):  【1】 CSelf5[tempFileContent] が "<NoFile>" を含む
+-◇分岐： 【1】 [ CSelf5[tempFileContent] が "<NoFile>" を含む ]の場合↓
+ |■文章:(テストプレイ限定)\n読み込むファイルが存在していません。\ns11の変数を確認してください\nS11=\s[11]
+ |■ﾋﾟｸﾁｬ消去：10300 ～ 10299  / 30(0)ﾌﾚｰﾑ
+ |■イベント処理中断
+ |■
+◇分岐終了◇
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S21[CFディレクトリ] = CSelf6
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf8 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf9[currentFileName] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+●ラベル地点「cs1」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+●ラベル地点「ループ」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文章:5:\cself[5]
+■条件分岐(数値):  【1】 V124[CFnoMod]  が   0 と同じ 
+-◇分岐： 【1】  [ V124[CFnoMod]  が  0 と同じ  ]の場合↓
+ |■変数操作: V101[moded] = 1 + 0 
+ |■
+◇分岐終了◇
+■条件分岐(文字):  【1】 CSelf7 が "#cdb" を含む 【2】 CSelf7 が "#sysdb" を含む 【3】 CSelf7 が "#error" を含む 【4】 CSelf7 が "#udb" を含む
+-◇分岐： 【1】 [ CSelf7 が "#cdb" を含む ]の場合↓
+ |●ラベル「cdb」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+-◇分岐： 【2】 [ CSelf7 が "#sysdb" を含む ]の場合↓
+ |●ラベル「Sysdb」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+-◇分岐： 【3】 [ CSelf7 が "#error" を含む ]の場合↓
+ |●ラベル「error」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+-◇分岐： 【4】 [ CSelf7 が "#udb" を含む ]の場合↓
+ |●ラベル「udb」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+-◇上記以外
+ |■条件分岐(数値):  【1】 CSelf0  が   5 以下 
+ |-◇分岐： 【1】  [ CSelf0  が  5 以下  ]の場合↓
+ | |■条件分岐(文字):  【1】 CSelf7 が "wait" を含む
+ | |-◇分岐： 【1】 [ CSelf7 が "wait" を含む ]の場合↓
+ | | |●ラベル「wait_old」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | |■
+ | |◇分岐終了◇
+ | |■
+ |◇分岐終了◇
+ |■条件分岐(文字):  【1】 CSelf7 が "#wait" を含む 【2】 CSelf7 が "#msg" を含む 【3】 CSelf7 が "#mapchip" を含む 【4】 CSelf7 が "#debugmsg" と同じ
+ |-◇分岐： 【1】 [ CSelf7 が "#wait" を含む ]の場合↓
+ | |●ラベル「wait」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | |■
+ |-◇分岐： 【2】 [ CSelf7 が "#msg" を含む ]の場合↓
+ | |●ラベル「msg」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | |■
+ |-◇分岐： 【3】 [ CSelf7 が "#mapchip" を含む ]の場合↓
+ | |●ラベル「mapchip」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | |■
+ |-◇分岐： 【4】 [ CSelf7 が "#debugmsg" と同じ ]の場合↓
+ | |●ラベル「debugmsg」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | |■
+ |-◇上記以外
+ | |■条件分岐(文字):  【1】 CSelf7 が "#v" を含む 【2】 CSelf7 が "#sysv" を含む 【3】 CSelf7 が "#s" を含む 【4】 CSelf7 が "#syss" を含む
+ | |-◇分岐： 【1】 [ CSelf7 が "#v" を含む ]の場合↓
+ | | |●ラベル「V」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | |■
+ | |-◇分岐： 【2】 [ CSelf7 が "#sysv" を含む ]の場合↓
+ | | |●ラベル「SysV」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | |■
+ | |-◇分岐： 【3】 [ CSelf7 が "#s" を含む ]の場合↓
+ | | |●ラベル「S」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | |■
+ | |-◇分岐： 【4】 [ CSelf7 が "#syss" を含む ]の場合↓
+ | | |●ラベル「SysS」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | |■
+ | |-◇上記以外
+ | | |■条件分岐(文字):  【1】 CSelf7 が "#common" を含む 【2】 CSelf7 が "[end]" を含む 【3】 CSelf7 が "" と同じ 【4】 CSelf7 が "#se" を含む
+ | | |-◇分岐： 【1】 [ CSelf7 が "#common" を含む ]の場合↓
+ | | | |●ラベル「Common」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | |■
+ | | |-◇分岐： 【2】 [ CSelf7 が "[end]" を含む ]の場合↓
+ | | | |●ラベル「end」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | |■
+ | | |-◇分岐： 【3】 [ CSelf7 が "" と同じ ]の場合↓
+ | | | |●ラベル「end」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | |■
+ | | |-◇分岐： 【4】 [ CSelf7 が "#se" を含む ]の場合↓
+ | | | |●ラベル「SE」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | |■
+ | | |-◇上記以外
+ | | | |■条件分岐(文字):  【1】 CSelf7 が "#bgm" を含む 【2】 CSelf7 が "#bgs" を含む 【3】 CSelf7 が "#csv" を含む 【4】 CSelf7 が "//" が先頭にある
+ | | | |-◇分岐： 【1】 [ CSelf7 が "#bgm" を含む ]の場合↓
+ | | | | |●ラベル「BGM」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | | |■
+ | | | |-◇分岐： 【2】 [ CSelf7 が "#bgs" を含む ]の場合↓
+ | | | | |●ラベル「BGS」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | | |■
+ | | | |-◇分岐： 【3】 [ CSelf7 が "#csv" を含む ]の場合↓
+ | | | | |●ラベル「CSV」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | | |■
+ | | | |-◇分岐： 【4】 [ CSelf7 が "//" が先頭にある ]の場合↓
+ | | | | |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | | | |■
+ | | | |-◇上記以外
+ | | | | |■変数操作: V90[ロード画面] = 2 + 0 
+ | | | | |■文章:エラー:実行対象が定義されていません。\n\cself[5]
+ | | | | |■ﾋﾟｸﾁｬ消去：10300 ～ 10299  / 30(0)ﾌﾚｰﾑ
+ | | | | |■イベント処理中断
+ | | | | |■
+ | | | |◇分岐終了◇
+ | | | |■
+ | | |◇分岐終了◇
+ | | |■
+ | |◇分岐終了◇
+ | |■
+ |◇分岐終了◇
+ |■
+◇分岐終了◇
+●ラベル地点「cdb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf0 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf1 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf2 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■文字列操作：CSelf8 = CSelf7
+■条件分岐(文字):  【1】 CSelf8 が ":" が先頭にある
+-◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
+ |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
+ |■変数操作: CSelf4 = CSelf8 + 0 
+ |■DB書込(可変)：可変DB[ CSelf0:CSelf1:CSelf2 ] (-:-:-) =  CSelf4
+ |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+◇分岐終了◇
+■デバッグ文:dir:\cself[9]
+■デバッグ文:\cself[5]
+■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
+■DB書込(可変)：可変DB[ CSelf0:CSelf1:CSelf2 ] (-:-:-) =  CSelf8
+■デバッグ文:\cself[5]
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「error」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■変数操作: CSelf0 = CSelf7 + 0 
+■条件分岐(数値):  【1】 CSelf0  が   666 と同じ 
+-◇分岐： 【1】  [ CSelf0  が  666 と同じ  ]の場合↓
+ |■変数操作: V90[ロード画面] = 2 + 0 
+ |■イベントの挿入： コモン255：[  ]
+ |■ﾋﾟｸﾁｬ消去：10300 ～ 10299  / 30(0)ﾌﾚｰﾑ
+ |■イベント処理中断
+ |■
+◇分岐終了◇
+■イベントの挿入： コモン397：[ エラーメッセージv3 ] / CSelf0
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「udb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf0 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf1 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf2 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■文字列操作：CSelf8 = CSelf7
+■条件分岐(文字):  【1】 CSelf8 が ":" が先頭にある
+-◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
+ |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
+ |■変数操作: CSelf4 = CSelf8 + 0 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+◇分岐終了◇
+■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
+■デバッグ文:dir:\cself[9]
+■デバッグ文:\cself[5]
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+■デバッグ文:\cself[5]
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「Sysdb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf0 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf1 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■デバッグ文:\cself[5]
+■変数操作: CSelf2 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■文字列操作：CSelf8 = CSelf7
+■条件分岐(文字):  【1】 CSelf8 が ":" が先頭にある
+-◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
+ |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
+ |■変数操作: CSelf4 = CSelf8 + 0 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+◇分岐終了◇
+■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
+■デバッグ文:dir:\cself[9]
+■デバッグ文:\cself[5]
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+■デバッグ文:\cself[5]
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「wait」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: CSelf0 = CSelf7 + 0 
+■変数操作: V90[ロード画面] = 0 + 0 
+■ウェイト：CSelf0 フレーム
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「wait_old」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf7 =<から→の文字列を全消去> "wait"
+■文字列操作：CSelf7 =<から→の文字列を全消去> "]"
+■文字列操作：CSelf7 =<から→の文字列を全消去> "["
+■文字列操作：CSelf7 =<から→の文字列を全消去> " "
+■変数操作: CSelf0 = CSelf7 + 0 
+■変数操作: V90[ロード画面] = 0 + 0 
+■ウェイト：CSelf0 フレーム
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「msg」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf8 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf9[currentFileName] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf6 = "\cself[6]\n\cself[7]\n\cself[8]\n\cself[9]"
+■変数操作: V90[ロード画面] = 0 + 0 
+■文章:\cself[6]
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「debugmsg」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf8 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf9[currentFileName] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: V90[ロード画面] = 0 + 0 
+■デバッグ文:\cself[6]\n\cself[7]\n\cself[8]\n\cself[9]
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「V」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: V82[temp2] = 2000000 + CSelf6 
+■変数操作: V69[temp] = CSelf7 + 0 
+■条件分岐(文字):  【1】 CSelf6 が "124" を含む 【2】 CSelf6 が "101" を含む
+-◇分岐： 【1】 [ CSelf6 が "124" を含む ]の場合↓
+ |■条件分岐(数値):  【1】 Sys112:[読]テストプレイ中？(1=YES)  が   1 と同じ 
+ |-◇分岐： 【1】  [ Sys112:[読]テストプレイ中？(1=YES)  が  1 と同じ  ]の場合↓
+ | |■文章:エラー:変数\cself[6]は書き換えできません。
+ | |■
+ |◇分岐終了◇
+ |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+-◇分岐： 【2】 [ CSelf6 が "101" を含む ]の場合↓
+ |■条件分岐(数値):  【1】 Sys112:[読]テストプレイ中？(1=YES)  が   1 と同じ 
+ |-◇分岐： 【1】  [ Sys112:[読]テストプレイ中？(1=YES)  が  1 と同じ  ]の場合↓
+ | |■文章:エラー:変数\cself[6]は書き換えできません。
+ | |■
+ |◇分岐終了◇
+ |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+◇分岐終了◇
+■変数操作: V90[ロード画面] = 0 + 0 
+■変数操作: V[V82[temp2]] = V69[temp] + 0 
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「SysV」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: V82[temp2] = 9000000 + CSelf6 
+■変数操作: V69[temp] = CSelf7 + 0 
+■変数操作: V90[ロード画面] = 0 + 0 
+■変数操作: V[V82[temp2]] = V69[temp] + 0 
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「S」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: V82[temp2] = 3000000 + CSelf6 
+■変数操作: V90[ロード画面] = 0 + 0 
+■文字列操作：V[V82[temp2]] = S7[temp]
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「SysS」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: V82[temp2] = 9900000 + CSelf6 
+■変数操作: V90[ロード画面] = 0 + 0 
+■文字列操作：V[V82[temp2]] = S7[temp]
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「Common」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■条件分岐(文字):  【1】 CSelf6 が "326" を含む
+-◇分岐： 【1】 [ CSelf6 が "326" を含む ]の場合↓
+ |■変数操作: V90[ロード画面] = 0 + 0 
+ |■条件分岐(数値):  【1】 V2-13[処理可能ｺﾏﾝﾄﾞ[通常0/プロ版1]]  が   0 と同じ 
+ |-◇分岐： 【1】  [ V2-13[処理可能ｺﾏﾝﾄﾞ[通常0/プロ版1]]  が  0 と同じ  ]の場合↓
+ | |■文章:エラー:通常版のウディタでは実行できないプログラ\nムがありました。\n無視してそのまま実行します。
+ | |■変数操作: V90[ロード画面] = 1 + 0 
+ | |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | |■
+ |◇分岐終了◇
+ |■文章:実行しているプログラムの中にファイルの削除\nに関するものが含まれていました。
+ |■サウンド：SE23「ブザー90」(0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
+ |■文章:実行しますか?\n\f[8]※いいえの場合は無視してそのまま実行します。
+ |■文章選択肢:/ 【1】いいえ / 【2】はい 
+ |-◇選択肢：【1】 いいえ                                      の場合↓
+ | |■変数操作: V90[ロード画面] = 1 + 0 
+ | |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | |■
+ |-◇選択肢：【2】 はい                                       の場合↓
+ | |■
+ |◇分岐終了◇
+ |■変数操作: V90[ロード画面] = 1 + 0 
+ |■
+◇分岐終了◇
+■変数操作: V82[temp2] = 500000 + CSelf6 
+■変数操作: V90[ロード画面] = 0 + 0 
+■イベントの挿入： 変数[V82[temp2]]のEv ページ[1]
+■変数操作: V90[ロード画面] = 1 + 0 
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「mapchip」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: CSelf15 = CSelf6 + 0 
+■ﾁｯﾌﾟｾｯﾄ切り替え： [CSelf15] 番
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「SE」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+▼ se
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■サウンド：SE ﾌｧｲﾙ[\cself[6]] 音 100％ 周 100％ (0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「BGM」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+▼ bgm
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■サウンド：BGM ﾌｧｲﾙ[\cself[6]] 音 100％ 周 100％ ﾙ 0ms 再生 / 処理時間:0ﾌﾚｰﾑ
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「BGS」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+▼ bgs
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■サウンド：BGS ﾌｧｲﾙ[\cself[6]] 音 100％ 周 100％ ﾙ 0ms (0 ﾁｬﾝﾈﾙ) 再生 / 処理時間:0ﾌﾚｰﾑ
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「CSV」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■条件分岐(文字):  【1】 CSelf6 が "cdb" と同じ 【2】 CSelf6 が "udb" と同じ 【3】 CSelf6 が "sysdb" と同じ
+-◇分岐： 【1】 [ CSelf6 が "cdb" と同じ ]の場合↓
+ |■変数操作: CSelf16[csv識別] = 1 + 0 
+ |■
+-◇分岐： 【2】 [ CSelf6 が "udb" と同じ ]の場合↓
+ |■変数操作: CSelf16[csv識別] = 2 + 0 
+ |■
+-◇分岐： 【3】 [ CSelf6 が "sysdb" と同じ ]の場合↓
+ |■変数操作: CSelf16[csv識別] = 3 + 0 
+ |■
+-◇上記以外
+ |■文章:エラー:cdb,udb,sysdbのどれかを指定してください。
+ |■イベント処理中断
+ |■
+◇分岐終了◇
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■変数操作: CSelf0 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：S7[temp] = CSelf7
+■変数操作: CSelf1 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■変数操作: CSelf2 = CSelf7 + 0 
+■文字列操作：CSelf7 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
+■文字列操作：CSelf7 =<から文字列を置換> "%csv%" → "\sysS[52]assets/CSV"
+■文字列操作：CSelf7 =<から文字列を置換> "%moddir%" → "\sysS[52]assets/\s[21]"
+■条件分岐(数値):  【1】 CSelf16[csv識別]  が   1 と同じ  【2】 CSelf16[csv識別]  が   2 と同じ  【3】 CSelf16[csv識別]  が   3 と同じ 
+-◇分岐： 【1】  [ CSelf16[csv識別]  が  1 と同じ  ]の場合↓
+ |■デバッグ文:cdb
+ |■CSVﾌｧｲﾙからDBに読込:　ﾌｧｲﾙ "\cself[7]"　→　可変DB[ CSelf0:CSelf1 ] から [ CSelf2 ]データ
+ |■
+-◇分岐： 【2】  [ CSelf16[csv識別]  が  2 と同じ  ]の場合↓
+ |■デバッグ文:udb
+ |■CSVﾌｧｲﾙからDBに読込:　ﾌｧｲﾙ "\cself[7]"　→　ﾕｰｻﾞDB[ CSelf0:CSelf1 ] から [ CSelf2 ]データ
+ |■
+-◇分岐： 【3】  [ CSelf16[csv識別]  が  3 と同じ  ]の場合↓
+ |■デバッグ文:sysdb
+ |■CSVﾌｧｲﾙからDBに読込:　ﾌｧｲﾙ "\cself[7]"　→　ｼｽﾃﾑDB[ CSelf0:CSelf1 ] から [ CSelf2 ]データ
+ |■
+-◇上記以外
+ |■文章:エラー:cdb,udb,sysdbのどれかを指定してください。
+ |■イベント処理中断
+ |■
+◇分岐終了◇
+■デバッグ文:以下csv\n\cself[0]\n\cself[1]\n\cself[2]\n\cself[7]\n---
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+●ラベル地点「end」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■変数操作: CSelf16[csv識別] = 0 + 0 
+■変数操作: V90[ロード画面] = 2 + 0 
+■文字列操作：S11[loadedCustomFile] = ""
+■イベント処理中断
+●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ■
 [COMMAND_TEXT_END]
 --------------------------
@@ -299687,14 +299931,14 @@ WoditorEvCOMMAND_END
 -◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
  |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
  |■変数操作: CSelf4 = CSelf8 + 0 
- |■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
  |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
  |■
 ◇分岐終了◇
 ■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
 ■デバッグ文:dir:\cself[9]
 ■デバッグ文:\cself[5]
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
 ■デバッグ文:\cself[5]
 ●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「Sysdb」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
@@ -299717,14 +299961,14 @@ WoditorEvCOMMAND_END
 -◇分岐： 【1】 [ CSelf8 が ":" が先頭にある ]の場合↓
  |■文字列操作：CSelf8 =<から→の文字列を全消去> ":"
  |■変数操作: CSelf4 = CSelf8 + 0 
- |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
+ |■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / CSelf4 / 
  |●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
  |■
 ◇分岐終了◇
 ■文字列操作：CSelf8 =<から文字列を置換> "%moddir%" → "assets/\s[21]"
 ■デバッグ文:dir:\cself[9]
 ■デバッグ文:\cself[5]
-■イベントの挿入： コモン312：[ 【呼】SysDB書き込み ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
+■イベントの挿入： コモン312：[ 【呼】SysDB書き込み_old ] / CSelf0 / CSelf1 / CSelf2 / 0 / CSelf8
 ■デバッグ文:\cself[5]
 ●ラベル「ループ」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
 ●ラベル地点「wait」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
@@ -301719,7 +301963,7 @@ WoditorEvCOMMAND_END
 ◇分岐終了◇
 ■文字列操作：CSelf6 =<ﾌｧｲﾙ内容読込> [UTF-8] "PreVersion.txt"
 ■文字列操作：S1[バージョン] = CSelf6
-■イベントの挿入： コモン309：[ 【呼】UDB書き込み ] / 27 / 0 / 0 / 0 / CSelf6
+■イベントの挿入： コモン309：[ 【呼】UDB書き込み_old ] / 27 / 0 / 0 / 0 / CSelf6
 ■
 [COMMAND_TEXT_END]
 --------------------------
@@ -302160,261 +302404,9 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=649
-COMMON_NAME=スクリーンショット
+COMMON_NAME=
 COMMAND_COLOR=0
-TRIGGER=34
-TRIGGER_TARGET=2100001
-TRIGGER_VAL=2
-MEMO=
-VALINPUT_NUM=0
-STRINPUT_NUM=0
-VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=
-VALINPUT_NAME_1=
-VALINPUT_NAME_2=
-VALINPUT_NAME_3=
-VALINPUT_NAME_4=
-VALINPUT_NAME_5=
-VALINPUT_NAME_6=
-VALINPUT_NAME_7=
-VALINPUT_NAME_8=
-VALINPUT_NAME_9=
-VALINPUT_NAME_10=
-LOADTYPE_NUM=10
-LOADTYPE0=0
-LOADTYPE1=0
-LOADTYPE2=0
-LOADTYPE3=0
-LOADTYPE4=0
-LOADTYPE5=0
-LOADTYPE6=0
-LOADTYPE7=0
-LOADTYPE8=0
-LOADTYPE9=0
-CHOICE_STR_NUM=10
-CHOICE_STR_0_NUM=0
-CHOICE_STR_1_NUM=0
-CHOICE_STR_2_NUM=0
-CHOICE_STR_3_NUM=0
-CHOICE_STR_4_NUM=0
-CHOICE_STR_5_NUM=0
-CHOICE_STR_6_NUM=0
-CHOICE_STR_7_NUM=0
-CHOICE_STR_8_NUM=0
-CHOICE_STR_9_NUM=0
-CHOICE_VAL_NUM=10
-CHOICE_VAL_0_NUM=0
-CHOICE_VAL_1_NUM=0
-CHOICE_VAL_2_NUM=0
-CHOICE_VAL_3_NUM=0
-CHOICE_VAL_4_NUM=0
-CHOICE_VAL_5_NUM=0
-CHOICE_VAL_6_NUM=0
-CHOICE_VAL_7_NUM=0
-CHOICE_VAL_8_NUM=0
-CHOICE_VAL_9_NUM=0
-DEFAULT_VAL_NUM=5
-DEFAULT_VAL_0=0
-DEFAULT_VAL_1=0
-DEFAULT_VAL_2=0
-DEFAULT_VAL_3=0
-DEFAULT_VAL_4=0
-RETURN_VAL_NAME=
-RETURN_VAL_TARGET=-1
-CSELF_NAME_0=
-CSELF_NAME_1=x
-CSELF_NAME_2=y
-CSELF_NAME_3=
-CSELF_NAME_4=
-CSELF_NAME_5=使用ウィンドウ
-CSELF_NAME_6=スクリーンショット
-CSELF_NAME_7=
-CSELF_NAME_8=
-CSELF_NAME_9=
-CSELF_NAME_10=起点ピクチャ番号
-CSELF_NAME_11=Yサイズ
-CSELF_NAME_12=起点Y
-CSELF_NAME_13=初回処理
-CSELF_NAME_14=明るさ
-CSELF_NAME_15=不透明度
-CSELF_NAME_16=文字Y
-CSELF_NAME_17=文字X
-CSELF_NAME_18=重複防止
-CSELF_NAME_19=一時
-CSELF_NAME_20=
-CSELF_NAME_21=
-CSELF_NAME_22=
-CSELF_NAME_23=
-CSELF_NAME_24=
-CSELF_NAME_25=
-CSELF_NAME_26=
-CSELF_NAME_27=
-CSELF_NAME_28=
-CSELF_NAME_29=
-CSELF_NAME_30=
-CSELF_NAME_31=
-CSELF_NAME_32=
-CSELF_NAME_33=
-CSELF_NAME_34=
-CSELF_NAME_35=
-CSELF_NAME_36=
-CSELF_NAME_37=
-CSELF_NAME_38=
-CSELF_NAME_39=
-CSELF_NAME_40=
-CSELF_NAME_41=
-CSELF_NAME_42=
-CSELF_NAME_43=
-CSELF_NAME_44=
-CSELF_NAME_45=
-CSELF_NAME_46=
-CSELF_NAME_47=
-CSELF_NAME_48=
-CSELF_NAME_49=
-CSELF_NAME_50=
-CSELF_NAME_51=
-CSELF_NAME_52=
-CSELF_NAME_53=
-CSELF_NAME_54=
-CSELF_NAME_55=
-CSELF_NAME_56=
-CSELF_NAME_57=
-CSELF_NAME_58=
-CSELF_NAME_59=
-CSELF_NAME_60=temp
-CSELF_NAME_61=
-CSELF_NAME_62=
-CSELF_NAME_63=
-CSELF_NAME_64=
-CSELF_NAME_65=
-CSELF_NAME_66=
-CSELF_NAME_67=
-CSELF_NAME_68=
-CSELF_NAME_69=
-CSELF_NAME_70=
-CSELF_NAME_71=
-CSELF_NAME_72=
-CSELF_NAME_73=
-CSELF_NAME_74=
-CSELF_NAME_75=
-CSELF_NAME_76=
-CSELF_NAME_77=
-CSELF_NAME_78=
-CSELF_NAME_79=
-CSELF_NAME_80=
-CSELF_NAME_81=
-CSELF_NAME_82=
-CSELF_NAME_83=
-CSELF_NAME_84=
-CSELF_NAME_85=
-CSELF_NAME_86=
-CSELF_NAME_87=
-CSELF_NAME_88=
-CSELF_NAME_89=
-CSELF_NAME_90=
-CSELF_NAME_91=
-CSELF_NAME_92=
-CSELF_NAME_93=
-CSELF_NAME_94=
-CSELF_NAME_95=
-CSELF_NAME_96=
-CSELF_NAME_97=
-CSELF_NAME_98=
-CSELF_NAME_99=
-COMMAND_NUM=41
---
-WoditorEvCOMMAND_START
-[121][4,0]<0>(1600010,55600,0,0)()
-[121][4,0]<0>(1600060,1600010,1,0)()
-[150][6,0]<0>(16777218,1600010,0,0,0,1600060)()
-[121][4,0]<0>(1600019,9000028,0,0)()
-[121][4,0]<0>(1600018,1600019,100,12288)()
-[121][4,0]<0>(1600018,1600018,100,8192)()
-[121][4,0]<0>(1600018,1600019,1600018,4096)()
-[122][3,1]<0>(1600006,0,0)("Screenshot/\sys[77]-\sys[78]-\sys[79]_\sys[80].\sys[81].\sys[82]-\cself[18].png")
-[180][1,0]<0>(1)()
-[1000][1,1]<0>(1)("Screenshot/")
-[1000][1,1]<0>(0)("\cself[6]")
-[121][4,0]<0>(1600011,9000117,6,12288)()
-[121][4,0]<0>(1600012,9000117,2,8192)()
-[122][3,1]<0>(1600005,0,0)("Picture/fade.png")
-[121][4,0]<0>(1600014,100,0,0)()
-[121][4,0]<0>(1600015,185,0,0)()
-[121][4,0]<0>(1600016,9000117,80,12288)()
-[121][4,0]<0>(1600016,1600016,79,8192)()
-[121][4,0]<0>(1600017,9000116,240,12288)()
-[180][1,0]<0>(1)()
-[111][7,0]<0>(2,2100001,2,2,2100001,1,2)()
-[401][1,0]<0>(1)()
-[150][19,1]<1>(3153952,1600060,0,1,1,1,255,1600017,780,100,0,0,33554432,0,0,100,100,100,100)("\font[0]\f[33]スクリーンショットを\cself[6]に保存しました。")
-[150][18,0]<1>(8256,1600010,0,9000116,1600011,1,1600015,0,1600012,100,0,1600005,33554432,0,0,1600014,1600014,1600014)()
-[210][3,0]<1>(500391,1,14)()
-[210][7,0]<1>(500382,20,35,1600060,1600017,1600016,3000009)()
-[210][7,0]<1>(500382,20,35,1600010,0,9000117,3000009)()
-[180][1,0]<1>(35)()
-[150][18,0]<1>(8256,1600010,0,9000116,1600011,1,1600015,0,9000117,100,0,1600005,33554432,0,0,1600014,1600014,1600014)()
-[180][1,0]<1>(145)()
-[150][18,0]<1>(8256,1600010,0,9000116,1600011,1,1600015,0,9000117,100,0,1600005,33554432,0,0,1600014,1600014,1600014)()
-[210][3,0]<1>(500391,1,24)()
-[210][7,0]<1>(500382,20,60,1600060,1600017,780,3000009)()
-[210][7,0]<1>(500382,20,60,1600010,0,1600012,3000009)()
-[180][1,0]<1>(60)()
-[121][4,0]<1>(2100001,1,0,0)()
-[0][0,0]<1>()()
-[401][1,0]<0>(2)()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[0][0,0]<0>()()
-WoditorEvCOMMAND_END
---
-[COMMAND_TEXT_START]
-■変数操作: CSelf10[起点ピクチャ番号] = 55600 + 0 
-■変数操作: CSelf60[temp] = CSelf10[起点ピクチャ番号] + 1 
-■ﾋﾟｸﾁｬ消去：CSelf10[起点ピクチャ番号] ～ CSelf60[temp]  / 0(0)ﾌﾚｰﾑ
-■変数操作: CSelf19[一時] = Sys28:経過ﾌﾚｰﾑ数[1000万で一周] + 0 
-■変数操作: CSelf18[重複防止] = CSelf19[一時] / 100 
-■変数操作: CSelf18[重複防止] = CSelf18[重複防止] * 100 
-■変数操作: CSelf18[重複防止] = CSelf19[一時] - CSelf18[重複防止] 
-■文字列操作：CSelf6[スクリーンショット] = "Screenshot/\sys[77]-\sys[78]-\sys[79]_\sys[80].\sys[81].\sys[82]-\cself[18].png"
-■ウェイト：1 フレーム
-■[Pro] フォルダ作成 [Screenshot/]
-■[Pro] スクリーンショット(JPG) [\cself[6]]
-■変数操作: CSelf11[Yサイズ] = Sys117:[読]画面サイズＹ / 6 
-■変数操作: CSelf12[起点Y] = Sys117:[読]画面サイズＹ * 2 
-■文字列操作：CSelf5[使用ウィンドウ] = "Picture/fade.png"
-■変数操作: CSelf14[明るさ] = 100 + 0 
-■変数操作: CSelf15[不透明度] = 185 + 0 
-■変数操作: CSelf16[文字Y] = Sys117:[読]画面サイズＹ / 80 
-■変数操作: CSelf16[文字Y] = CSelf16[文字Y] * 79 
-■変数操作: CSelf17[文字X] = Sys116:[読]画面サイズＸ / 240 
-■ウェイト：1 フレーム
-■条件分岐(数値):  【1】 V1-1[スクリーンショットUI]  が   2 と同じ  【2】 V1-1[スクリーンショットUI]  が   1 と同じ 
--◇分岐： 【1】  [ V1-1[スクリーンショットUI]  が  2 と同じ  ]の場合↓
- |■ﾋﾟｸﾁｬ表示：CSelf60[temp] [左下]文字列[\font[0]\f[33]スク] X:CSelf17[文字X] Y:780 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100x100％ / ｶﾗｰ R[100] G[100] B[100]
- |■ﾋﾟｸﾁｬ表示：CSelf10[起点ピクチャ番号] [左下]ｳｨﾝﾄﾞｳ(CSelf5[使用ウィンドウ]) ｻｲｽﾞ[Sys116:[読]画面サイズＸ,CSelf11[Yサイズ]] X:0 Y:CSelf12[起点Y] / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 CSelf15[不透明度] / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[CSelf14[明るさ]] G[CSelf14[明るさ]] B[CSelf14[明るさ]]
- |■イベントの挿入： コモン391：[ [E+]イージング選択 ] / 14:減速5
- |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 35 / CSelf60[temp] / CSelf17[文字X] / CSelf16[文字Y] / S9[[E]イージング設定]
- |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 35 / CSelf10[起点ピクチャ番号] / 0 / Sys117:[読]画面サイズＹ / S9[[E]イージング設定]
- |■ウェイト：35 フレーム
- |■ﾋﾟｸﾁｬ表示：CSelf10[起点ピクチャ番号] [左下]ｳｨﾝﾄﾞｳ(CSelf5[使用ウィンドウ]) ｻｲｽﾞ[Sys116:[読]画面サイズＸ,CSelf11[Yサイズ]] X:0 Y:Sys117:[読]画面サイズＹ / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 CSelf15[不透明度] / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[CSelf14[明るさ]] G[CSelf14[明るさ]] B[CSelf14[明るさ]]
- |■ウェイト：145 フレーム
- |■ﾋﾟｸﾁｬ表示：CSelf10[起点ピクチャ番号] [左下]ｳｨﾝﾄﾞｳ(CSelf5[使用ウィンドウ]) ｻｲｽﾞ[Sys116:[読]画面サイズＸ,CSelf11[Yサイズ]] X:0 Y:Sys117:[読]画面サイズＹ / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 CSelf15[不透明度] / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[CSelf14[明るさ]] G[CSelf14[明るさ]] B[CSelf14[明るさ]]
- |■イベントの挿入： コモン391：[ [E+]イージング選択 ] / 24:加減速5
- |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 60 / CSelf60[temp] / CSelf17[文字X] / 780 / S9[[E]イージング設定]
- |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 60 / CSelf10[起点ピクチャ番号] / 0 / CSelf12[起点Y] / S9[[E]イージング設定]
- |■ウェイト：60 フレーム
- |■変数操作: V1-1[スクリーンショットUI] = 1 + 0 
- |■
--◇分岐： 【2】  [ V1-1[スクリーンショットUI]  が  1 と同じ  ]の場合↓
- |■
-◇分岐終了◇
-■
-[COMMAND_TEXT_END]
---------------------------
-COMMON_ID=650
-COMMON_NAME=スクリーンショット切り替え
-COMMAND_COLOR=1
-TRIGGER=35
+TRIGGER=32
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
 MEMO=
@@ -302484,7 +302476,7 @@ CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
 CSELF_NAME_10=
-CSELF_NAME_11=キー
+CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
 CSELF_NAME_14=
@@ -302573,77 +302565,185 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=33
+COMMAND_NUM=1
 --
 WoditorEvCOMMAND_START
-[121][4,0]<0>(1600011,160,0,0)()
-[123][3,0]<0>(1600000,4480,160)()
-[140][7,0]<0>(32,0,0,0,0,0,0)()
-[121][4,0]<0>(2100001,1,0,0)()
-[180][1,0]<0>(1)()
-[121][4,0]<0>(2100001,2,0,0)()
-[212][0,1]<0>()("ループ1")
-[123][3,0]<0>(1600010,4352,1600011)()
-[111][4,0]<0>(1,1600010,1600011,2)()
-[401][1,0]<0>(1)()
-[180][1,0]<1>(1)()
-[213][0,1]<1>()("ループ1")
-[0][0,0]<1>()()
-[499][0,0]<0>()()
-[111][7,0]<0>(2,2100001,2,5,2100001,2,2)()
-[401][1,0]<0>(1)()
-[0][0,0]<1>()()
-[401][1,0]<0>(2)()
-[179][1,0]<1>(0)()
-[121][4,0]<2>(2100001,1,0,0)()
-[212][0,1]<2>()("ループ12")
-[123][3,0]<2>(1600010,4352,1600011)()
-[111][4,0]<2>(1,1600010,1600011,2)()
-[401][1,0]<2>(1)()
-[180][1,0]<3>(1)()
-[213][0,1]<3>()("ループ12")
-[0][0,0]<3>()()
-[499][0,0]<2>()()
-[0][0,0]<2>()()
-[498][0,0]<1>()()
-[0][0,0]<1>()()
-[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■変数操作: CSelf11[キー] = 160 + 0 
-■キー入力：CSelf0 [入力待ち【！】] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[160]のみ判定] ( F2ｷｰ ) 
-■サウンド：SE0「[ｼｽﾃﾑ]決定音」(0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
-■変数操作: V1-1[スクリーンショットUI] = 1 + 0 
-■ウェイト：1 フレーム
-■変数操作: V1-1[スクリーンショットUI] = 2 + 0 
-●ラベル地点「ループ1」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
-■キー入力：CSelf10 [通常入力] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[CSelf11[キー]]のみ判定]
-■条件分岐(数値):  【1】 CSelf10  が   CSelf11[キー] と同じ 
--◇分岐： 【1】  [ CSelf10  が  CSelf11[キー] と同じ  ]の場合↓
- |■ウェイト：1 フレーム
- |●ラベル「ループ1」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- |■
-◇分岐終了◇
-■条件分岐(数値):  【1】 V1-1[スクリーンショットUI]  が   2 以外  【2】 V1-1[スクリーンショットUI]  が   2 と同じ 
--◇分岐： 【1】  [ V1-1[スクリーンショットUI]  が  2 以外  ]の場合↓
- |■
--◇分岐： 【2】  [ V1-1[スクリーンショットUI]  が  2 と同じ  ]の場合↓
- |■回数付きループ [ 0 ]回
- | |■変数操作: V1-1[スクリーンショットUI] = 1 + 0 
- | |●ラベル地点「ループ12」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
- | |■キー入力：CSelf10 [通常入力] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[CSelf11[キー]]のみ判定]
- | |■条件分岐(数値):  【1】 CSelf10  が   CSelf11[キー] と同じ 
- | |-◇分岐： 【1】  [ CSelf10  が  CSelf11[キー] と同じ  ]の場合↓
- | | |■ウェイト：1 フレーム
- | | |●ラベル「ループ12」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
- | | |■
- | |◇分岐終了◇
- | |■
- |◇ループここまで◇◇
- |■
-◇分岐終了◇
+■
+[COMMAND_TEXT_END]
+--------------------------
+COMMON_ID=650
+COMMON_NAME=
+COMMAND_COLOR=0
+TRIGGER=32
+TRIGGER_TARGET=2000000
+TRIGGER_VAL=0
+MEMO=
+VALINPUT_NUM=0
+STRINPUT_NUM=0
+VALINPUT_NAME_NUM=11
+VALINPUT_NAME_0=
+VALINPUT_NAME_1=
+VALINPUT_NAME_2=
+VALINPUT_NAME_3=
+VALINPUT_NAME_4=
+VALINPUT_NAME_5=
+VALINPUT_NAME_6=
+VALINPUT_NAME_7=
+VALINPUT_NAME_8=
+VALINPUT_NAME_9=
+VALINPUT_NAME_10=
+LOADTYPE_NUM=10
+LOADTYPE0=0
+LOADTYPE1=0
+LOADTYPE2=0
+LOADTYPE3=0
+LOADTYPE4=0
+LOADTYPE5=0
+LOADTYPE6=0
+LOADTYPE7=0
+LOADTYPE8=0
+LOADTYPE9=0
+CHOICE_STR_NUM=10
+CHOICE_STR_0_NUM=0
+CHOICE_STR_1_NUM=0
+CHOICE_STR_2_NUM=0
+CHOICE_STR_3_NUM=0
+CHOICE_STR_4_NUM=0
+CHOICE_STR_5_NUM=0
+CHOICE_STR_6_NUM=0
+CHOICE_STR_7_NUM=0
+CHOICE_STR_8_NUM=0
+CHOICE_STR_9_NUM=0
+CHOICE_VAL_NUM=10
+CHOICE_VAL_0_NUM=0
+CHOICE_VAL_1_NUM=0
+CHOICE_VAL_2_NUM=0
+CHOICE_VAL_3_NUM=0
+CHOICE_VAL_4_NUM=0
+CHOICE_VAL_5_NUM=0
+CHOICE_VAL_6_NUM=0
+CHOICE_VAL_7_NUM=0
+CHOICE_VAL_8_NUM=0
+CHOICE_VAL_9_NUM=0
+DEFAULT_VAL_NUM=5
+DEFAULT_VAL_0=0
+DEFAULT_VAL_1=0
+DEFAULT_VAL_2=0
+DEFAULT_VAL_3=0
+DEFAULT_VAL_4=0
+RETURN_VAL_NAME=
+RETURN_VAL_TARGET=-1
+CSELF_NAME_0=
+CSELF_NAME_1=
+CSELF_NAME_2=
+CSELF_NAME_3=
+CSELF_NAME_4=
+CSELF_NAME_5=
+CSELF_NAME_6=
+CSELF_NAME_7=
+CSELF_NAME_8=
+CSELF_NAME_9=
+CSELF_NAME_10=
+CSELF_NAME_11=
+CSELF_NAME_12=
+CSELF_NAME_13=
+CSELF_NAME_14=
+CSELF_NAME_15=
+CSELF_NAME_16=
+CSELF_NAME_17=
+CSELF_NAME_18=
+CSELF_NAME_19=
+CSELF_NAME_20=
+CSELF_NAME_21=
+CSELF_NAME_22=
+CSELF_NAME_23=
+CSELF_NAME_24=
+CSELF_NAME_25=
+CSELF_NAME_26=
+CSELF_NAME_27=
+CSELF_NAME_28=
+CSELF_NAME_29=
+CSELF_NAME_30=
+CSELF_NAME_31=
+CSELF_NAME_32=
+CSELF_NAME_33=
+CSELF_NAME_34=
+CSELF_NAME_35=
+CSELF_NAME_36=
+CSELF_NAME_37=
+CSELF_NAME_38=
+CSELF_NAME_39=
+CSELF_NAME_40=
+CSELF_NAME_41=
+CSELF_NAME_42=
+CSELF_NAME_43=
+CSELF_NAME_44=
+CSELF_NAME_45=
+CSELF_NAME_46=
+CSELF_NAME_47=
+CSELF_NAME_48=
+CSELF_NAME_49=
+CSELF_NAME_50=
+CSELF_NAME_51=
+CSELF_NAME_52=
+CSELF_NAME_53=
+CSELF_NAME_54=
+CSELF_NAME_55=
+CSELF_NAME_56=
+CSELF_NAME_57=
+CSELF_NAME_58=
+CSELF_NAME_59=
+CSELF_NAME_60=
+CSELF_NAME_61=
+CSELF_NAME_62=
+CSELF_NAME_63=
+CSELF_NAME_64=
+CSELF_NAME_65=
+CSELF_NAME_66=
+CSELF_NAME_67=
+CSELF_NAME_68=
+CSELF_NAME_69=
+CSELF_NAME_70=
+CSELF_NAME_71=
+CSELF_NAME_72=
+CSELF_NAME_73=
+CSELF_NAME_74=
+CSELF_NAME_75=
+CSELF_NAME_76=
+CSELF_NAME_77=
+CSELF_NAME_78=
+CSELF_NAME_79=
+CSELF_NAME_80=
+CSELF_NAME_81=
+CSELF_NAME_82=
+CSELF_NAME_83=
+CSELF_NAME_84=
+CSELF_NAME_85=
+CSELF_NAME_86=
+CSELF_NAME_87=
+CSELF_NAME_88=
+CSELF_NAME_89=
+CSELF_NAME_90=
+CSELF_NAME_91=
+CSELF_NAME_92=
+CSELF_NAME_93=
+CSELF_NAME_94=
+CSELF_NAME_95=
+CSELF_NAME_96=
+CSELF_NAME_97=
+CSELF_NAME_98=
+CSELF_NAME_99=
+COMMAND_NUM=1
+--
+WoditorEvCOMMAND_START
+[0][0,0]<0>()()
+WoditorEvCOMMAND_END
+--
+[COMMAND_TEXT_START]
 ■
 [COMMAND_TEXT_END]
 --------------------------
@@ -318002,7 +318102,7 @@ WoditorEvCOMMAND_END
 ■マスク機能：[このﾋﾟｸﾁｬIDをﾏｽｸ対象にする] => ID 7774 
 ■マスク機能：[ﾏｽｸを全面[非表示]に塗る]
 ■回数付きループ [ 1 ]回
- |■イベントの挿入[名]： ["マスクウィンドウ"] <コモンEv 908>  / 400 / 200 / 300 / 300
+ |■イベントの挿入[名]： ["マスクウィンドウ"] <コモンEv 531>  / 400 / 200 / 300 / 300
  |■
 ◇ループここまで◇◇
 ■回数付きループ [ 1 ]回
@@ -340879,7 +340979,7 @@ WoditorEvCOMMAND_END
 ■DB書込(可変)：可変DB[ 6:0:0 ] (パーティー情報:メイン設定:所持金) =  0
 ■条件分岐(数値):  【1】 V2-11[旧タイトル画面]  が   1 と同じ 
 -◇分岐： 【1】  [ V2-11[旧タイトル画面]  が  1 と同じ  ]の場合↓
- |■イベントの挿入[名]： ["【呼】SysDB書き込み"] <コモンEv 312>  / 7 / 40 / 0 / 45 / 
+ |■イベントの挿入[名]： ["【呼】SysDB書き込み"] <コモンEv 530>  / 7 / 40 / 0 / 45 / 
  |■
 ◇分岐終了◇
 ■
@@ -359005,17 +359105,17 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=901
-COMMON_NAME=最大公約数算出
+COMMON_NAME=スクリーンショット
 COMMAND_COLOR=0
-TRIGGER=32
-TRIGGER_TARGET=2000000
-TRIGGER_VAL=0
+TRIGGER=34
+TRIGGER_TARGET=2100001
+TRIGGER_VAL=2
 MEMO=
-VALINPUT_NUM=2
+VALINPUT_NUM=0
 STRINPUT_NUM=0
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=A
-VALINPUT_NAME_1=B
+VALINPUT_NAME_0=
+VALINPUT_NAME_1=
 VALINPUT_NAME_2=
 VALINPUT_NAME_3=
 VALINPUT_NAME_4=
@@ -359064,29 +359164,29 @@ DEFAULT_VAL_1=0
 DEFAULT_VAL_2=0
 DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
-RETURN_VAL_NAME=GCD
-RETURN_VAL_TARGET=0
-CSELF_NAME_0=A
-CSELF_NAME_1=B
-CSELF_NAME_2=
+RETURN_VAL_NAME=
+RETURN_VAL_TARGET=-1
+CSELF_NAME_0=
+CSELF_NAME_1=x
+CSELF_NAME_2=y
 CSELF_NAME_3=
 CSELF_NAME_4=
-CSELF_NAME_5=
-CSELF_NAME_6=
+CSELF_NAME_5=使用ウィンドウ
+CSELF_NAME_6=スクリーンショット
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=GCD
-CSELF_NAME_11=temp
-CSELF_NAME_12=
-CSELF_NAME_13=
-CSELF_NAME_14=
-CSELF_NAME_15=
-CSELF_NAME_16=
-CSELF_NAME_17=
-CSELF_NAME_18=
-CSELF_NAME_19=
-CSELF_NAME_20=
+CSELF_NAME_10=起点ピクチャ番号
+CSELF_NAME_11=Yサイズ
+CSELF_NAME_12=起点Y
+CSELF_NAME_13=初回処理
+CSELF_NAME_14=明るさ
+CSELF_NAME_15=不透明度
+CSELF_NAME_16=文字Y
+CSELF_NAME_17=文字X
+CSELF_NAME_18=重複防止
+CSELF_NAME_19=一時
+CSELF_NAME_20=文字サイズ
 CSELF_NAME_21=
 CSELF_NAME_22=
 CSELF_NAME_23=
@@ -359126,7 +359226,7 @@ CSELF_NAME_56=
 CSELF_NAME_57=
 CSELF_NAME_58=
 CSELF_NAME_59=
-CSELF_NAME_60=
+CSELF_NAME_60=temp
 CSELF_NAME_61=
 CSELF_NAME_62=
 CSELF_NAME_63=
@@ -359166,58 +359266,110 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=15
+COMMAND_NUM=41
 --
 WoditorEvCOMMAND_START
-[103][0,1]<0>()(" ")
-[103][0,1]<0>()(" ")
-[170][0,0]<0>()()
-[111][4,0]<1>(1,1600001,0,2)()
-[401][1,0]<1>(1)()
-[171][0,0]<2>()()
-[0][0,0]<2>()()
-[499][0,0]<1>()()
-[121][4,0]<1>(1600011,1600001,0,0)()
-[121][4,0]<1>(1600001,1600000,1600001,16384)()
-[121][4,0]<1>(1600000,1600011,0,0)()
-[176][0,0]<1>()()
+[121][4,0]<0>(1600010,55600,0,0)()
+[121][4,0]<0>(1600060,1600010,1,0)()
+[150][6,0]<0>(16777218,1600010,0,0,0,1600060)()
+[121][4,0]<0>(1600019,9000028,0,0)()
+[121][4,0]<0>(1600018,1600019,100,12288)()
+[121][4,0]<0>(1600018,1600018,100,8192)()
+[121][4,0]<0>(1600018,1600019,1600018,4096)()
+[122][3,1]<0>(1600006,0,0)("Screenshot/\sys[77]-\sys[78]-\sys[79]_\sys[80].\sys[81].\sys[82]-\cself[18].png")
+[180][1,0]<0>(1)()
+[1000][1,1]<0>(1)("Screenshot/")
+[1000][1,1]<0>(0)("\cself[6]")
+[121][4,0]<0>(1600011,9000117,6,12288)()
+[121][4,0]<0>(1600012,9000117,2,8192)()
+[122][3,1]<0>(1600005,0,0)("Picture/fade.png")
+[121][4,0]<0>(1600014,100,0,0)()
+[121][4,0]<0>(1600015,185,0,0)()
+[121][4,0]<0>(1600016,9000117,80,12288)()
+[121][4,0]<0>(1600016,1600016,79,8192)()
+[121][4,0]<0>(1600017,9000116,240,12288)()
+[180][1,0]<0>(1)()
+[111][7,0]<0>(2,2100001,2,2,2100001,1,2)()
+[401][1,0]<0>(1)()
+[150][19,1]<1>(3153952,1600060,0,1,1,1,255,1600017,780,100,0,0,33554432,0,0,100,100,100,100)("\font[0]\f[33]スクリーンショットを\cself[6]に保存しました。")
+[150][18,0]<1>(8256,1600010,0,9000116,1600011,1,1600015,0,1600012,100,0,1600005,33554432,0,0,1600014,1600014,1600014)()
+[210][3,0]<1>(500391,1,14)()
+[210][7,0]<1>(500382,20,35,1600060,1600017,1600016,3000009)()
+[210][7,0]<1>(500382,20,35,1600010,0,9000117,3000009)()
+[180][1,0]<1>(35)()
+[150][18,0]<1>(8256,1600010,0,9000116,1600011,1,1600015,0,9000117,100,0,1600005,33554432,0,0,1600014,1600014,1600014)()
+[180][1,0]<1>(145)()
+[150][18,0]<1>(8256,1600010,0,9000116,1600011,1,1600015,0,9000117,100,0,1600005,33554432,0,0,1600014,1600014,1600014)()
+[210][3,0]<1>(500391,1,24)()
+[210][7,0]<1>(500382,20,60,1600060,1600017,780,3000009)()
+[210][7,0]<1>(500382,20,60,1600010,0,1600012,3000009)()
+[180][1,0]<1>(60)()
+[121][4,0]<1>(2100001,1,0,0)()
 [0][0,0]<1>()()
-[498][0,0]<0>()()
+[401][1,0]<0>(2)()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-▼  
-▼  
-■ループ開始
- |■条件分岐(数値):  【1】 CSelf1[B]  が   0 と同じ 
- |-◇分岐： 【1】  [ CSelf1[B]  が  0 と同じ  ]の場合↓
- | |■ループ中断
- | |■
- |◇分岐終了◇
- |■変数操作: CSelf11[temp] = CSelf1[B] + 0 
- |■変数操作: CSelf1[B] = CSelf0[A] % CSelf1[B] 
- |■変数操作: CSelf0[A] = CSelf11[temp] + 0 
- |■ループ開始へ戻る
+■変数操作: CSelf10[起点ピクチャ番号] = 55600 + 0 
+■変数操作: CSelf60[temp] = CSelf10[起点ピクチャ番号] + 1 
+■ﾋﾟｸﾁｬ消去：CSelf10[起点ピクチャ番号] ～ CSelf60[temp]  / 0(0)ﾌﾚｰﾑ
+■変数操作: CSelf19[一時] = Sys28:経過ﾌﾚｰﾑ数[1000万で一周] + 0 
+■変数操作: CSelf18[重複防止] = CSelf19[一時] / 100 
+■変数操作: CSelf18[重複防止] = CSelf18[重複防止] * 100 
+■変数操作: CSelf18[重複防止] = CSelf19[一時] - CSelf18[重複防止] 
+■文字列操作：CSelf6[スクリーンショット] = "Screenshot/\sys[77]-\sys[78]-\sys[79]_\sys[80].\sys[81].\sys[82]-\cself[18].png"
+■ウェイト：1 フレーム
+■[Pro] フォルダ作成 [Screenshot/]
+■[Pro] スクリーンショット(JPG) [\cself[6]]
+■変数操作: CSelf11[Yサイズ] = Sys117:[読]画面サイズＹ / 6 
+■変数操作: CSelf12[起点Y] = Sys117:[読]画面サイズＹ * 2 
+■文字列操作：CSelf5[使用ウィンドウ] = "Picture/fade.png"
+■変数操作: CSelf14[明るさ] = 100 + 0 
+■変数操作: CSelf15[不透明度] = 185 + 0 
+■変数操作: CSelf16[文字Y] = Sys117:[読]画面サイズＹ / 80 
+■変数操作: CSelf16[文字Y] = CSelf16[文字Y] * 79 
+■変数操作: CSelf17[文字X] = Sys116:[読]画面サイズＸ / 240 
+■ウェイト：1 フレーム
+■条件分岐(数値):  【1】 V1-1[スクリーンショットUI]  が   2 と同じ  【2】 V1-1[スクリーンショットUI]  が   1 と同じ 
+-◇分岐： 【1】  [ V1-1[スクリーンショットUI]  が  2 と同じ  ]の場合↓
+ |■ﾋﾟｸﾁｬ表示：CSelf60[temp] [左下]文字列[\font[0]\f[33]スク] X:CSelf17[文字X] Y:780 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100x100％ / ｶﾗｰ R[100] G[100] B[100]
+ |■ﾋﾟｸﾁｬ表示：CSelf10[起点ピクチャ番号] [左下]ｳｨﾝﾄﾞｳ(CSelf5[使用ウィンドウ]) ｻｲｽﾞ[Sys116:[読]画面サイズＸ,CSelf11[Yサイズ]] X:0 Y:CSelf12[起点Y] / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 CSelf15[不透明度] / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[CSelf14[明るさ]] G[CSelf14[明るさ]] B[CSelf14[明るさ]]
+ |■イベントの挿入： コモン391：[ [E+]イージング選択 ] / 14:減速5
+ |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 35 / CSelf60[temp] / CSelf17[文字X] / CSelf16[文字Y] / S9[[E]イージング設定]
+ |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 35 / CSelf10[起点ピクチャ番号] / 0 / Sys117:[読]画面サイズＹ / S9[[E]イージング設定]
+ |■ウェイト：35 フレーム
+ |■ﾋﾟｸﾁｬ表示：CSelf10[起点ピクチャ番号] [左下]ｳｨﾝﾄﾞｳ(CSelf5[使用ウィンドウ]) ｻｲｽﾞ[Sys116:[読]画面サイズＸ,CSelf11[Yサイズ]] X:0 Y:Sys117:[読]画面サイズＹ / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 CSelf15[不透明度] / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[CSelf14[明るさ]] G[CSelf14[明るさ]] B[CSelf14[明るさ]]
+ |■ウェイト：145 フレーム
+ |■ﾋﾟｸﾁｬ表示：CSelf10[起点ピクチャ番号] [左下]ｳｨﾝﾄﾞｳ(CSelf5[使用ウィンドウ]) ｻｲｽﾞ[Sys116:[読]画面サイズＸ,CSelf11[Yサイズ]] X:0 Y:Sys117:[読]画面サイズＹ / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 CSelf15[不透明度] / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[CSelf14[明るさ]] G[CSelf14[明るさ]] B[CSelf14[明るさ]]
+ |■イベントの挿入： コモン391：[ [E+]イージング選択 ] / 24:加減速5
+ |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 60 / CSelf60[temp] / CSelf17[文字X] / 780 / S9[[E]イージング設定]
+ |■イベントの挿入： コモン382：[ [E]絶対移動 ] / 60 / CSelf10[起点ピクチャ番号] / 0 / CSelf12[起点Y] / S9[[E]イージング設定]
+ |■ウェイト：60 フレーム
+ |■変数操作: V1-1[スクリーンショットUI] = 1 + 0 
  |■
-◇ループここまで◇◇
+-◇分岐： 【2】  [ V1-1[スクリーンショットUI]  が  1 と同じ  ]の場合↓
+ |■
+◇分岐終了◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=902
-COMMON_NAME=比率計算
-COMMAND_COLOR=0
-TRIGGER=32
+COMMON_NAME=スクリーンショット切り替え
+COMMAND_COLOR=1
+TRIGGER=35
 TRIGGER_TARGET=2000000
 TRIGGER_VAL=0
 MEMO=
-VALINPUT_NUM=4
+VALINPUT_NUM=0
 STRINPUT_NUM=0
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=値1
-VALINPUT_NAME_1=値2
-VALINPUT_NAME_2=戻り値1
-VALINPUT_NAME_3=戻り値2
+VALINPUT_NAME_0=
+VALINPUT_NAME_1=
+VALINPUT_NAME_2=
+VALINPUT_NAME_3=
 VALINPUT_NAME_4=
 VALINPUT_NAME_5=
 VALINPUT_NAME_6=
@@ -359266,18 +359418,18 @@ DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
 RETURN_VAL_NAME=
 RETURN_VAL_TARGET=-1
-CSELF_NAME_0=値1
-CSELF_NAME_1=値2
-CSELF_NAME_2=戻り値1
-CSELF_NAME_3=戻り値2
+CSELF_NAME_0=
+CSELF_NAME_1=
+CSELF_NAME_2=
+CSELF_NAME_3=
 CSELF_NAME_4=
 CSELF_NAME_5=
 CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=GCD
-CSELF_NAME_11=
+CSELF_NAME_10=
+CSELF_NAME_11=キー
 CSELF_NAME_12=
 CSELF_NAME_13=
 CSELF_NAME_14=
@@ -359366,27 +359518,77 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=8
+COMMAND_NUM=33
 --
 WoditorEvCOMMAND_START
-[103][0,1]<0>()(" ")
-[103][0,1]<0>()(" ")
-[300][5,1]<0>(0,16777218,1600000,1600001,1600010)("最大公約数算出")
-[121][4,0]<0>(1600000,1600000,1600010,12288)()
-[121][4,0]<0>(1600001,1600001,1600010,12288)()
-[121][4,0]<0>(1600002,1600000,0,16)()
-[121][4,0]<0>(1600003,1600001,0,16)()
+[121][4,0]<0>(1600011,160,0,0)()
+[123][3,0]<0>(1600000,4480,160)()
+[140][7,0]<0>(32,0,0,0,0,0,0)()
+[121][4,0]<0>(2100001,1,0,0)()
+[180][1,0]<0>(1)()
+[121][4,0]<0>(2100001,2,0,0)()
+[212][0,1]<0>()("ループ1")
+[123][3,0]<0>(1600010,4352,1600011)()
+[111][4,0]<0>(1,1600010,1600011,2)()
+[401][1,0]<0>(1)()
+[180][1,0]<1>(1)()
+[213][0,1]<1>()("ループ1")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
+[111][7,0]<0>(2,2100001,2,5,2100001,2,2)()
+[401][1,0]<0>(1)()
+[0][0,0]<1>()()
+[401][1,0]<0>(2)()
+[179][1,0]<1>(0)()
+[121][4,0]<2>(2100001,1,0,0)()
+[212][0,1]<2>()("ループ12")
+[123][3,0]<2>(1600010,4352,1600011)()
+[111][4,0]<2>(1,1600010,1600011,2)()
+[401][1,0]<2>(1)()
+[180][1,0]<3>(1)()
+[213][0,1]<3>()("ループ12")
+[0][0,0]<3>()()
+[499][0,0]<2>()()
+[0][0,0]<2>()()
+[498][0,0]<1>()()
+[0][0,0]<1>()()
+[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-▼  
-▼  
-■イベントの挿入[名]： CSelf10[GCD] = ["最大公約数算出"] <コモンEv 901>  / CSelf0[値1] / CSelf1[値2]
-■変数操作: CSelf0[値1] = CSelf0[値1] / CSelf10[GCD] 
-■変数操作: CSelf1[値2] = CSelf1[値2] / CSelf10[GCD] 
-■変数操作: V[CSelf2[戻り値1]] = CSelf0[値1] + 0 
-■変数操作: V[CSelf3[戻り値2]] = CSelf1[値2] + 0 
+■変数操作: CSelf11[キー] = 160 + 0 
+■キー入力：CSelf0 [入力待ち【！】] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[160]のみ判定] ( F2ｷｰ ) 
+■サウンド：SE0「[ｼｽﾃﾑ]決定音」(0 ﾁｬﾝﾈﾙ) 再生 / 遅延：0ﾌﾚｰﾑ
+■変数操作: V1-1[スクリーンショットUI] = 1 + 0 
+■ウェイト：1 フレーム
+■変数操作: V1-1[スクリーンショットUI] = 2 + 0 
+●ラベル地点「ループ1」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+■キー入力：CSelf10 [通常入力] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[CSelf11[キー]]のみ判定]
+■条件分岐(数値):  【1】 CSelf10  が   CSelf11[キー] と同じ 
+-◇分岐： 【1】  [ CSelf10  が  CSelf11[キー] と同じ  ]の場合↓
+ |■ウェイト：1 フレーム
+ |●ラベル「ループ1」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ |■
+◇分岐終了◇
+■条件分岐(数値):  【1】 V1-1[スクリーンショットUI]  が   2 以外  【2】 V1-1[スクリーンショットUI]  が   2 と同じ 
+-◇分岐： 【1】  [ V1-1[スクリーンショットUI]  が  2 以外  ]の場合↓
+ |■
+-◇分岐： 【2】  [ V1-1[スクリーンショットUI]  が  2 と同じ  ]の場合↓
+ |■回数付きループ [ 0 ]回
+ | |■変数操作: V1-1[スクリーンショットUI] = 1 + 0 
+ | |●ラベル地点「ループ12」　＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜＜★
+ | |■キー入力：CSelf10 [通常入力] ｷｰﾎﾞｰﾄﾞ(100～) [ｷｰｺｰﾄﾞ[CSelf11[キー]]のみ判定]
+ | |■条件分岐(数値):  【1】 CSelf10  が   CSelf11[キー] と同じ 
+ | |-◇分岐： 【1】  [ CSelf10  が  CSelf11[キー] と同じ  ]の場合↓
+ | | |■ウェイト：1 フレーム
+ | | |●ラベル「ループ12」に飛ぶ　＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞＞
+ | | |■
+ | |◇分岐終了◇
+ | |■
+ |◇ループここまで◇◇
+ |■
+◇分岐終了◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
@@ -360746,19 +360948,19 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=908
-COMMON_NAME=マスクウィンドウ
+COMMON_NAME=疑似4:3モード
 COMMAND_COLOR=0
-TRIGGER=32
-TRIGGER_TARGET=2000000
-TRIGGER_VAL=0
+TRIGGER=34
+TRIGGER_TARGET=2200017
+TRIGGER_VAL=1
 MEMO=
-VALINPUT_NUM=4
+VALINPUT_NUM=0
 STRINPUT_NUM=0
 VALINPUT_NAME_NUM=11
-VALINPUT_NAME_0=X開始
-VALINPUT_NAME_1=Y開始
-VALINPUT_NAME_2=横
-VALINPUT_NAME_3=縦
+VALINPUT_NAME_0=
+VALINPUT_NAME_1=
+VALINPUT_NAME_2=
+VALINPUT_NAME_3=
 VALINPUT_NAME_4=
 VALINPUT_NAME_5=
 VALINPUT_NAME_6=
@@ -360807,20 +361009,20 @@ DEFAULT_VAL_3=0
 DEFAULT_VAL_4=0
 RETURN_VAL_NAME=
 RETURN_VAL_TARGET=-1
-CSELF_NAME_0=X開始
-CSELF_NAME_1=Y開始
-CSELF_NAME_2=横
-CSELF_NAME_3=縦
+CSELF_NAME_0=
+CSELF_NAME_1=
+CSELF_NAME_2=
+CSELF_NAME_3=
 CSELF_NAME_4=
 CSELF_NAME_5=
 CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=xtemp
-CSELF_NAME_11=ytemp
-CSELF_NAME_12=横ループ
-CSELF_NAME_13=縦ループ
+CSELF_NAME_10=X
+CSELF_NAME_11=幅
+CSELF_NAME_12=
+CSELF_NAME_13=
 CSELF_NAME_14=
 CSELF_NAME_15=
 CSELF_NAME_16=
@@ -360907,99 +361109,41 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=44
+COMMAND_NUM=15
 --
 WoditorEvCOMMAND_START
-[121][4,0]<0>(1600010,1600002,2,12288)()
-[121][4,0]<0>(1600011,1600003,2,12288)()
-[121][4,0]<0>(1600010,1600000,1600010,4096)()
-[121][4,0]<0>(1600011,1600001,1600011,4096)()
-[121][4,0]<0>(1600012,1600002,-54,0)()
-[121][4,0]<0>(1600013,1600003,-54,0)()
-[121][4,0]<0>(1600012,1600012,30,12288)()
-[121][4,0]<0>(1600013,1600013,30,12288)()
-[179][1,0]<0>(1600013)()
-[179][1,0]<1>(1600012)()
-[290][7,1]<2>(83,0,0,0,1600010,1600011,0)("SystemFile/WindowBase_New_Mask.png")
-[121][4,0]<2>(1600010,30,0,256)()
-[0][0,0]<2>()()
-[498][0,0]<1>()()
-[121][4,0]<1>(1600011,30,0,256)()
-[121][4,0]<1>(1600010,1600002,2,12288)()
-[121][4,0]<1>(1600010,1600000,1600010,4096)()
+[111][7,0]<0>(2,2200017,0,2,2200017,1,2)()
+[401][1,0]<0>(1)()
+[150][6,0]<1>(16777266,1,0,0,0,2)()
 [0][0,0]<1>()()
-[498][0,0]<0>()()
-[121][4,0]<0>(1600010,1600002,2,12288)()
-[121][4,0]<0>(1600011,1600003,2,12288)()
-[121][4,0]<0>(1600010,1600000,1600010,4096)()
-[121][4,0]<0>(1600011,1600001,1600011,4096)()
-[121][4,0]<0>(1600012,1600002,-54,0)()
-[121][4,0]<0>(1600013,1600003,-54,0)()
-[121][4,0]<0>(1600010,1600002,-54,256)()
-[179][1,0]<0>(1600013)()
-[290][7,1]<1>(83,0,0,0,1600010,1600011,0)("SystemFile/WindowBase_New_Mask.png")
-[121][4,0]<1>(1600011,1,0,256)()
+[401][1,0]<0>(2)()
+[121][4,0]<1>(1600010,9000117,4,8192)()
+[121][4,0]<1>(1600010,1600010,3,12288)()
+[121][4,0]<1>(1600011,9000116,1600010,4096)()
+[121][4,0]<1>(1600011,1600011,2,12288)()
+[150][6,0]<1>(16777266,1,0,0,0,2)()
+[150][18,1]<1>(48,1,0,1600011,9000117,1,255,0,0,100,0,0,33554432,0,0,0,0,0)("<SQUARE>")
+[150][18,1]<1>(12336,2,0,1600011,9000117,1,255,9000116,0,100,0,0,33554432,0,0,0,0,0)("<SQUARE>")
 [0][0,0]<1>()()
-[498][0,0]<0>()()
-[121][4,0]<0>(1600010,1600002,2,12288)()
-[121][4,0]<0>(1600011,1600003,2,12288)()
-[121][4,0]<0>(1600010,1600000,1600010,4096)()
-[121][4,0]<0>(1600011,1600001,1600011,4096)()
-[121][4,0]<0>(1600012,1600002,-54,0)()
-[121][4,0]<0>(1600013,1600003,-54,0)()
-[121][4,0]<0>(1600011,1600003,-54,256)()
-[179][1,0]<0>(1600012)()
-[290][7,1]<1>(83,0,0,0,1600010,1600011,0)("SystemFile/WindowBase_New_Mask.png")
-[121][4,0]<1>(1600010,1,0,256)()
-[0][0,0]<1>()()
-[498][0,0]<0>()()
+[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
-■変数操作: CSelf11[ytemp] = CSelf3[縦] / 2 
-■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
-■変数操作: CSelf11[ytemp] = CSelf1[Y開始] - CSelf11[ytemp] 
-■変数操作: CSelf12[横ループ] = CSelf2[横] + -54 
-■変数操作: CSelf13[縦ループ] = CSelf3[縦] + -54 
-■変数操作: CSelf12[横ループ] = CSelf12[横ループ] / 30 
-■変数操作: CSelf13[縦ループ] = CSelf13[縦ループ] / 30 
-■回数付きループ [ CSelf13[縦ループ] ]回
- |■回数付きループ [ CSelf12[横ループ] ]回
- | |■マスク機能：[ﾏｽｸに表示範囲(黒)を追加] =>[SystemFile/WindowBase_New_Mask.png] XCSelf10[xtemp] YCSelf11[ytemp] (左上)
- | |■変数操作: CSelf10[xtemp] += 30 + 0 
- | |■
- |◇ループここまで◇◇
- |■変数操作: CSelf11[ytemp] += 30 + 0 
- |■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
- |■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
+■条件分岐(数値):  【1】 V2-17[疑似4:3モード]  が   0 と同じ  【2】 V2-17[疑似4:3モード]  が   1 と同じ 
+-◇分岐： 【1】  [ V2-17[疑似4:3モード]  が  0 と同じ  ]の場合↓
+ |■ﾋﾟｸﾁｬ消去：1 ～ 2  / 0(0)ﾌﾚｰﾑ
  |■
-◇ループここまで◇◇
-■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
-■変数操作: CSelf11[ytemp] = CSelf3[縦] / 2 
-■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
-■変数操作: CSelf11[ytemp] = CSelf1[Y開始] - CSelf11[ytemp] 
-■変数操作: CSelf12[横ループ] = CSelf2[横] + -54 
-■変数操作: CSelf13[縦ループ] = CSelf3[縦] + -54 
-■変数操作: CSelf10[xtemp] += CSelf2[横] + -54 
-■回数付きループ [ CSelf13[縦ループ] ]回
- |■マスク機能：[ﾏｽｸに表示範囲(黒)を追加] =>[SystemFile/WindowBase_New_Mask.png] XCSelf10[xtemp] YCSelf11[ytemp] (左上)
- |■変数操作: CSelf11[ytemp] += 1 + 0 
+-◇分岐： 【2】  [ V2-17[疑似4:3モード]  が  1 と同じ  ]の場合↓
+ |■変数操作: CSelf10[X] = Sys117:[読]画面サイズＹ * 4 
+ |■変数操作: CSelf10[X] = CSelf10[X] / 3 
+ |■変数操作: CSelf11[幅] = Sys116:[読]画面サイズＸ - CSelf10[X] 
+ |■変数操作: CSelf11[幅] = CSelf11[幅] / 2 
+ |■ﾋﾟｸﾁｬ消去：1 ～ 2  / 0(0)ﾌﾚｰﾑ
+ |■ﾋﾟｸﾁｬ表示：1 [左上]ｳｨﾝﾄﾞｳ「<SQUARE>」ｻｲｽﾞ[CSelf11[幅],Sys117:[読]画面サイズＹ] X:0 Y:0 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[0] G[0] B[0]
+ |■ﾋﾟｸﾁｬ表示：2 [右上]ｳｨﾝﾄﾞｳ「<SQUARE>」ｻｲｽﾞ[CSelf11[幅],Sys117:[読]画面サイズＹ] X:Sys116:[読]画面サイズＸ Y:0 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[0] G[0] B[0]
  |■
-◇ループここまで◇◇
-■変数操作: CSelf10[xtemp] = CSelf2[横] / 2 
-■変数操作: CSelf11[ytemp] = CSelf3[縦] / 2 
-■変数操作: CSelf10[xtemp] = CSelf0[X開始] - CSelf10[xtemp] 
-■変数操作: CSelf11[ytemp] = CSelf1[Y開始] - CSelf11[ytemp] 
-■変数操作: CSelf12[横ループ] = CSelf2[横] + -54 
-■変数操作: CSelf13[縦ループ] = CSelf3[縦] + -54 
-■変数操作: CSelf11[ytemp] += CSelf3[縦] + -54 
-■回数付きループ [ CSelf12[横ループ] ]回
- |■マスク機能：[ﾏｽｸに表示範囲(黒)を追加] =>[SystemFile/WindowBase_New_Mask.png] XCSelf10[xtemp] YCSelf11[ytemp] (左上)
- |■変数操作: CSelf10[xtemp] += 1 + 0 
- |■
-◇ループここまで◇◇
+◇分岐終了◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
@@ -362422,11 +362566,11 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=914
-COMMON_NAME=疑似4:3モード
+COMMON_NAME=
 COMMAND_COLOR=0
-TRIGGER=34
-TRIGGER_TARGET=2200017
-TRIGGER_VAL=1
+TRIGGER=32
+TRIGGER_TARGET=2000000
+TRIGGER_VAL=0
 MEMO=
 VALINPUT_NUM=0
 STRINPUT_NUM=0
@@ -362493,8 +362637,8 @@ CSELF_NAME_6=
 CSELF_NAME_7=
 CSELF_NAME_8=
 CSELF_NAME_9=
-CSELF_NAME_10=X
-CSELF_NAME_11=幅
+CSELF_NAME_10=
+CSELF_NAME_11=
 CSELF_NAME_12=
 CSELF_NAME_13=
 CSELF_NAME_14=
@@ -362583,41 +362727,13 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=15
+COMMAND_NUM=1
 --
 WoditorEvCOMMAND_START
-[111][7,0]<0>(2,2200017,0,2,2200017,1,2)()
-[401][1,0]<0>(1)()
-[150][6,0]<1>(16777266,1,0,0,0,2)()
-[0][0,0]<1>()()
-[401][1,0]<0>(2)()
-[121][4,0]<1>(1600010,9000117,4,8192)()
-[121][4,0]<1>(1600010,1600010,3,12288)()
-[121][4,0]<1>(1600011,9000116,1600010,4096)()
-[121][4,0]<1>(1600011,1600011,2,12288)()
-[150][6,0]<1>(16777266,1,0,0,0,2)()
-[150][18,1]<1>(48,1,0,1600011,9000117,1,255,0,0,100,0,0,33554432,0,0,0,0,0)("<SQUARE>")
-[150][18,1]<1>(12336,2,0,1600011,9000117,1,255,9000116,0,100,0,0,33554432,0,0,0,0,0)("<SQUARE>")
-[0][0,0]<1>()()
-[499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(数値):  【1】 V2-17[疑似4:3モード]  が   0 と同じ  【2】 V2-17[疑似4:3モード]  が   1 と同じ 
--◇分岐： 【1】  [ V2-17[疑似4:3モード]  が  0 と同じ  ]の場合↓
- |■ﾋﾟｸﾁｬ消去：1 ～ 2  / 0(0)ﾌﾚｰﾑ
- |■
--◇分岐： 【2】  [ V2-17[疑似4:3モード]  が  1 と同じ  ]の場合↓
- |■変数操作: CSelf10[X] = Sys117:[読]画面サイズＹ * 4 
- |■変数操作: CSelf10[X] = CSelf10[X] / 3 
- |■変数操作: CSelf11[幅] = Sys116:[読]画面サイズＸ - CSelf10[X] 
- |■変数操作: CSelf11[幅] = CSelf11[幅] / 2 
- |■ﾋﾟｸﾁｬ消去：1 ～ 2  / 0(0)ﾌﾚｰﾑ
- |■ﾋﾟｸﾁｬ表示：1 [左上]ｳｨﾝﾄﾞｳ「<SQUARE>」ｻｲｽﾞ[CSelf11[幅],Sys117:[読]画面サイズＹ] X:0 Y:0 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[0] G[0] B[0]
- |■ﾋﾟｸﾁｬ表示：2 [右上]ｳｨﾝﾄﾞｳ「<SQUARE>」ｻｲｽﾞ[CSelf11[幅],Sys117:[読]画面サイズＹ] X:Sys116:[読]画面サイズＸ Y:0 / 0(0)ﾌﾚｰﾑ  / ﾊﾟﾀｰﾝ 1 / 透 255 / 通常  / 角 0 / 拡 100％ / ｶﾗｰ R[0] G[0] B[0]
- |■
-◇分岐終了◇
 ■
 [COMMAND_TEXT_END]
 --------------------------
