@@ -3239,7 +3239,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>実験メッセージウィンドウぼかし,
 <<!--DATANAME--!>>停止メッセージウィンドウ,
 <<!--DATANAME--!>>疑似4:3モード,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>ウィンドウ設定無効化,
 <<!--DATANAME--!>>,
 
 <<--CSV_END-->>
