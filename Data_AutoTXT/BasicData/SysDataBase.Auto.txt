@@ -3110,7 +3110,7 @@ DATANAME_LOAD_NAME=
 ITEM_NUM=0
 NUMDATA_TYPE_NUM=0
 STRDATA_TYPE_NUM=0
-DATA_NUM=20
+DATA_NUM=22
 TYPENAME=予備変数2:設定
 ITEMNAME_NUM=0
 MEMO=
@@ -3241,6 +3241,8 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>疑似4:3モード,
 <<!--DATANAME--!>>ウィンドウ設定無効化,
 <<!--DATANAME--!>>,
+<<!--DATANAME--!>>X仮想解像度,
+<<!--DATANAME--!>>Y仮想解像度,
 
 <<--CSV_END-->>
 ----
