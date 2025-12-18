@@ -268,8 +268,8 @@ WoditorEvCOMMAND_END
 -----
 EVENT_ID=3
 EVENT_NAME=学生ゾンビ2<Enemy>
-EVENT_X=7
-EVENT_Y=4
+EVENT_X=8
+EVENT_Y=2
 EVENT_PAGE=2
 OPTION_DATA_NUM=0
 EVENT_PAGE_NUM=2
@@ -346,18 +346,18 @@ OPTION_VAL_2=0
 COMMAND_NUM=6
 --
 WoditorEvCOMMAND_START
+[300][2,1]<0>(0,0)("学生ゾンビ2")
 [111][4,0]<0>(1,2000046,1,2)()
 [401][1,0]<0>(1)()
-[300][2,1]<1>(0,0)("学生ゾンビ2")
 [0][0,0]<1>()()
 [499][0,0]<0>()()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■イベントの挿入[名]： ["学生ゾンビ2"] <コモンEv 754> 
 ■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
 -◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
- |■イベントの挿入[名]： ["学生ゾンビ2"] <コモンEv 754> 
  |■
 ◇分岐終了◇
 ■
@@ -1082,23 +1082,15 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=6
+COMMAND_NUM=2
 --
 WoditorEvCOMMAND_START
-[111][4,0]<0>(1,2000046,1,2)()
-[401][1,0]<0>(1)()
-[300][2,1]<1>(0,0)("男性ゾンビ1ゾンビ")
-[0][0,0]<1>()()
-[499][0,0]<0>()()
+[300][2,1]<0>(0,0)("女性ゾンビ")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(数値):  【1】 V46[何が起こってる！]  が   1 と同じ 
--◇分岐： 【1】  [ V46[何が起こってる！]  が  1 と同じ  ]の場合↓
- |■イベントの挿入[名]： ["男性ゾンビ1ゾンビ"] <コモンEv 757> 
- |■
-◇分岐終了◇
+■イベントの挿入[名]： ["女性ゾンビ"] <コモンEv 755> 
 ■
 [COMMAND_TEXT_END]
 EVENT_PAGE=1

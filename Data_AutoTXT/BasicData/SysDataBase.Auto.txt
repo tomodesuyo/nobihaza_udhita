@@ -3096,7 +3096,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>強制ゲームオーバー,
 <<!--DATANAME--!>>外部コモン呼び出し,
 <<!--DATANAME--!>>銃弾発射,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>クイックセーブUI,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
