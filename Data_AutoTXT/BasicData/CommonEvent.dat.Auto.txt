@@ -299081,7 +299081,7 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=430
+COMMAND_NUM=431
 --
 WoditorEvCOMMAND_START
 [103][0,1]<0>()("古いバージョンです。")
@@ -299109,6 +299109,7 @@ WoditorEvCOMMAND_START
 [172][0,0]<1>()()
 [0][0,0]<1>()()
 [499][0,0]<0>()()
+[300][4,1]<0>(0,16777232,1600005,1600005)("CFS事前処理")
 [122][3,0]<0>(1600006,769,1600005)()
 [122][3,0]<0>(1600006,769,1600005)()
 [122][3,0]<0>(3000021,1,1600006)()
@@ -299542,6 +299543,7 @@ WoditorEvCOMMAND_END
  |■イベント処理中断
  |■
 ◇分岐終了◇
+■イベントの挿入[名]： CSelf5[tempFileContent] = ["CFS事前処理"] <コモンEv 918>  / CSelf5[tempFileContent]
 ■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
 ■文字列操作：CSelf6 =<上1行切出(→文ｶｯﾄ)> CSelf5[tempFileContent]
 ■文字列操作：S21[CFディレクトリ] = CSelf6
