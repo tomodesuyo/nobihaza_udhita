@@ -4089,19 +4089,20 @@ OPTION_VAL_2=0
 COMMAND_NUM=3
 --
 WoditorEvCOMMAND_START
-[300][4,2]<0>(0,16781328,0,3000000)("CFS事前処理","//if 2000008 == 41<\n>	18<\n>	18testスプリクト名<\n>	説明1\n説明2\n説明3<\n>//endif<\n><\n>//if 2000008 != 41<\n>	19<\n>	19testスプリクト名<\n>	説明aaaaa1\n説明2\n説明3<\n>//endif<\n><\n>//if 2000008 < 41<\n>	cdb 0 0 4 999999<\n>	cdb 7 42 0 999<\n>	udb 2 42 0 <dqrt>書き換えテスト<dqrt><\n>	udb 2 42 3  1<\n>	sysdb 0 0 0 <dqrt>MapData/Dungeon.mps<dqrt><\n>	sysdb 0 0 1 4<\n>	var 141 1<\n>	sysvar 21 0<\n>	se <dqrt>SE/[System]Get2_wolf.ogg<dqrt> 100 999<\n>	str 23 <dqrt>aaa<dqrt><\n>	msg <dqrt>こんにちは!!\nversion<41!<dqrt><\n>	[end]<\n>//endif <\n><\n>//新しいデータベース先に書き込む<\n>cdb 0 0 4 999999<\n>cdb 7 42 0 999<\n>udb 2 42 0 <dqrt>書き換えテスト<dqrt><\n>udb 2 42 3  1<\n>sysdb 0 0 0 <dqrt>MapData/Dungeon.mps<dqrt><\n>sysdb 0 0 1 4<\n>var 141 1<\n>sysvar 21 0<\n>str 23 <dqrt>aaa<dqrt><\n>msg <dqrt>こんにちは!!\nversion41!<dqrt>")
+[300][4,2]<0>(0,16781328,0,3000000)("CFS事前処理","18<\n>RandomizerCore<\n>総合ランダマイザー<\n><\n>msg <dqrt>ランダマイザーを実行します。<dqrt><\n><\n>// ランダムアイテム<\n>common 294<\n><\n>// ランダム武器<\n>common 295<\n><\n>// ランダム防具<\n>common 296<\n><\n>msg <dqrt>ランダマイザー完了！<dqrt><\n>")
 [106][0,1]<0>()("\s[0]")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■イベントの挿入[名]： S0[[サンプル]一時文字列] = ["CFS事前処理"] <コモンEv 918>  / //if 2000008 == 41
-	18
-	18testスプリクト名
-	説明1\n説明2\n説明3
-//endif
+■イベントの挿入[名]： S0[[サンプル]一時文字列] = ["CFS事前処理"] <コモンEv 918>  / 18
+RandomizerCore
+総合ランダマイザー
 
-//if 2000008  ....
+msg "ランダマイザーを実行します。"
+
+// ランダムアイテム
+common 294 ....
 ■デバッグ文:\s[0]
 ■
 [COMMAND_TEXT_END]

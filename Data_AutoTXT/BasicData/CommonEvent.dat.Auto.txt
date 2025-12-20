@@ -317972,7 +317972,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=694
-COMMON_NAME=
+COMMON_NAME=コモンリスト出力
 COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
@@ -318133,13 +318133,31 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=10
 --
 WoditorEvCOMMAND_START
+[122][3,1]<0>(1600006,0,0)("")
+[121][4,0]<0>(1600010,0,0,0)()
+[179][1,0]<0>(1000)()
+[122][3,1]<1>(1600005,262656,0)("<<GET_COMMONEVENT_NAME_FROM_ID>>\cself[10]")
+[122][3,1]<1>(1600006,256,0)("\cself[10]:\cself[5]<\n>")
+[121][4,0]<1>(1600010,1,0,256)()
+[0][0,0]<1>()()
+[498][0,0]<0>()()
+[122][4,1]<0>(1600006,1536,0,1)("Extract/CommonLists/CommonList.txt")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■文字列操作：CSelf6 = ""
+■変数操作: CSelf10 = 0 + 0 
+■回数付きループ [ 1000 ]回
+ |■文字列操作：CSelf5 =<隠しコード実行>"<<GET_COMMONEVENT_NAME_FROM_ID>>\cself[10]"
+ |■文字列操作：CSelf6 += "\cself[10]:\cself[5]\n"
+ |■変数操作: CSelf10 += 1 + 0 
+ |■
+◇ループここまで◇◇
+■文字列操作：CSelf6 =<を→のﾌｧｲﾙに出力> [BOM有] "Extract/CommonLists/CommonList.txt"
 ■
 [COMMAND_TEXT_END]
 --------------------------

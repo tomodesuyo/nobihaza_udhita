@@ -19291,7 +19291,7 @@ DEFAULT_VAL_0=0
 "SysV",<<!--DATANAME--!>>sysvar,
 "S",<<!--DATANAME--!>>str,
 "SysS",<<!--DATANAME--!>>syss,
-"common",<<!--DATANAME--!>>common,
+"Common",<<!--DATANAME--!>>common,
 "end",<<!--DATANAME--!>>[end],
 "common",<<!--DATANAME--!>>cmn,
 "SE",<<!--DATANAME--!>>se,
