@@ -3098,7 +3098,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>銃弾発射,
 <<!--DATANAME--!>>クイックセーブUI,
 <<!--DATANAME--!>>低画質雪,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>エラー停止,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 

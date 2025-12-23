@@ -22240,7 +22240,7 @@ DEFAULT_VAL_4=0
 <<--CSV_START-->>
 "基本","サブ1","サブ2","サブ3","フォント太さ",
 "梅+M+ゴシックP","ＭＳ ゴシック","Rounded Mplus 1c Black","meiryo",6,<<!--DATANAME--!>>old,
-"源暎エムゴv2 Medium","ＭＳ ゴシック","Rounded Mplus 1c Black","源暎エムゴv2 Heavy",0,<<!--DATANAME--!>>デフォルト,
+"源暎エムゴv2 Medium","ＭＳ ゴシック","メイリオ","源暎エムゴv2 Heavy",0,<<!--DATANAME--!>>デフォルト,
 "ＭＳ ゴシック","ＭＳ ゴシック","Rounded Mplus 1c Black","メイリオ ボールド",0,<<!--DATANAME--!>>互換,
 "源暎エムゴv2 Medium","ＭＳ ゴシック","Rounded Mplus 1c Black","源暎エムゴv2 Heavy",0,<<!--DATANAME--!>>CF,
 "","","","",0,<<!--DATANAME--!>>,
