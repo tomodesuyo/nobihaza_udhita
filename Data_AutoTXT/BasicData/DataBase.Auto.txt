@@ -19290,7 +19290,7 @@ DEFAULT_VAL_0=0
 "V",<<!--DATANAME--!>>var,
 "SysV",<<!--DATANAME--!>>sysvar,
 "S",<<!--DATANAME--!>>str,
-"SysS",<<!--DATANAME--!>>syss,
+"SysS",<<!--DATANAME--!>>sysstr,
 "Common",<<!--DATANAME--!>>common,
 "end",<<!--DATANAME--!>>[end],
 "common",<<!--DATANAME--!>>cmn,

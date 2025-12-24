@@ -53,3 +53,5 @@ Editor_TaskList.ini
 Editor.Lang.dll
 /Data/Picture/resize
 *.xcf
+help.txt
+help.md
