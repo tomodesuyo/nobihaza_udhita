@@ -19163,7 +19163,7 @@ ITEM_NUM=1
 DATATYPE_0=2000
 NUMDATA_TYPE_NUM=0
 STRDATA_TYPE_NUM=1
-DATA_NUM=26
+DATA_NUM=28
 TYPENAME=コマンド構文設定
 ITEMNAME_NUM=1
 ITEMNAME0=ラベル設定
@@ -19305,6 +19305,8 @@ DEFAULT_VAL_0=0
 "univar",<<!--DATANAME--!>>univar,
 "uniS",<<!--DATANAME--!>>unistr,
 "manual",<<!--DATANAME--!>>msgs,
+"config",<<!--DATANAME--!>>config,
+"call",<<!--DATANAME--!>>call,
 
 <<--CSV_END-->>
 ----
