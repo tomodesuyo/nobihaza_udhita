@@ -988,7 +988,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>CFTemp,
 <<!--DATANAME--!>>OldAS,
 <<!--DATANAME--!>>初回起動フラグ設定,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>[CFS]call用一時保存,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
