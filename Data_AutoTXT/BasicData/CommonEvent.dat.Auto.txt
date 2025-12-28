@@ -305057,7 +305057,7 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=9
+COMMAND_NUM=10
 --
 WoditorEvCOMMAND_START
 [121][4,0]<0>(1600011,18,0,0)()
@@ -305068,6 +305068,7 @@ WoditorEvCOMMAND_START
 [122][3,1]<0>(1600009,0,0)("\sysS[52]Temp/\cself[9].tmp")
 [122][4,1]<0>(1600006,1536,0,0)("\cself[9]")
 [210][3,2]<0>(500409,4112,0)("","\cself[9]")
+[300][2,1]<0>(0,0)("バージョン表記")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
@@ -305080,6 +305081,7 @@ WoditorEvCOMMAND_END
 ■文字列操作：CSelf9[ランダム文字] = "\sysS[52]Temp/\cself[9].tmp"
 ■文字列操作：CSelf6[出力] =<を→のﾌｧｲﾙに出力> [BOMﾅｼ] "\cself[9]"
 ■イベントの挿入： コモン409：[ カスタムファイルサイレント ] / \cself[9]
+■イベントの挿入[名]： ["バージョン表記"] <コモンEv 341> 
 ■
 [COMMAND_TEXT_END]
 --------------------------
