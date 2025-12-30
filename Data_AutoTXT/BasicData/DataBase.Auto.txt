@@ -18917,7 +18917,7 @@ DEFAULT_VAL_5=0
 CFSを記述することで実行することが可能です｡",2100010,"EnableCommands",0,1,<<!--DATANAME--!>>コマンドを有効にする,
 0,"4:3っぽくします",2200017,"Pseudo43Mode",0,1,<<!--DATANAME--!>>\疑似4:3モード,
 0,"ウィンドウ設定を無効化します。",2200018,"DisableWindowSetteing",0,0,<<!--DATANAME--!>>\ウィンドウ設定無効化,
-0,"インターネットのバージョンチェックを無効化します。",2200018,"DisableInternetVersionCheck",0,0,<<!--DATANAME--!>>\ネットチェック無効化,
+0,"インターネットのバージョンチェックを無効化します。",2200019,"DisableInternetVersionCheck",0,0,<<!--DATANAME--!>>\ネットチェック無効化,
 0,"",0,"",0,0,<<!--DATANAME--!>>,
 0,"",0,"",0,0,<<!--DATANAME--!>>,
 0,"",0,"",0,0,<<!--DATANAME--!>>,
