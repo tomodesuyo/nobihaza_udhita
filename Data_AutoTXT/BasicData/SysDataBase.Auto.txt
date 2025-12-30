@@ -3240,7 +3240,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>停止メッセージウィンドウ,
 <<!--DATANAME--!>>疑似4:3モード,
 <<!--DATANAME--!>>ウィンドウ設定無効化,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>ネットチェック無効化,
 <<!--DATANAME--!>>X仮想解像度,
 <<!--DATANAME--!>>Y仮想解像度,
 
