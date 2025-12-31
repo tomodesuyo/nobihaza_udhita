@@ -1,9 +1,13 @@
-# 説明
+### 注意:**このゲームで起きたトラブルは全て自己責任となります。**
+
+## 説明
 のびハザをウディタに移植しています。
-一応Windows環境なら誰でも改造できるはずです。
-# 改造方法
-https://www.silversecond.com/WolfRPGEditor/<br>
-↑のページからウディタのプログラムのみをダウンロードして、ディレクトリに入れてください。
-プロ版ではない場合、混同しないようにGamePro.exeを削除したほうがいいです。
-Editor.exe(プロ版の場合はEditorPro.exe)を起動すれば改造できます。<br>
-<h1><strong>注意:このゲームで起きたトラブルは全て自己責任になります。</strong></h1>
+Windows環境なら誰でも改造できます｡
+
+## 改造方法
+<https://www.silversecond.com/WolfRPGEditor/>  
+ウディタの配布ページから**プログラムのみ**をダウンロードして、ゲームのディレクトリに入れてください。  
+Editor.exe(プロ版の場合はEditorPro.exe)を起動すれば改造ができます。
+
+## クレジット
+<https://tomodesuyo.github.io/nobihaza_udhita-credits/>
