@@ -4098,11 +4098,12 @@ OPTION_VAL_NUM=3
 OPTION_VAL_0=0
 OPTION_VAL_1=0
 OPTION_VAL_2=0
-COMMAND_NUM=4
+COMMAND_NUM=5
 --
 WoditorEvCOMMAND_START
 [106][0,1]<0>()("")
 [106][0,1]<0>()("")
+[101][0,1]<0>()("ノイズテスト")
 [210][2,0]<0>(500666,0)()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
@@ -4110,6 +4111,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_START]
 ■デバッグ文:
 ■デバッグ文:
+■文章:ノイズテスト
 ■イベントの挿入： コモン666：[ ノイズテスト ]
 ■
 [COMMAND_TEXT_END]
