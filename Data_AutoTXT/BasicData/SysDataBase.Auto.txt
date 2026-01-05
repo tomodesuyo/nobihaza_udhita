@@ -227,7 +227,7 @@ DEFAULT_VAL_10=0
 <<--CSV_START-->>
 "マップファイル名","BGM番号(ﾘｽﾄ読込)","BGS番号(ﾘｽﾄ読込)","ﾙｰﾌﾟ:1横2縦3両方","遠景番号","BGMﾌｧｲﾙ名[BGM番号=-3]","BGSﾌｧｲﾙ名[BGS番号=-3]","遠景ﾌｧｲﾙ名[遠景番号=-3]","-------------------------------","外か","雪が降るか",
 "MapData/Initial.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>InitialMap,
-"MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>のび,
+"MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>野比家,
 "MapData/Map002_A.mps",0,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街,
 "MapData/Map003_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街2,
 "MapData/Map004_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街3,
@@ -989,7 +989,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>OldAS,
 <<!--DATANAME--!>>初回起動フラグ設定,
 <<!--DATANAME--!>>[CFS]call用一時保存,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>ノイズ画像,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
