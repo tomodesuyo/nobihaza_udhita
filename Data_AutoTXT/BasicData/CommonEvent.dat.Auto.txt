@@ -360743,12 +360743,11 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=28
+COMMAND_NUM=27
 --
 WoditorEvCOMMAND_START
 [121][4,0]<0>(2000186,2200020,2,12288)()
 [121][4,0]<0>(2000187,2200021,2,12288)()
-[122][3,0]<0>(1600009,1,9900019)()
 [300][2,1]<0>(0,0)("ブラウザ判定")
 [210][2,0]<0>(500305,0)()
 [210][2,0]<0>(500617,0)()
@@ -360779,7 +360778,6 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_START]
 ■変数操作: V186[X中心] = V2-20[X仮想解像度] / 2 
 ■変数操作: V187[Y中心] = V2-21[Y仮想解像度] / 2 
-■文字列操作：CSelf9[プレイ環境] = SysS19[[読]ｻｰﾄﾞﾊﾟｰﾃｨ実行識別ID]
 ■イベントの挿入[名]： ["ブラウザ判定"] <コモンEv 928> 
 ■イベントの挿入： コモン305：[ testデバック投与 ]
 ■イベントの挿入： コモン617：[ 自動セーブデータ削除 ]
@@ -367404,10 +367402,11 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=9
+COMMAND_NUM=10
 --
 WoditorEvCOMMAND_START
-[112][2,4]<0>(17,1600009)("BrowserWoditor","","","")
+[122][3,0]<0>(1600009,1,9900019)()
+[112][2,4]<0>(17,538470921)("BrowserWoditor","","","")
 [401][1,0]<0>(1)()
 [121][4,0]<1>(2000189,1,0,0)()
 [0][0,0]<1>()()
@@ -367419,8 +367418,9 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■条件分岐(文字):  【1】 CSelf9 が "BrowserWoditor" と同じ
--◇分岐： 【1】 [ CSelf9 が "BrowserWoditor" と同じ ]の場合↓
+■文字列操作：CSelf9 = SysS19[[読]ｻｰﾄﾞﾊﾟｰﾃｨ実行識別ID]
+■条件分岐(文字):  【1】 CSelf9 が "BrowserWoditor" を含む
+-◇分岐： 【1】 [ CSelf9 が "BrowserWoditor" を含む ]の場合↓
  |■変数操作: V189[ﾌﾟﾚｲ環境判定B=1] = 1 + 0 
  |■
 -◇上記以外
