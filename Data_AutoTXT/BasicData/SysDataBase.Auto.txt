@@ -3098,7 +3098,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>低画質雪,
 <<!--DATANAME--!>>エラー停止,
 <<!--DATANAME--!>>コマンド,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>難易度説明,
 
 <<--CSV_END-->>
 ----
@@ -3242,7 +3242,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>X仮想解像度,
 <<!--DATANAME--!>>Y仮想解像度,
 <<!--DATANAME--!>>旧終了画面,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>旧難易度設定,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
