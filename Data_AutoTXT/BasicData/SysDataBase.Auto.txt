@@ -19,7 +19,7 @@ DATATYPE_10=1006
 DATATYPE_11=1007
 NUMDATA_TYPE_NUM=8
 STRDATA_TYPE_NUM=4
-DATA_NUM=46
+DATA_NUM=47
 TYPENAME=マップ設定
 ITEMNAME_NUM=12
 ITEMNAME0=マップファイル名
@@ -294,6 +294,7 @@ DEFAULT_VAL_11=1
 0","","",0,0,0,1,<<!--DATANAME--!>>マップチップテスト,
 "MapData/Map073.mps",-1,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>戦闘,
 "MapData/TitleMap.mps",-1,-1,0,-1,"","","",0,0,0,0,<<!--DATANAME--!>>旧タイトル,
+"",-1,-1,0,-2,"","","",0,1,0,1,<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
 ----

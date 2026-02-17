@@ -4745,7 +4745,7 @@ TILE_NUM=4888
 TILESET_NAME=nobi
 TILE_FILE_NUM=32
 TILE_FILE_0=nobihazaMapChip/MainChipAll.png
-TILE_FILE_1=nobihazaMapChip/[ウ]のび太の家01.png
+TILE_FILE_1=nobihazaMapChip/table.png
 TILE_FILE_2=nobihazaMapChip/[ウ]のび太の家04.png
 TILE_FILE_3=nobihazaMapChip/[ウ]のび太の家08.png
 TILE_FILE_4=
@@ -5665,7 +5665,7 @@ TILE_NUM=7072
 [--PASSAGE_FLAG_END--]
 [--TAG_START--]
 0,0,0,44,4,21,22,23,
-24,9,10,1,12,13,14,15,
+24,9,10,1,4,13,14,15,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
