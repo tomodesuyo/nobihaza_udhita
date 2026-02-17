@@ -236434,7 +236434,7 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=111
+COMMAND_NUM=113
 --
 WoditorEvCOMMAND_START
 [111][4,0]<0>(1,9000012,0,2)()
@@ -236528,6 +236528,7 @@ WoditorEvCOMMAND_START
 [0][0,0]<4>()()
 [498][0,0]<3>()()
 [130][6,0]<3>(-1,1600022,1600023,-1,0,0)()
+[106][0,1]<3>()("詰み回避完了!<\n>x:\cself[22]<\n>y:\cself[23]")
 [179][1,0]<3>(0)()
 [256][5,4]<4>(0,0,0,70400,31)("Data/db.csv","loot_yuka","","")
 [101][0,1]<4>()("Done!<\n>x:\cself[22]<\n>y:\cself[23]")
@@ -236547,6 +236548,7 @@ WoditorEvCOMMAND_START
 [499][0,0]<1>()()
 [0][0,0]<1>()()
 [499][0,0]<0>()()
+[180][1,0]<0>(5)()
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
@@ -236642,6 +236644,7 @@ WoditorEvCOMMAND_END
  | | | |■
  | | |◇ループここまで◇◇
  | | |■場所移動：主人公 ▲現在のマップ X:CSelf22[Xcom] Y:CSelf23[Ycom]  [ﾄﾗﾝｼﾞｼｮﾝなし]
+ | | |■デバッグ文:詰み回避完了!\nx:\cself[22]\ny:\cself[23]
  | | |■回数付きループ [ 0 ]回
  | | | |■XY配列からCSVﾌｧｲﾙに保存:　XY配列[ "loot_yuka":0 ] から [ 31 ]データ　→　ﾌｧｲﾙ "Data/db.csv"
  | | | |■文章:Done!\nx:\cself[22]\ny:\cself[23]
@@ -236661,6 +236664,7 @@ WoditorEvCOMMAND_END
  |◇分岐終了◇
  |■
 ◇分岐終了◇
+■ウェイト：5 フレーム
 ■
 [COMMAND_TEXT_END]
 --------------------------
