@@ -278320,14 +278320,28 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=11
+COMMAND_NUM=25
 --
 WoditorEvCOMMAND_START
-[101][0,1]<0>()("Google Formsを使ってバグ報告や<\n>意見を送ることができます。")
+[111][7,0]<0>(2,2000131,0,2,2000131,1,2)()
+[401][1,0]<0>(1)()
+[101][0,1]<1>()("GitHubのissuesページからバグ報告や<\n>意見を送ることができます。")
+[0][0,0]<1>()()
+[401][1,0]<0>(2)()
+[101][0,1]<1>()("Google Formsを使ってバグ報告や<\n>意見を送ることができます。")
+[0][0,0]<1>()()
+[499][0,0]<0>()()
 [101][0,1]<0>()("ページを開きますか?")
 [102][1,2]<0>(18)("開く","いいえ")
 [401][1,0]<0>(2)()
-[260][3,3]<1>(0,-4,290)("https://docs.google.com/forms/d/e/1FAIpQLSdTRz6WDWm30GHjkOhqV7UJOX99xePdOzhsHYWxsf6Shoo9Jg/viewform?usp=pp_url&entry.654587776=\udb[27:0:0]","Data/","")
+[111][7,0]<1>(2,2000131,0,2,2000131,1,2)()
+[401][1,0]<1>(1)()
+[260][3,3]<2>(0,-4,290)("https://github.com/tomodesuyo/nobihaza_udhita/issues","Data/","")
+[0][0,0]<2>()()
+[401][1,0]<1>(2)()
+[260][3,3]<2>(0,-4,290)("https://docs.google.com/forms/d/e/1FAIpQLSdTRz6WDWm30GHjkOhqV7UJOX99xePdOzhsHYWxsf6Shoo9Jg/viewform?usp=pp_url&entry.654587776=\udb[27:0:0]","Data/","")
+[0][0,0]<2>()()
+[499][0,0]<1>()()
 [101][0,1]<1>()("フィードバックありがとうございます。")
 [0][0,0]<1>()()
 [401][1,0]<0>(3)()
@@ -278337,11 +278351,25 @@ WoditorEvCOMMAND_START
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
-■文章:Google Formsを使ってバグ報告や\n意見を送ることができます。
+■条件分岐(数値):  【1】 V131[GameID]  が   0 と同じ  【2】 V131[GameID]  が   1 と同じ 
+-◇分岐： 【1】  [ V131[GameID]  が  0 と同じ  ]の場合↓
+ |■文章:GitHubのissuesページからバグ報告や\n意見を送ることができます。
+ |■
+-◇分岐： 【2】  [ V131[GameID]  が  1 と同じ  ]の場合↓
+ |■文章:Google Formsを使ってバグ報告や\n意見を送ることができます。
+ |■
+◇分岐終了◇
 ■文章:ページを開きますか?
 ■文章選択肢:/ 【1】開く / 【2】いいえ 
 -◇選択肢：【1】 開く                                       の場合↓
- |■ダウンロード：URL[ https://docs.google.com/forms/d/e/1FAIpQLSdTRz6WDWm30GHjkOhqV7UJOX99xePdOzhsHYWxsf6Shoo9Jg/viewform?usp=pp_url&entry.654587776=\udb[27:0:0] ]  保存先[ Data/ ]  => [ [Pro] URLをブラウザで開く ] 
+ |■条件分岐(数値):  【1】 V131[GameID]  が   0 と同じ  【2】 V131[GameID]  が   1 と同じ 
+ |-◇分岐： 【1】  [ V131[GameID]  が  0 と同じ  ]の場合↓
+ | |■ダウンロード：URL[ https://github.com/tomodesuyo/nobihaza_udhita/issues ]  保存先[ Data/ ]  => [ [Pro] URLをブラウザで開く ] 
+ | |■
+ |-◇分岐： 【2】  [ V131[GameID]  が  1 と同じ  ]の場合↓
+ | |■ダウンロード：URL[ https://docs.google.com/forms/d/e/1FAIpQLSdTRz6WDWm30GHjkOhqV7UJOX99xePdOzhsHYWxsf6Shoo9Jg/viewform?usp=pp_url&entry.654587776=\udb[27:0:0] ]  保存先[ Data/ ]  => [ [Pro] URLをブラウザで開く ] 
+ | |■
+ |◇分岐終了◇
  |■文章:フィードバックありがとうございます。
  |■
 -◇選択肢：【2】 いいえ                                      の場合↓
