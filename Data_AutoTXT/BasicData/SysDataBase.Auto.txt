@@ -1000,7 +1000,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>[CFS]call用一時保存,
 <<!--DATANAME--!>>ノイズ画像,
 <<!--DATANAME--!>>CommitDate,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>MusicMode,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
@@ -1217,8 +1217,8 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>[読]OSの言語名,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
-<<!--DATANAME--!>> -----,
-<<!--DATANAME--!>> -----,
+<<!--DATANAME--!>>[読]ゲーム名 メイン,
+<<!--DATANAME--!>>[読]ゲーム名 追記,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
@@ -1508,7 +1508,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>[読]横方向の字詰めピクセル[px] ※ｹﾞｰﾑ基本設定,
 <<!--DATANAME--!>>[読]改行の間隔[px] ※ｹﾞｰﾑ基本設定,
 <<!--DATANAME--!>>[読]選択肢の改行間隔 ※ｹﾞｰﾑ基本設定,
-<<!--DATANAME--!>> -----,
+<<!--DATANAME--!>>[読]最大マップレイヤー数,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
@@ -3257,7 +3257,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>旧難易度設定,
 <<!--DATANAME--!>>旧ロードメッセージ,
 <<!--DATANAME--!>>EnableLegacyAutoSave,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>AudioPack,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
@@ -4293,16 +4293,23 @@ DEFAULT_VAL_1=0
 TYPE_ID=25
 DATANAME_LOAD_TYPE=0
 DATANAME_LOAD_NAME=
-ITEM_NUM=0
-NUMDATA_TYPE_NUM=0
-STRDATA_TYPE_NUM=0
-DATA_NUM=1
-TYPENAME=
-ITEMNAME_NUM=1
-ITEMNAME0=
-MEMO=
+ITEM_NUM=4
+DATATYPE_0=2000
+DATATYPE_1=1000
+DATATYPE_2=1001
+DATATYPE_3=1002
+NUMDATA_TYPE_NUM=3
+STRDATA_TYPE_NUM=1
+DATA_NUM=21
+TYPENAME=BGMリスト
+ITEMNAME_NUM=4
+ITEMNAME0=ファイル名
+ITEMNAME1=再生音量[%] 標準100
+ITEMNAME2=再生周波数[%]
+ITEMNAME3=ループ開始位置(ms)/ｷｰ±
+MEMO=音量や再生周波数に<<\n>>0を入れておくと、<<\n>>自動で100％になります。<<\n>><<\n>><<\n>>ﾙｰﾌﾟ開始位置/ｷｰ±は、<<\n>><<\n>>○oggやMP3なら<<\n>>　ﾙｰﾌﾟ開始位置(ms)<<\n>>○MIDIならキーの高低<<\n>>　（-24～+24）<<\n>><<\n>>となります。
 ITEMTYPE_NUM=100
-ITEM_LOADTYPE_0=0
+ITEM_LOADTYPE_0=1
 ITEM_LOADTYPE_1=0
 ITEM_LOADTYPE_2=0
 ITEM_LOADTYPE_3=0
@@ -4402,17 +4409,51 @@ ITEM_LOADTYPE_96=0
 ITEM_LOADTYPE_97=0
 ITEM_LOADTYPE_98=0
 ITEM_LOADTYPE_99=0
-VMEMO_NUM=1
+VMEMO_NUM=4
 VMEMO_NAME_0=
-CHOICE_NUM=1
-CHOICE_NAME_0_NUM=0
-CHOICE_VAL_NUM=1
-CHOICE_VAL_0_NUM=0
-DEFAULT_VAL_NUM=1
+VMEMO_NAME_1=
+VMEMO_NAME_2=
+VMEMO_NAME_3=
+CHOICE_NUM=4
+CHOICE_NAME_0_NUM=1
+CHOICE_NAME_0_0=BGM
+CHOICE_NAME_1_NUM=0
+CHOICE_NAME_2_NUM=0
+CHOICE_NAME_3_NUM=0
+CHOICE_VAL_NUM=4
+CHOICE_VAL_0_NUM=1
+CHOICE_VAL_0_0=0
+CHOICE_VAL_1_NUM=0
+CHOICE_VAL_2_NUM=0
+CHOICE_VAL_3_NUM=0
+DEFAULT_VAL_NUM=4
 DEFAULT_VAL_0=0
+DEFAULT_VAL_1=100
+DEFAULT_VAL_2=100
+DEFAULT_VAL_3=0
 <<--CSV_START-->>
-
-<<!--DATANAME--!>>,
+"ファイル名","再生音量[%] 標準100","再生周波数[%]","ループ開始位置(ms)/ｷｰ±",
+"nobihazaBGM/ff9.mid",100,100,0,<<!--DATANAME--!>>街,
+"nobihazaBGM/緊急事態.mid",100,100,0,<<!--DATANAME--!>>緊急事態,
+"nobihazaBGM/ドラえもん.mid",100,100,0,<<!--DATANAME--!>>ドラえもん,
+"nobihazaBGM/ママ.mid",100,100,0,<<!--DATANAME--!>>マザー,
+"nobihazaBGM/崩壊.mid",100,100,0,<<!--DATANAME--!>>校庭,
+"nobihazaBGM/The Front Hall.ogg",100,100,0,<<!--DATANAME--!>>The Front Hall,
+"nobihazaBGM/Secure Place.ogg",100,100,0,<<!--DATANAME--!>>Secure Place,
+"nobihazaBGM/闇の通路.mid",100,100,0,<<!--DATANAME--!>>闇の通路,
+"nobihazaBGM/library.mid",100,100,0,<<!--DATANAME--!>>図書室,
+"nobihazaBGM/闇の通路.mid",100,60,0,<<!--DATANAME--!>>闇の通路2,
+"nobihazaBGM/闇の通路.mid",80,30,-8,<<!--DATANAME--!>>闇の通路3,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
 ----
