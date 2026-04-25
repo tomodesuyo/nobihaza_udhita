@@ -3260,7 +3260,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>AudioPack,
 <<!--DATANAME--!>>フィードバックモード,
 <<!--DATANAME--!>>旧設定システム,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>詳細設定の項目位置の保持をしない,
 <<!--DATANAME--!>>,
 
 <<--CSV_END-->>
