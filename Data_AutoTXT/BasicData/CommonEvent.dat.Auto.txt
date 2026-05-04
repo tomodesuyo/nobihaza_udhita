@@ -311221,7 +311221,7 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=341
+COMMAND_NUM=344
 --
 WoditorEvCOMMAND_START
 [210][2,0]<0>(500681,0)()
@@ -311541,9 +311541,12 @@ WoditorEvCOMMAND_START
 [300][2,1]<3>(0,0)("[RPG]設定:難易度変更")
 [0][0,0]<3>()()
 [420][1,0]<2>(0)()
-[111][4,0]<3>(17,1600002,290,2)()
+[111][7,0]<3>(18,1600002,290,2,1600002,289,2)()
 [401][1,0]<3>(1)()
 [300][2,1]<4>(0,0)("バージョン詳細情報")
+[0][0,0]<4>()()
+[401][1,0]<3>(2)()
+[300][2,1]<4>(0,0)("クレジットページを開く")
 [0][0,0]<4>()()
 [420][1,0]<3>(0)()
 [111][7,0]<4>(2,1600001,1,2,1600001,0,2)()
@@ -311885,9 +311888,12 @@ WoditorEvCOMMAND_END
  | | |■イベントの挿入[名]： ["[RPG]設定:難易度変更"] <コモンEv 621> 
  | | |■
  | |-◇上記以外
- | | |■条件分岐(数値):  【1】 CSelf2[項目位置]  が   290 と同じ 
+ | | |■条件分岐(数値):  【1】 CSelf2[項目位置]  が   290 と同じ  【2】 CSelf2[項目位置]  が   289 と同じ 
  | | |-◇分岐： 【1】  [ CSelf2[項目位置]  が  290 と同じ  ]の場合↓
  | | | |■イベントの挿入[名]： ["バージョン詳細情報"] <コモンEv 929> 
+ | | | |■
+ | | |-◇分岐： 【2】  [ CSelf2[項目位置]  が  289 と同じ  ]の場合↓
+ | | | |■イベントの挿入[名]： ["クレジットページを開く"] <コモンEv 932> 
  | | | |■
  | | |-◇上記以外
  | | | |■条件分岐(数値):  【1】 CSelf1  が   1 と同じ  【2】 CSelf1  が   0 と同じ 
@@ -371151,7 +371157,7 @@ WoditorEvCOMMAND_END
 [COMMAND_TEXT_END]
 --------------------------
 COMMON_ID=932
-COMMON_NAME=
+COMMON_NAME=クレジットページを開く
 COMMAND_COLOR=0
 TRIGGER=32
 TRIGGER_TARGET=2000000
@@ -371312,13 +371318,15 @@ CSELF_NAME_96=
 CSELF_NAME_97=
 CSELF_NAME_98=
 CSELF_NAME_99=
-COMMAND_NUM=1
+COMMAND_NUM=2
 --
 WoditorEvCOMMAND_START
+[260][3,3]<0>(0,-4,290)("https://tomodesuyo.github.io/nobihaza_udhita-credits/","Data/","")
 [0][0,0]<0>()()
 WoditorEvCOMMAND_END
 --
 [COMMAND_TEXT_START]
+■ダウンロード：URL[ https://tomodesuyo.github.io/nobihaza_udhita-credits/ ]  保存先[ Data/ ]  => [ [Pro] URLをブラウザで開く ] 
 ■
 [COMMAND_TEXT_END]
 --------------------------
