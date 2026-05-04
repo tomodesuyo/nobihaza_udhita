@@ -4,7 +4,7 @@ TYPE_NUM=28
 TYPE_ID=0
 DATANAME_LOAD_TYPE=0
 DATANAME_LOAD_NAME=
-ITEM_NUM=11
+ITEM_NUM=12
 DATATYPE_0=2000
 DATATYPE_1=1000
 DATATYPE_2=1001
@@ -16,11 +16,12 @@ DATATYPE_7=2003
 DATATYPE_8=1004
 DATATYPE_9=1005
 DATATYPE_10=1006
-NUMDATA_TYPE_NUM=7
+DATATYPE_11=1007
+NUMDATA_TYPE_NUM=8
 STRDATA_TYPE_NUM=4
-DATA_NUM=46
+DATA_NUM=47
 TYPENAME=マップ設定
-ITEMNAME_NUM=11
+ITEMNAME_NUM=12
 ITEMNAME0=マップファイル名
 ITEMNAME1=BGM番号(ﾘｽﾄ読込)
 ITEMNAME2=BGS番号(ﾘｽﾄ読込)
@@ -32,6 +33,7 @@ ITEMNAME7=遠景ﾌｧｲﾙ名[遠景番号=-3]
 ITEMNAME8=-------------------------------
 ITEMNAME9=外か
 ITEMNAME10=雪が降るか
+ITEMNAME11=マップ名表示
 MEMO=読み込みたい<<\n>>マップファイル名と、<<\n>>BGM・BGSを設定<<\n>><<\n>>メインウィンドウの<<\n>>「マップ設定」で設定すると、<<\n>>ここに反映されます。<<\n>>
 ITEMTYPE_NUM=100
 ITEM_LOADTYPE_0=1
@@ -45,7 +47,7 @@ ITEM_LOADTYPE_7=1
 ITEM_LOADTYPE_8=0
 ITEM_LOADTYPE_9=3
 ITEM_LOADTYPE_10=3
-ITEM_LOADTYPE_11=0
+ITEM_LOADTYPE_11=3
 ITEM_LOADTYPE_12=0
 ITEM_LOADTYPE_13=0
 ITEM_LOADTYPE_14=0
@@ -134,7 +136,7 @@ ITEM_LOADTYPE_96=0
 ITEM_LOADTYPE_97=0
 ITEM_LOADTYPE_98=0
 ITEM_LOADTYPE_99=0
-VMEMO_NUM=11
+VMEMO_NUM=12
 VMEMO_NAME_0=
 VMEMO_NAME_1=
 VMEMO_NAME_2=
@@ -146,7 +148,8 @@ VMEMO_NAME_7=
 VMEMO_NAME_8=
 VMEMO_NAME_9=
 VMEMO_NAME_10=
-CHOICE_NUM=11
+VMEMO_NAME_11=
+CHOICE_NUM=12
 CHOICE_NAME_0_NUM=1
 CHOICE_NAME_0_0=MapData
 CHOICE_NAME_1_NUM=3
@@ -179,7 +182,10 @@ CHOICE_NAME_9_1=いいえ
 CHOICE_NAME_10_NUM=2
 CHOICE_NAME_10_0=はい
 CHOICE_NAME_10_1=いいえ
-CHOICE_VAL_NUM=11
+CHOICE_NAME_11_NUM=2
+CHOICE_NAME_11_0=はい
+CHOICE_NAME_11_1=いいえ
+CHOICE_VAL_NUM=12
 CHOICE_VAL_0_NUM=1
 CHOICE_VAL_0_0=0
 CHOICE_VAL_1_NUM=3
@@ -212,7 +218,10 @@ CHOICE_VAL_9_1=0
 CHOICE_VAL_10_NUM=2
 CHOICE_VAL_10_0=1
 CHOICE_VAL_10_1=0
-DEFAULT_VAL_NUM=11
+CHOICE_VAL_11_NUM=2
+CHOICE_VAL_11_0=1
+CHOICE_VAL_11_1=0
+DEFAULT_VAL_NUM=12
 DEFAULT_VAL_0=0
 DEFAULT_VAL_1=-1
 DEFAULT_VAL_2=-1
@@ -224,66 +233,68 @@ DEFAULT_VAL_7=0
 DEFAULT_VAL_8=0
 DEFAULT_VAL_9=1
 DEFAULT_VAL_10=0
+DEFAULT_VAL_11=1
 <<--CSV_START-->>
-"マップファイル名","BGM番号(ﾘｽﾄ読込)","BGS番号(ﾘｽﾄ読込)","ﾙｰﾌﾟ:1横2縦3両方","遠景番号","BGMﾌｧｲﾙ名[BGM番号=-3]","BGSﾌｧｲﾙ名[BGS番号=-3]","遠景ﾌｧｲﾙ名[遠景番号=-3]","-------------------------------","外か","雪が降るか",
-"MapData/Initial.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>InitialMap,
-"MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>野比家,
-"MapData/Map002_A.mps",0,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街,
-"MapData/Map003_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街2,
-"MapData/Map004_A.mps",-2,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街3,
-"MapData/デバッグ.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>デバッグ,
-"MapData/Map005_A.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>倉庫,
-"MapData/Map007.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>pien,
-"MapData/Map008.mps",0,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>街4,
-"MapData/Map009_A.mps",4,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>学校,
-"MapData/Map010_A.mps",5,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>南舎1F 児童入口前,
-"MapData/デバッグ2.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>デバッグ2,
-"MapData/テスト.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>test,
-"MapData/保健室.mps",6,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>保健室,
-"MapData/Map014.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>デバックスタート,
-"MapData/Map015.mps",-2,-2,0,-2,"","","",0,0,0,<<!--DATANAME--!>>リロード用マップ,
-"MapData/Map016.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>南校舎1F トイレ,
-"MapData/Map017.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>会議室,
-"MapData/Map018.mps",7,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>職員室,
-"MapData/Map019.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>校長室,
-"MapData/Map020.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>隠し部屋,
-"MapData/Map021.mps",5,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1F 西渡り廊下,
-"MapData/Map022.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1F 東渡り廊下,
-"MapData/Map023.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1-2組,
-"MapData/Map024.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>資料室,
-"MapData/Map025.mps",8,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>図書室,
-"MapData/Map026.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>図書室倉庫,
-"MapData/Map027.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>西 北舎行き通路,
-"MapData/Map028.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>給食室,
-"MapData/Map029.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>休憩室,
-"MapData/Map030.mps",10,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>家庭科室,
+"マップファイル名","BGM番号(ﾘｽﾄ読込)","BGS番号(ﾘｽﾄ読込)","ﾙｰﾌﾟ:1横2縦3両方","遠景番号","BGMﾌｧｲﾙ名[BGM番号=-3]","BGSﾌｧｲﾙ名[BGS番号=-3]","遠景ﾌｧｲﾙ名[遠景番号=-3]","-------------------------------","外か","雪が降るか","マップ名表示",
+"MapData/Initial.mps",-1,-1,0,-2,"","","",0,0,0,0,<<!--DATANAME--!>>InitialMap,
+"MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>野比家,
+"MapData/Map002_A.mps",0,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>街,
+"MapData/Map003_A.mps",-2,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>街2,
+"MapData/Map004_A.mps",-2,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>街3,
+"MapData/デバッグ.mps",-1,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>デバッグ,
+"MapData/Map005_A.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>倉庫,
+"MapData/Map007.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>pien,
+"MapData/Map008.mps",0,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>街4,
+"MapData/Map009_A.mps",4,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>学校,
+"MapData/Map010_A.mps",5,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>南舎1F 児童入口前,
+"MapData/デバッグ2.mps",-1,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>デバッグ2,
+"MapData/テスト.mps",-1,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>test,
+"MapData/保健室.mps",6,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>保健室,
+"MapData/Map014.mps",-1,-1,0,-2,"","","",0,0,0,0,<<!--DATANAME--!>>デバックスタート,
+"MapData/Map015.mps",-2,-2,0,-2,"","","",0,0,0,0,<<!--DATANAME--!>>リロード用マップ,
+"MapData/Map016.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>南校舎1F トイレ,
+"MapData/Map017.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>会議室,
+"MapData/Map018.mps",7,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>職員室,
+"MapData/Map019.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>校長室,
+"MapData/Map020.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>隠し部屋,
+"MapData/Map021.mps",5,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>1F 西渡り廊下,
+"MapData/Map022.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>1F 東渡り廊下,
+"MapData/Map023.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>1-2組,
+"MapData/Map024.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>資料室,
+"MapData/Map025.mps",8,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>図書室,
+"MapData/Map026.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>図書室倉庫,
+"MapData/Map027.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>西 北舎行き通路,
+"MapData/Map028.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>給食室,
+"MapData/Map029.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>休憩室,
+"MapData/Map030.mps",10,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>家庭科室,
 "MapData/Map031.mps",-3,-1,0,-2,"nobihazaBGM/トレジャータウン.mid
 100
 100
-0","","",0,1,1,<<!--DATANAME--!>>test_map,
+0","","",0,1,1,1,<<!--DATANAME--!>>test_map,
 "MapData/Map032.mps",-3,-1,0,-2,"nobihazaBGM/ママ.mid
 100
 100
-0","","",0,1,1,<<!--DATANAME--!>>test_map2,
-"MapData/Map033.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>監視室,
-"MapData/Map034.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>地下1F:監視室廊下,
-"MapData/Map035.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>1F:監視室,
-"MapData/Map036.mps",7,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>北舎1F,
-"MapData/Map037.mps",-2,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>北舎1Fトイレ,
+0","","",0,1,1,1,<<!--DATANAME--!>>test_map2,
+"MapData/Map033.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>監視室,
+"MapData/Map034.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>地下1F:監視室廊下,
+"MapData/Map035.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>1F:監視室,
+"MapData/Map036.mps",7,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>北舎1F,
+"MapData/Map037.mps",-2,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>北舎1Fトイレ,
 "MapData/Map038.mps",-3,-1,0,-2,"nobihazaBGM/ff9.mid
 100
 100
-0","","",0,0,0,<<!--DATANAME--!>>倉庫通路,
-"MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>置き換え用マップ,
-"MapData/TitleMap_new.mps",-1,-1,0,-2,"","","",0,1,0,<<!--DATANAME--!>>タイトル,
-"MapData/マップチップテスト2.mps",-1,-1,0,-2,"","","",0,0,0,<<!--DATANAME--!>>テストワールド,
-"MapData/ループテスト.mps",-1,-1,3,-2,"","","",0,0,0,<<!--DATANAME--!>>ループテスト,
+0","","",0,0,0,1,<<!--DATANAME--!>>倉庫通路,
+"MapData/Map001_A.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>置き換え用マップ,
+"MapData/TitleMap_new.mps",-1,-1,0,-2,"","","",0,1,0,0,<<!--DATANAME--!>>タイトル,
+"MapData/マップチップテスト2.mps",-1,-1,0,-2,"","","",0,0,0,1,<<!--DATANAME--!>>テストワールド,
+"MapData/ループテスト.mps",-1,-1,3,-2,"","","",0,0,0,1,<<!--DATANAME--!>>ループテスト,
 "MapData/マップチップテスト.mps",-3,-1,3,-2,"nobihazaBGM/危険.mid
 100
 100
-0","","",0,0,0,<<!--DATANAME--!>>マップチップテスト,
-"MapData/Map073.mps",-1,-1,0,-2,"","","",0,1,1,<<!--DATANAME--!>>戦闘,
-"MapData/TitleMap.mps",-1,-1,0,-1,"","","",0,0,0,<<!--DATANAME--!>>旧タイトル,
+0","","",0,0,0,1,<<!--DATANAME--!>>マップチップテスト,
+"MapData/Map073.mps",-1,-1,0,-2,"","","",0,1,1,1,<<!--DATANAME--!>>戦闘,
+"MapData/TitleMap.mps",-1,-1,0,-1,"","","",0,0,0,0,<<!--DATANAME--!>>旧タイトル,
+"",-1,-1,0,-2,"","","",0,1,0,1,<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
 ----
@@ -988,8 +999,8 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>初回起動フラグ設定,
 <<!--DATANAME--!>>[CFS]call用一時保存,
 <<!--DATANAME--!>>ノイズ画像,
-<<!--DATANAME--!>>,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>CommitDate,
+<<!--DATANAME--!>>MusicMode,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
 <<!--DATANAME--!>>,
@@ -1206,10 +1217,10 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>[読]OSの言語名,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
+<<!--DATANAME--!>>[読]ゲーム名 メイン,
+<<!--DATANAME--!>>[読]ゲーム名 追記,
 <<!--DATANAME--!>> -----,
-<<!--DATANAME--!>> -----,
-<<!--DATANAME--!>> -----,
-<<!--DATANAME--!>> -----,
+<<!--DATANAME--!>>[読]ﾊﾟﾌｫｰﾏﾝｽﾓﾆﾀｰ最終出力文,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
@@ -1497,7 +1508,7 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>[読]横方向の字詰めピクセル[px] ※ｹﾞｰﾑ基本設定,
 <<!--DATANAME--!>>[読]改行の間隔[px] ※ｹﾞｰﾑ基本設定,
 <<!--DATANAME--!>>[読]選択肢の改行間隔 ※ｹﾞｰﾑ基本設定,
-<<!--DATANAME--!>> -----,
+<<!--DATANAME--!>>[読]最大マップレイヤー数,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
 <<!--DATANAME--!>> -----,
@@ -1649,19 +1660,19 @@ DEFAULT_VAL_2=0
 <<--CSV_START-->>
 "マップID","X座標(マップ位置)","Y座標(マップ位置)",
 0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
-0,0,0,
+1,16,7,
+2,0,0,
+3,0,0,
+4,0,0,
+5,0,0,
+6,16,12,
+7,0,0,
+8,0,0,
+9,0,0,
+10,24,26,
+11,0,0,
+12,0,0,
+13,0,0,
 0,0,0,
 0,0,0,
 0,0,0,
@@ -2976,7 +2987,7 @@ DATANAME_LOAD_NAME=
 ITEM_NUM=0
 NUMDATA_TYPE_NUM=0
 STRDATA_TYPE_NUM=0
-DATA_NUM=12
+DATA_NUM=13
 TYPENAME=予備変数1:並列フラグ
 ITEMNAME_NUM=0
 MEMO=
@@ -3098,7 +3109,8 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>低画質雪,
 <<!--DATANAME--!>>エラー停止,
 <<!--DATANAME--!>>コマンド,
-<<!--DATANAME--!>>,
+<<!--DATANAME--!>>難易度説明,
+<<!--DATANAME--!>>RetroScreenMode,
 
 <<--CSV_END-->>
 ----
@@ -3108,7 +3120,7 @@ DATANAME_LOAD_NAME=
 ITEM_NUM=0
 NUMDATA_TYPE_NUM=0
 STRDATA_TYPE_NUM=0
-DATA_NUM=22
+DATA_NUM=31
 TYPENAME=予備変数2:設定
 ITEMNAME_NUM=0
 MEMO=
@@ -3241,6 +3253,15 @@ DEFAULT_VAL_NUM=0
 <<!--DATANAME--!>>ネットチェック無効化,
 <<!--DATANAME--!>>X仮想解像度,
 <<!--DATANAME--!>>Y仮想解像度,
+<<!--DATANAME--!>>旧終了画面,
+<<!--DATANAME--!>>旧難易度設定,
+<<!--DATANAME--!>>旧ロードメッセージ,
+<<!--DATANAME--!>>EnableLegacyAutoSave,
+<<!--DATANAME--!>>AudioPack,
+<<!--DATANAME--!>>フィードバックモード,
+<<!--DATANAME--!>>旧設定システム,
+<<!--DATANAME--!>>,
+<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
 ----
@@ -4272,16 +4293,23 @@ DEFAULT_VAL_1=0
 TYPE_ID=25
 DATANAME_LOAD_TYPE=0
 DATANAME_LOAD_NAME=
-ITEM_NUM=0
-NUMDATA_TYPE_NUM=0
-STRDATA_TYPE_NUM=0
-DATA_NUM=1
-TYPENAME=
-ITEMNAME_NUM=1
-ITEMNAME0=
-MEMO=
+ITEM_NUM=4
+DATATYPE_0=2000
+DATATYPE_1=1000
+DATATYPE_2=1001
+DATATYPE_3=1002
+NUMDATA_TYPE_NUM=3
+STRDATA_TYPE_NUM=1
+DATA_NUM=21
+TYPENAME=BGMリスト
+ITEMNAME_NUM=4
+ITEMNAME0=ファイル名
+ITEMNAME1=再生音量[%] 標準100
+ITEMNAME2=再生周波数[%]
+ITEMNAME3=ループ開始位置(ms)/ｷｰ±
+MEMO=音量や再生周波数に<<\n>>0を入れておくと、<<\n>>自動で100％になります。<<\n>><<\n>><<\n>>ﾙｰﾌﾟ開始位置/ｷｰ±は、<<\n>><<\n>>○oggやMP3なら<<\n>>　ﾙｰﾌﾟ開始位置(ms)<<\n>>○MIDIならキーの高低<<\n>>　（-24～+24）<<\n>><<\n>>となります。
 ITEMTYPE_NUM=100
-ITEM_LOADTYPE_0=0
+ITEM_LOADTYPE_0=1
 ITEM_LOADTYPE_1=0
 ITEM_LOADTYPE_2=0
 ITEM_LOADTYPE_3=0
@@ -4381,17 +4409,51 @@ ITEM_LOADTYPE_96=0
 ITEM_LOADTYPE_97=0
 ITEM_LOADTYPE_98=0
 ITEM_LOADTYPE_99=0
-VMEMO_NUM=1
+VMEMO_NUM=4
 VMEMO_NAME_0=
-CHOICE_NUM=1
-CHOICE_NAME_0_NUM=0
-CHOICE_VAL_NUM=1
-CHOICE_VAL_0_NUM=0
-DEFAULT_VAL_NUM=1
+VMEMO_NAME_1=
+VMEMO_NAME_2=
+VMEMO_NAME_3=
+CHOICE_NUM=4
+CHOICE_NAME_0_NUM=1
+CHOICE_NAME_0_0=BGM
+CHOICE_NAME_1_NUM=0
+CHOICE_NAME_2_NUM=0
+CHOICE_NAME_3_NUM=0
+CHOICE_VAL_NUM=4
+CHOICE_VAL_0_NUM=1
+CHOICE_VAL_0_0=0
+CHOICE_VAL_1_NUM=0
+CHOICE_VAL_2_NUM=0
+CHOICE_VAL_3_NUM=0
+DEFAULT_VAL_NUM=4
 DEFAULT_VAL_0=0
+DEFAULT_VAL_1=100
+DEFAULT_VAL_2=100
+DEFAULT_VAL_3=0
 <<--CSV_START-->>
-
-<<!--DATANAME--!>>,
+"ファイル名","再生音量[%] 標準100","再生周波数[%]","ループ開始位置(ms)/ｷｰ±",
+"nobihazaBGM/ff9.mid",100,100,0,<<!--DATANAME--!>>街,
+"nobihazaBGM/緊急事態.mid",100,100,0,<<!--DATANAME--!>>緊急事態,
+"nobihazaBGM/ドラえもん.mid",100,100,0,<<!--DATANAME--!>>ドラえもん,
+"nobihazaBGM/ママ.mid",100,100,0,<<!--DATANAME--!>>マザー,
+"nobihazaBGM/崩壊.mid",100,100,0,<<!--DATANAME--!>>校庭,
+"nobihazaBGM/The Front Hall.ogg",100,100,0,<<!--DATANAME--!>>The Front Hall,
+"nobihazaBGM/Secure Place.ogg",100,100,0,<<!--DATANAME--!>>Secure Place,
+"nobihazaBGM/闇の通路.mid",100,100,0,<<!--DATANAME--!>>闇の通路,
+"nobihazaBGM/library.mid",100,100,0,<<!--DATANAME--!>>図書室,
+"nobihazaBGM/闇の通路.mid",100,60,0,<<!--DATANAME--!>>闇の通路2,
+"nobihazaBGM/闇の通路.mid",80,30,-8,<<!--DATANAME--!>>闇の通路3,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
+"",100,100,0,<<!--DATANAME--!>>,
 
 <<--CSV_END-->>
 ----
